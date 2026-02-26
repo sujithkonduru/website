@@ -1,0 +1,22 @@
+- [x] Add faqData array to Contact.jsx to define sample FAQs
+- [x] Fix the map iframe src in Contact.jsx for proper rendering
+- [x] Test the contact page rendering after fixes
+- [x] Test the gallery page rendering with ratings and feedback section
+- [x] Create GalleryPage.jsx component
+- [x] Add GalleryPage import and route in App.jsx
+- [x] Add "View Gallery" button to Navbar.jsx (desktop and mobile)
+- [x] Create client/public/images/ folder and move images there
+- [x] Update Gallery.jsx and GalleryPage.jsx to import images from /images/ folder
+- [x] Add ratings and feedback section to GalleryPage.jsx with testimonials and overall rating
+- [x] Confirm everywhere uses GalleryPage only (not Gallery component)
+- [x] Update Home.jsx to use Gallery component (image scrolling only) instead of GalleryPage
+- [x] Remove auto-scrolling from GalleryPage.jsx and display images in a grid layout
+- [x] Fix JSX syntax errors in Home.jsx motion.h4 element
+- [x] Update hero section title to "Advancing Humanity Through Research. Driving Innovation Through Technology. Inspiring Minds Through Education."
+- [x] Revert all changes to Home.jsx (restore original hero section with motion.h4 and original title)
+- [x] Reorder programs list: R&D Projects, IT Services, Robotics Education, Workshops & Internships, Digital Marketing, GSIN Platform
+- [x] Add EdTech point to homepage mission section
+- [x] Correct alignment of About.jsx (consistent pillar ordering)
+- [x] Fix StackenzoPrograms.jsx rendering issue (GraduationCamp -> GraduationCap) - Build successful ✅
+- [x] Ensure StackenzoPrograms page font alignment matches other pages (added font-sans)
+- [x] Remove highlights from StackenzoPrograms.jsx description text
