@@ -99,7 +99,7 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
           className="bg-gray-900 rounded-2xl p-6 sm:p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-gray-700"
         >
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400">Submit Your Resume</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-olive green-400">Submit Your Resume</h2>
             <button
               onClick={onClose}
               className="text-gray-400 hover:text-white transition"
@@ -119,7 +119,7 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                 placeholder="John Doe"
               />
             </div>
@@ -135,7 +135,7 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                   placeholder="john@example.com"
                 />
               </div>
@@ -150,7 +150,7 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                   placeholder="+91 9876543210"
                 />
               </div>
@@ -166,7 +166,7 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
                   name="position"
                   value={formData.position}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                   placeholder="e.g., Full Stack Developer"
                 />
               </div>
@@ -179,7 +179,7 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
                   name="experience"
                   value={formData.experience}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                 >
                   <option value="">Select Experience</option>
                   <option value="Fresher">Fresher</option>
@@ -207,10 +207,10 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
                 />
                 <label
                   htmlFor="resume-upload"
-                  className="flex items-center justify-center w-full px-4 py-6 bg-gray-800 border-2 border-dashed border-gray-700 rounded-lg cursor-pointer hover:border-yellow-400 transition"
+                  className="flex items-center justify-center w-full px-4 py-6 bg-gray-800 border-2 border-dashed border-gray-700 rounded-lg cursor-pointer hover:border-olive green-400 transition"
                 >
                   {resumeFile ? (
-                    <div className="flex items-center text-green-400">
+                    <div className="flex items-center text-olive green-400">
                       <FileText className="w-6 h-6 mr-2" />
                       <span>{resumeFile.name}</span>
                     </div>
@@ -233,13 +233,13 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
                 value={formData.message}
                 onChange={handleChange}
                 rows="4"
-                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400 resize-none"
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400 resize-none"
                 placeholder="Tell us why you'd be a great fit..."
               />
             </div>
 
             {submitStatus === "success" && (
-              <div className="bg-green-600 text-white px-4 py-3 rounded-lg">
+              <div className="bg-olive green-600 text-white px-4 py-3 rounded-lg">
                 ✓ Resume submitted successfully! We'll contact you soon.
               </div>
             )}
@@ -254,7 +254,7 @@ function ResumeModal({ isOpen, onClose, jobTitle = "" }) {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="flex-1 bg-yellow-400 text-black font-semibold py-3 rounded-lg hover:bg-yellow-300 transition disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex-1 bg-olive green-400 text-black font-semibold py-3 rounded-lg hover:bg-olive green-300 transition disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 {isSubmitting ? "Submitting..." : "Submit Resume"}
               </button>

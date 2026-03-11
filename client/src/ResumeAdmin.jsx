@@ -73,9 +73,9 @@ function ResumeAdmin() {
 
   const getStatusColor = (status) => {
     const colors = {
-      pending: "bg-yellow-600",
+      pending: "bg-olive green-600",
       reviewed: "bg-blue-600",
-      shortlisted: "bg-green-600",
+      shortlisted: "bg-olive green-600",
       rejected: "bg-red-600"
     };
     return colors[status] || "bg-gray-600";
@@ -93,13 +93,13 @@ function ResumeAdmin() {
     <div className="min-h-screen bg-gray-950 text-white p-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
-          <h1 className="text-3xl font-bold text-yellow-400">Resume Submissions</h1>
+          <h1 className="text-3xl font-bold text-olive green-400">Resume Submissions</h1>
           <div className="flex items-center gap-3">
             <Filter className="w-5 h-5 text-gray-400" />
             <select
               value={statusFilter}
               onChange={(e) => setStatusFilter(e.target.value)}
-              className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+              className="px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
             >
               <option value="">All Status</option>
               <option value="pending">Pending</option>
@@ -181,7 +181,7 @@ function ResumeAdmin() {
                           </button>
                           <button
                             onClick={() => downloadResume(resume.id, resume.resume_filename)}
-                            className="flex items-center gap-2 px-3 py-1 bg-yellow-400 text-black rounded-lg hover:bg-yellow-300 transition text-sm font-semibold"
+                            className="flex items-center gap-2 px-3 py-1 bg-olive green-400 text-black rounded-lg hover:bg-olive green-300 transition text-sm font-semibold"
                           >
                             <Download className="w-4 h-4" />
                             Download

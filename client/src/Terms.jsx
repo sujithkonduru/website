@@ -15,7 +15,7 @@ function Terms() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <FileText className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
+            <FileText className="w-16 h-16 text-olive green-400 mx-auto mb-6" />
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">
               Terms and Conditions
             </h1>
@@ -36,7 +36,7 @@ function Terms() {
           >
             {/* Introduction */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">1. Introduction</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">1. Introduction</h2>
               <p className="text-gray-300 mb-3">
                 Welcome to Stackenzo. These Terms and Conditions ("Terms") govern your use of our website, 
                 services, workshops, and internship programs. By accessing or using our services, you agree 
@@ -49,7 +49,7 @@ function Terms() {
 
             {/* Definitions */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">2. Definitions</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">2. Definitions</h2>
               <ul className="space-y-2 text-gray-300">
                 <li>• "Company," "we," "us," or "our" refers to Stackenzo Technologies</li>
                 <li>• "User," "you," or "your" refers to individuals accessing our services</li>
@@ -60,7 +60,7 @@ function Terms() {
 
             {/* Eligibility */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">3. Eligibility</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">3. Eligibility</h2>
               <p className="text-gray-300 mb-3">
                 To use our services, you must:
               </p>
@@ -74,7 +74,7 @@ function Terms() {
 
             {/* Registration and Enrollment */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">4. Registration and Enrollment</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">4. Registration and Enrollment</h2>
               <p className="text-gray-300 mb-3">
                 When enrolling in our programs:
               </p>
@@ -88,7 +88,7 @@ function Terms() {
 
             {/* Payment Terms */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">5. Payment Terms</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">5. Payment Terms</h2>
               <p className="text-gray-300 mb-3">
                 Regarding fees and payments:
               </p>
@@ -103,7 +103,7 @@ function Terms() {
 
             {/* Refund Policy */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">6. Refund Policy</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">6. Refund Policy</h2>
               <p className="text-gray-300 mb-3">
                 Our refund policy:
               </p>
@@ -118,7 +118,7 @@ function Terms() {
 
             {/* User Responsibilities */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">7. User Responsibilities</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">7. User Responsibilities</h2>
               <p className="text-gray-300 mb-3">
                 As a user, you agree to:
               </p>
@@ -133,7 +133,7 @@ function Terms() {
 
             {/* Intellectual Property */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">8. Intellectual Property</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">8. Intellectual Property</h2>
               <p className="text-gray-300 mb-3">
                 All content, materials, and resources provided by Stackenzo are protected by intellectual 
                 property rights. You may not:
@@ -148,7 +148,7 @@ function Terms() {
 
             {/* Code of Conduct */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">9. Code of Conduct</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">9. Code of Conduct</h2>
               <p className="text-gray-300 mb-3">
                 Users must maintain professional conduct. Prohibited activities include:
               </p>
@@ -163,7 +163,7 @@ function Terms() {
 
             {/* Certificates */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">10. Certificates and Credentials</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">10. Certificates and Credentials</h2>
               <p className="text-gray-300 mb-3">
                 Regarding certificates:
               </p>
@@ -177,7 +177,7 @@ function Terms() {
 
             {/* Limitation of Liability */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">11. Limitation of Liability</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">11. Limitation of Liability</h2>
               <p className="text-gray-300 mb-3">
                 Stackenzo shall not be liable for:
               </p>
@@ -192,7 +192,7 @@ function Terms() {
 
             {/* Termination */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">12. Termination</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">12. Termination</h2>
               <p className="text-gray-300 mb-3">
                 We reserve the right to terminate or suspend access to our services:
               </p>
@@ -206,7 +206,7 @@ function Terms() {
 
             {/* Changes to Terms */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">13. Changes to Terms</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">13. Changes to Terms</h2>
               <p className="text-gray-300">
                 We may update these Terms periodically. Continued use of our services after changes 
                 constitutes acceptance of the modified Terms. We will notify users of significant changes 
@@ -216,7 +216,7 @@ function Terms() {
 
             {/* Governing Law */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">14. Governing Law</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">14. Governing Law</h2>
               <p className="text-gray-300">
                 These Terms are governed by the laws of India. Any disputes shall be subject to the 
                 exclusive jurisdiction of courts in Bangalore, Karnataka.
@@ -225,7 +225,7 @@ function Terms() {
 
             {/* Contact */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">15. Contact Information</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">15. Contact Information</h2>
               <p className="text-gray-300 mb-3">
                 For questions about these Terms, please contact us:
               </p>
@@ -242,15 +242,15 @@ function Terms() {
       {/* Footer */}
       <footer className="bg-black py-16 px-4 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
-          <Link to="/" className="text-2xl font-bold text-yellow-400 mb-4 block">
+          <Link to="/" className="text-2xl font-bold text-olive green-400 mb-4 block">
             Stackenzo
           </Link>
           <div className="flex justify-center space-x-6 text-sm">
-            <Link to="/" className="hover:text-yellow-400 transition">Home</Link>
-            <Link to="/About" className="hover:text-yellow-400 transition">About</Link>
-            <Link to="/Contact" className="hover:text-yellow-400 transition">Contact</Link>
-            <Link to="/Privacy" className="hover:text-yellow-400 transition">Privacy</Link>
-            <Link to="/Terms" className="hover:text-yellow-400 transition">Terms</Link>
+            <Link to="/" className="hover:text-olive green-400 transition">Home</Link>
+            <Link to="/About" className="hover:text-olive green-400 transition">About</Link>
+            <Link to="/Contact" className="hover:text-olive green-400 transition">Contact</Link>
+            <Link to="/Privacy" className="hover:text-olive green-400 transition">Privacy</Link>
+            <Link to="/Terms" className="hover:text-olive green-400 transition">Terms</Link>
           </div>
           <p className="text-gray-500 text-sm mt-8">
             © {new Date().getFullYear()} Stackenzo. All Rights Reserved.

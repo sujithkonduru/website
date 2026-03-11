@@ -24,7 +24,7 @@ function Workshops() {
   const [showInternshipRegModal, setShowInternshipRegModal] = useState(false);
   const [selectedInternship, setSelectedInternship] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
-
+  const [showQueryForm, setShowQueryForm] = useState(false);
 
   // Query Form State
   const [queryForm, setQueryForm] = useState({
@@ -113,6 +113,7 @@ function Workshops() {
           preferredContact: "email",
           preferredTime: "anytime"
         });
+        setShowQueryForm(false);
       } else {
         const errorData = await response.json();
         toast.error(errorData.message || "Failed to submit query. Please try again.", {
@@ -138,26 +139,26 @@ function Workshops() {
   };
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen overflow-x-hidden">
+    <div className="bg-white text-[#1A1A1A] min-h-screen overflow-x-hidden">
       <Toaster position="top-center" />
       <Navbar />
 
       {/* Hero Section - Enhanced with Query Button */}
-      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-[#E8F5E9] via-white to-[#E8F5E9]">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-indigo-900/40 to-purple-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1E301E]/10 via-transparent to-[#2E7D32]/10" />
 
         {/* Animated Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(30, 48, 30, 0.1) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }} />
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-20 left-10 w-64 h-64 bg-[#D4AF37]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#1E301E]/10 rounded-full blur-3xl animate-pulse delay-1000" />
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <motion.div
@@ -170,41 +171,41 @@ function Workshops() {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6"
+              className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 shadow-sm"
             >
               {viewMode === "workshops" ? (
                 <>
-                  <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
-                  <span className="text-sm sm:text-base text-yellow-400 font-semibold">Hands-on Technical Workshops</span>
+                  <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
+                  <span className="text-sm sm:text-base text-[#1E301E] font-semibold">Hands-on Technical Workshops</span>
                 </>
               ) : (
                 <>
-                  <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
-                  <span className="text-sm sm:text-base text-yellow-400 font-semibold">Professional Internship Program</span>
+                  <Briefcase className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
+                  <span className="text-sm sm:text-base text-[#1E301E] font-semibold">Professional Internship Program</span>
                 </>
               )}
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400/50" />
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-[#D4AF37]/50" />
             </motion.div>
 
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 px-2">
               {viewMode === "workshops" ? (
                 <>
-                  <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+                  <span className="text-[#1A1A1A]">
                     Transform Your Future
                   </span>
                   <br />
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                  <span className="text-[#1E301E]">
                     with Technical Workshops
                   </span>
                 </>
               ) : (
                 <>
-                  <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+                  <span className="text-[#1A1A1A]">
                     Launch Your Career
                   </span>
                   <br />
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+                  <span className="text-[#1E301E]">
                     with Professional Internships
                   </span>
                 </>
@@ -212,7 +213,7 @@ function Workshops() {
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4 mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-[#1A1A1A] max-w-3xl mx-auto leading-relaxed px-4 mb-6 sm:mb-8">
               {viewMode === "workshops"
                 ? "Learn cutting-edge technologies, build real-world projects, and gain the confidence to step into the industry with practical expertise."
                 : "Engage in structured learning, hands-on project development, and guided mentorship designed to prepare you for professional excellence."}
@@ -224,12 +225,12 @@ function Workshops() {
               <button
                 onClick={() => setViewMode("workshops")}
                 className={`relative px-7 py-3 rounded-xl font-semibold transition-all duration-300 
-    flex items-center gap-2 border backdrop-blur-md
+    flex items-center gap-2 border shadow-sm
     ${viewMode === "workshops"
-                    ? "bg-gradient-to-r from-yellow-400 to-orange-500 text-black shadow-xl scale-105 border-yellow-300"
-                    : "bg-gray-900/80 text-gray-200 border-gray-700 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-1"
+                    ? "bg-[#1E301E] text-white border-[#1E301E] shadow-md scale-105"
+                    : "bg-white text-[#1A1A1A] border-gray-200 hover:bg-[#E8F5E9] hover:border-[#1E301E] hover:text-[#1E301E]"
                   }
-    active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+    active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]`}
               >
                 <BookOpen className="w-4 h-4" />
                 Workshops
@@ -239,27 +240,27 @@ function Workshops() {
               <button
                 onClick={() => setViewMode("internships")}
                 className={`relative px-7 py-3 rounded-xl font-semibold transition-all duration-300 
-    flex items-center gap-2 border backdrop-blur-md
+    flex items-center gap-2 border shadow-sm
     ${viewMode === "internships"
-                    ? "bg-gradient-to-r from-yellow-400 to-orange-500 text-black shadow-xl scale-105 border-yellow-300"
-                    : "bg-gray-900/80 text-gray-200 border-gray-700 hover:bg-gray-800 hover:shadow-lg hover:-translate-y-1"
+                    ? "bg-[#1E301E] text-white border-[#1E301E] shadow-md scale-105"
+                    : "bg-white text-[#1A1A1A] border-gray-200 hover:bg-[#E8F5E9] hover:border-[#1E301E] hover:text-[#1E301E]"
                   }
-    active:scale-95 focus:outline-none focus:ring-2 focus:ring-yellow-400`}
+    active:scale-95 focus:outline-none focus:ring-2 focus:ring-[#D4AF37]`}
               >
                 <Briefcase className="w-4 h-4" />
                 Internships
               </button>
 
               {/* Query Button */}
-              {/* <button
-                onClick={() => document.getElementById('query-form').scrollIntoView({ behavior: 'smooth' })}
+              <button
+                onClick={() => setShowQueryForm(!showQueryForm)}
                 className="relative px-7 py-3 rounded-xl font-semibold transition-all duration-300
-    flex items-center gap-2 border backdrop-blur-md
-    bg-purple-600/20 text-purple-400 border-purple-500/30 hover:bg-purple-600/30 hover:shadow-lg hover:-translate-y-1"
+    flex items-center gap-2 border shadow-sm
+    bg-white text-[#1A1A1A] border-gray-200 hover:bg-[#E8F5E9] hover:border-[#D4AF37] hover:text-[#1E301E]"
               >
-                <HelpCircle className="w-4 h-4" />
+                <HelpCircle className="w-4 h-4 text-[#D4AF37]" />
                 Have a Query?
-              </button> */}
+              </button>
             </div>
 
             {/* Quick Stats */}
@@ -268,23 +269,23 @@ function Workshops() {
                 { icon: Clock, value: "5 Days", label: "Duration", color: "blue" },
                 { icon: Users, value: "500+", label: "Students Trained", color: "green" },
                 { icon: Code, value: "20+", label: "Workshops", color: "purple" },
-                { icon: Award, value: "100%", label: "Hands-on", color: "yellow" }
+                { icon: Award, value: "100%", label: "Hands-on", color: "green" }
               ] : [
                 { icon: Briefcase, value: "3-6 Months", label: "Duration", color: "blue" },
                 { icon: Users, value: "50+", label: "Interns", color: "green" },
                 { icon: TrendingUp, value: "20+", label: "Internships", color: "purple" },
-                { icon: Award, value: "100%", label: "Hands-on", color: "yellow" }
+                { icon: Award, value: "100%", label: "Hands-on", color: "green" }
               ]).map((stat, i) => (
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + i * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl p-3 sm:p-4 border border-white/10 hover:border-yellow-400/30 transition-all"
+                  className="bg-white border border-gray-200 rounded-xl p-3 sm:p-4 hover:border-[#D4AF37] transition-all shadow-sm"
                 >
-                  <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 text-${stat.color}-400 mx-auto mb-1 sm:mb-2`} />
-                  <div className="text-lg sm:text-2xl font-bold text-white">{stat.value}</div>
-                  <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
+                  <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 text-[#1E301E] mx-auto mb-1 sm:mb-2`} />
+                  <div className="text-lg sm:text-2xl font-bold text-[#1A1A1A]">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-[#1A1A1A]">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -292,7 +293,86 @@ function Workshops() {
         </div>
       </section>
 
-
+      {/* Quick Query Form - Toggle */}
+      <AnimatePresence>
+        {showQueryForm && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="overflow-hidden bg-[#E8F5E9] border-y border-gray-200"
+          >
+            <div className="max-w-4xl mx-auto py-8 px-4 sm:px-6">
+              <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="text-2xl font-bold text-[#1E301E]">Quick Query</h3>
+                  <button
+                    onClick={() => setShowQueryForm(false)}
+                    className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                  >
+                    <X className="w-5 h-5 text-[#1A1A1A]" />
+                  </button>
+                </div>
+                
+                <form onSubmit={handleQuerySubmit} className="space-y-4">
+                  <div className="grid sm:grid-cols-2 gap-4">
+                    <input
+                      type="text"
+                      name="name"
+                      value={queryForm.name}
+                      onChange={handleQueryChange}
+                      placeholder="Your Name *"
+                      required
+                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:border-[#1E301E] focus:outline-none"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      value={queryForm.email}
+                      onChange={handleQueryChange}
+                      placeholder="Your Email *"
+                      required
+                      className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:border-[#1E301E] focus:outline-none"
+                    />
+                  </div>
+                  <input
+                    type="text"
+                    name="phone"
+                    value={queryForm.phone}
+                    onChange={handleQueryChange}
+                    placeholder="Phone Number"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:border-[#1E301E] focus:outline-none"
+                  />
+                  <textarea
+                    name="message"
+                    value={queryForm.message}
+                    onChange={handleQueryChange}
+                    placeholder="Your Question *"
+                    required
+                    rows="3"
+                    className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:border-[#1E301E] focus:outline-none"
+                  />
+                  <div className="flex gap-4">
+                    <button
+                      type="submit"
+                      className="px-6 py-2 bg-[#1E301E] text-white rounded-lg hover:bg-[#2E7D32] transition-colors"
+                    >
+                      Submit Query
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setShowQueryForm(false)}
+                      className="px-6 py-2 border border-gray-200 text-[#1A1A1A] rounded-lg hover:bg-gray-100 transition-colors"
+                    >
+                      Cancel
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <AnimatePresence mode="wait">
         {viewMode === "workshops" ? (
@@ -304,12 +384,12 @@ function Workshops() {
             transition={{ duration: 0.3 }}
           >
             {/* Introduction Section */}
-            <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-900">
+            <section className="py-12 sm:py-16 px-4 sm:px-6 bg-white">
               <div className="max-w-4xl mx-auto text-center">
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-8"
+                  className="text-lg sm:text-xl text-[#1A1A1A] leading-relaxed mb-8"
                 >
                   We conduct short-term, high-impact technical workshops designed to bridge the gap between academic learning and real-world technology.
                   Our workshops focus on hands-on learning, practical exposure, and awareness of current industry trends.
@@ -321,27 +401,27 @@ function Workshops() {
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
                       setQueryForm({...queryForm, category: "workshop"});
-                      document.getElementById('query-form').scrollIntoView({ behavior: 'smooth' });
+                      setShowQueryForm(true);
                     }}
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-purple-600/20 text-purple-400 rounded-xl border border-purple-500/30 hover:bg-purple-600/30 transition-all"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#1E301E] rounded-xl border border-[#D4AF37] hover:bg-[#E8F5E9] transition-all shadow-sm"
                   >
-                    <HelpCircle className="w-5 h-5" />
+                    <HelpCircle className="w-5 h-5 text-[#D4AF37]" />
                     <span>Have Workshop Questions? Ask Us</span>
                   </motion.button>
               </div>
             </section>
 
             {/* Our Approach */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white-900">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-[#E8F5E9]">
               <div className="max-w-4xl mx-auto">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-yellow-400"
+                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-[#1E301E]"
                 >
                   Our Workshop Approach
                 </motion.h2>
-                <p className="text-lg sm:text-xl text-center text-gray-300 mb-8">
+                <p className="text-lg sm:text-xl text-center text-[#1A1A1A] mb-8">
                   Our technical workshops follow a hands-on, project-driven approach where participants learn by building real-world solutions—not by passively listening to theory.
                 </p>
                 <div className="grid sm:grid-cols-2 gap-4">
@@ -358,17 +438,17 @@ function Workshops() {
                       initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.1 }}
-                      className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl border border-gray-700 hover:border-yellow-400/30 transition-all"
+                      className="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200 hover:border-[#D4AF37] transition-all shadow-sm"
                     >
-                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 flex-shrink-0" />
-                      <span className="text-sm sm:text-base text-gray-300">{item}</span>
+                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37] flex-shrink-0" />
+                      <span className="text-sm sm:text-base text-[#1A1A1A]">{item}</span>
                     </motion.div>
                   ))}
                 </div>
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="text-center text-yellow-400 font-bold text-lg sm:text-xl mt-8"
+                  className="text-center text-[#1E301E] font-bold text-lg sm:text-xl mt-8"
                 >
                   Our goal is clarity, confidence, and practical exposure, not just certificates.
                 </motion.p>
@@ -376,9 +456,9 @@ function Workshops() {
             </section>
 
             {/* Department Filter */}
-            <section className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-800">
+            <section className="py-8 sm:py-12 px-4 sm:px-6 bg-white border-y border-gray-200">
               <div className="max-w-6xl mx-auto">
-                <h3 className="text-lg sm:text-xl font-semibold text-center mb-6 text-yellow-400">
+                <h3 className="text-lg sm:text-xl font-semibold text-center mb-6 text-[#1E301E]">
                   Filter Workshops by Department
                 </h3>
                 <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
@@ -388,9 +468,10 @@ function Workshops() {
                       onClick={() => setSelectedDepartment(dept)}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`px-4 sm:px-6 py-2 rounded-full text-sm sm:text-base font-semibold transition-all ${selectedDepartment === dept
-                        ? "bg-gradient-to-r from-yellow-400 to-orange-500 text-black shadow-lg"
-                        : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                      className={`px-4 sm:px-6 py-2 rounded-full text-sm sm:text-base font-semibold transition-all shadow-sm ${
+                        selectedDepartment === dept
+                        ? "bg-[#1E301E] text-white"
+                        : "bg-white text-[#1A1A1A] border border-gray-200 hover:bg-[#E8F5E9] hover:border-[#1E301E]"
                         }`}
                     >
                       {dept}
@@ -401,19 +482,19 @@ function Workshops() {
             </section>
 
             {/* Workshops Grid */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-[#E8F5E9]">
               <div className="max-w-6xl mx-auto">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-yellow-400"
+                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-[#1E301E]"
                 >
                   Core Workshop Domains We Offer
                 </motion.h2>
 
                 {searchFilteredWorkshops.length === 0 ? (
                   <div className="text-center py-12">
-                    <p className="text-gray-400 text-xl">No workshops found</p>
+                    <p className="text-[#1A1A1A] text-xl">No workshops found</p>
                   </div>
                 ) : (
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -424,36 +505,36 @@ function Workshops() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: i * 0.1 }}
                         whileHover={{ y: -5, scale: 1.02 }}
-                        className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl sm:rounded-2xl border border-gray-700 hover:border-yellow-400/50 transition-all overflow-hidden"
+                        className="group bg-white rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#1E301E] transition-all overflow-hidden shadow-sm hover:shadow"
                       >
                         <div className="p-4 sm:p-6">
                           {/* Title */}
-                          <h3 className="text-lg sm:text-xl font-bold text-white mb-3 group-hover:text-yellow-400 transition-colors">
+                          <h3 className="text-lg sm:text-xl font-bold text-[#1A1A1A] mb-3 group-hover:text-[#1E301E] transition-colors">
                             {workshop.title}
                           </h3>
 
                           {/* Description */}
-                          <p className="text-xs sm:text-sm text-gray-400 mb-4 line-clamp-2">
+                          <p className="text-xs sm:text-sm text-[#1A1A1A] mb-4 line-clamp-2">
                             {workshop.description}
                           </p>
 
                           {/* Duration */}
-                          <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-500 mb-4">
-                            <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+                          <div className="flex items-center gap-2 text-xs sm:text-sm text-[#1A1A1A] mb-4">
+                            <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-[#D4AF37]" />
                             <span>{workshop.duration}</span>
                           </div>
 
                           {/* Suited For */}
                           <div className="mb-4">
-                            <p className="text-xs text-gray-500 mb-2">Best suited for:</p>
+                            <p className="text-xs text-[#1A1A1A] mb-2">Best suited for:</p>
                             <div className="flex flex-wrap gap-1.5 sm:gap-2">
                               {workshop.suitedFor.slice(0, 3).map((branch, j) => (
-                                <span key={j} className="px-2 py-0.5 sm:py-1 bg-yellow-400/10 text-yellow-400 text-xs rounded-full border border-yellow-400/20">
+                                <span key={j} className="px-2 py-0.5 sm:py-1 bg-[#E8F5E9] text-[#1E301E] text-xs rounded-full border border-[#D4AF37]/30">
                                   {branch}
                                 </span>
                               ))}
                               {workshop.suitedFor.length > 3 && (
-                                <span className="px-2 py-0.5 sm:py-1 bg-gray-800 text-gray-400 text-xs rounded-full border border-gray-700">
+                                <span className="px-2 py-0.5 sm:py-1 bg-gray-100 text-[#1A1A1A] text-xs rounded-full border border-gray-200">
                                   +{workshop.suitedFor.length - 3}
                                 </span>
                               )}
@@ -466,13 +547,13 @@ function Workshops() {
                               onClick={() => setSelectedWorkshop(workshop)}
                               whileHover={{ scale: 1.02 }}
                               whileTap={{ scale: 0.98 }}
-                              className="w-full px-4 py-2.5 sm:py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-lg text-sm sm:text-base font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all flex items-center justify-center gap-2 group"
+                              className="w-full px-4 py-2.5 sm:py-3 bg-[#1E301E] text-white rounded-lg text-sm sm:text-base font-semibold hover:bg-[#2E7D32] transition-all shadow-sm hover:shadow flex items-center justify-center gap-2 group"
                             >
                               <span>View Details</span>
                               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </motion.button>
                             
-                            {/* <motion.button
+                            <motion.button
                               onClick={() => {
                                 setQueryForm({
                                   ...queryForm,
@@ -484,11 +565,11 @@ function Workshops() {
                               }}
                               whileHover={{ scale: 1.02 }}
                               whileTap={{ scale: 0.98 }}
-                              className="w-full px-4 py-2 bg-purple-600/20 text-purple-400 rounded-lg text-sm border border-purple-500/30 hover:bg-purple-600/30 transition-all flex items-center justify-center gap-2"
+                              className="w-full px-4 py-2 bg-white text-[#1A1A1A] rounded-lg text-sm border border-[#D4AF37] hover:bg-[#E8F5E9] transition-all flex items-center justify-center gap-2"
                             >
-                              <HelpCircle className="w-3 h-3" />
+                              <HelpCircle className="w-3 h-3 text-[#D4AF37]" />
                               <span>Quick Query</span>
-                            </motion.button> */}
+                            </motion.button>
                           </div>
                         </div>
                       </motion.div>
@@ -499,12 +580,12 @@ function Workshops() {
             </section>
 
             {/* What Students Gain */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-800">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
               <div className="max-w-6xl mx-auto">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-yellow-400"
+                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-[#1E301E]"
                 >
                   What Students Gain
                 </motion.h2>
@@ -515,10 +596,10 @@ function Workshops() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.1 }}
-                      className="bg-gray-700 p-4 sm:p-6 rounded-xl border border-gray-600 hover:border-yellow-400/50 transition-all flex flex-col items-center text-center"
+                      className="bg-[#E8F5E9] p-4 sm:p-6 rounded-xl border border-gray-200 hover:border-[#D4AF37] transition-all flex flex-col items-center text-center shadow-sm"
                     >
-                      <BadgeCheck className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400 mb-3" />
-                      <p className="text-sm sm:text-base text-gray-300">
+                      <BadgeCheck className="w-6 h-6 sm:w-8 sm:h-8 text-[#D4AF37] mb-3" />
+                      <p className="text-sm sm:text-base text-[#1A1A1A]">
                         {gain}
                       </p>
                     </motion.div>
@@ -528,12 +609,12 @@ function Workshops() {
             </section>
 
             {/* Why Choose Us */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-[#E8F5E9]">
               <div className="max-w-4xl mx-auto">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-yellow-400"
+                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-[#1E301E]"
                 >
                   Why Choose Our Workshops
                 </motion.h2>
@@ -544,10 +625,10 @@ function Workshops() {
                       initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.1 }}
-                      className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl border border-gray-700 hover:border-yellow-400/30 transition-all"
+                      className="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200 hover:border-[#D4AF37] transition-all shadow-sm"
                     >
-                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 flex-shrink-0" />
-                      <span className="text-sm sm:text-base text-gray-300">{reason}</span>
+                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37] flex-shrink-0" />
+                      <span className="text-sm sm:text-base text-[#1A1A1A]">{reason}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -555,19 +636,19 @@ function Workshops() {
             </section>
 
             {/* Philosophy Banner */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-yellow-400 to-orange-500">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-[#1E301E] to-[#2E7D32]">
               <div className="max-w-4xl mx-auto text-center">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-black mb-6"
+                  className="text-2xl sm:text-3xl font-bold text-white mb-6"
                 >
                   Our Workshop Philosophy
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="text-xl sm:text-2xl text-black/90 font-semibold mb-8"
+                  className="text-xl sm:text-2xl text-white/90 font-semibold mb-8"
                 >
                   Workshops should not just teach — they should transform thinking.
                 </motion.p>
@@ -578,9 +659,9 @@ function Workshops() {
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: i * 0.1 }}
-                      className="bg-black/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg"
+                      className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/20"
                     >
-                      <p className="text-sm sm:text-base text-black font-semibold">{item}</p>
+                      <p className="text-sm sm:text-base text-white font-semibold">{item}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -596,18 +677,18 @@ function Workshops() {
             transition={{ duration: 0.3 }}
           >
             {/* Internship Hero */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-gray-900 to-gray-950">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-br from-[#E8F5E9] to-white">
               <div className="max-w-4xl mx-auto text-center">
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                 >
-                  <Briefcase className="w-16 h-16 sm:w-20 sm:h-20 text-yellow-400 mx-auto mb-6" />
-                  <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-white">Internship Program at Stackenzo</h2>
-                  <p className="text-xl sm:text-2xl text-yellow-400 font-semibold mb-4">
+                  <Briefcase className="w-16 h-16 sm:w-20 sm:h-20 text-[#D4AF37] mx-auto mb-6" />
+                  <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-[#1A1A1A]">Internship Program at Stackenzo</h2>
+                  <p className="text-xl sm:text-2xl text-[#1E301E] font-semibold mb-4">
                     Learn From the Ground. Grow With Confidence. Enjoy the Work Culture.
                   </p>
-                  <p className="text-lg sm:text-xl text-gray-300 leading-relaxed">
+                  <p className="text-lg sm:text-xl text-[#1A1A1A] leading-relaxed">
                     At Stackenzo, our internship program is not just about certificates or short-term training.
                     It is about real exposure, real learning, and real motivation.
                   </p>
@@ -618,11 +699,11 @@ function Workshops() {
                     whileTap={{ scale: 0.95 }}
                     onClick={() => {
                       setQueryForm({...queryForm, category: "internship"});
-                      document.getElementById('query-form').scrollIntoView({ behavior: 'smooth' });
+                      setShowQueryForm(true);
                     }}
-                    className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-purple-600/20 text-purple-400 rounded-xl border border-purple-500/30 hover:bg-purple-600/30 transition-all"
+                    className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-white text-[#1E301E] rounded-xl border border-[#D4AF37] hover:bg-[#E8F5E9] transition-all shadow-sm"
                   >
-                    <HelpCircle className="w-5 h-5" />
+                    <HelpCircle className="w-5 h-5 text-[#D4AF37]" />
                     <span>Have Internship Questions? Ask Us</span>
                   </motion.button>
                 </motion.div>
@@ -630,9 +711,9 @@ function Workshops() {
             </section>
 
             {/* Department Filter for Internships */}
-            <section className="py-8 sm:py-12 px-4 sm:px-6 bg-gray-800">
+            <section className="py-8 sm:py-12 px-4 sm:px-6 bg-white border-y border-gray-200">
               <div className="max-w-6xl mx-auto">
-                <h3 className="text-lg sm:text-xl font-semibold text-center mb-6 text-yellow-400">
+                <h3 className="text-lg sm:text-xl font-semibold text-center mb-6 text-[#1E301E]">
                   Filter Internships by Department
                 </h3>
                 <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
@@ -642,9 +723,10 @@ function Workshops() {
                       onClick={() => setSelectedDepartment(dept)}
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className={`px-4 sm:px-6 py-2 rounded-full text-sm sm:text-base font-semibold transition-all ${selectedDepartment === dept
-                        ? "bg-gradient-to-r from-yellow-400 to-orange-500 text-black shadow-lg"
-                        : "bg-gray-700 text-gray-300 hover:bg-gray-600"
+                      className={`px-4 sm:px-6 py-2 rounded-full text-sm sm:text-base font-semibold transition-all shadow-sm ${
+                        selectedDepartment === dept
+                        ? "bg-[#1E301E] text-white"
+                        : "bg-white text-[#1A1A1A] border border-gray-200 hover:bg-[#E8F5E9] hover:border-[#1E301E]"
                         }`}
                     >
                       {dept}
@@ -655,19 +737,19 @@ function Workshops() {
             </section>
 
             {/* Internship Grid */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-[#E8F5E9]">
               <div className="max-w-6xl mx-auto">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-yellow-400"
+                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-[#1E301E]"
                 >
                   Available Internships
                 </motion.h2>
 
                 {searchFilteredInternships.length === 0 ? (
                   <div className="text-center py-12">
-                    <p className="text-gray-400 text-xl">No internships found</p>
+                    <p className="text-[#1A1A1A] text-xl">No internships found</p>
                   </div>
                 ) : (
                   <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -678,35 +760,35 @@ function Workshops() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ delay: i * 0.1 }}
                         whileHover={{ y: -5, scale: 1.02 }}
-                        className="group bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl sm:rounded-2xl border border-gray-700 hover:border-yellow-400/50 transition-all overflow-hidden"
+                        className="group bg-white rounded-xl sm:rounded-2xl border border-gray-200 hover:border-[#1E301E] transition-all overflow-hidden shadow-sm hover:shadow"
                       >
                         <div className="p-4 sm:p-6">
                           <div className="flex items-center gap-3 mb-4">
-                            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400/20 rounded-xl flex items-center justify-center">
-                              <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
+                            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#E8F5E9] rounded-xl flex items-center justify-center border border-[#D4AF37]/30">
+                              <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37]" />
                             </div>
                             <div>
-                              <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-yellow-400 transition-colors">
+                              <h3 className="text-base sm:text-lg font-bold text-[#1A1A1A] group-hover:text-[#1E301E] transition-colors">
                                 {internship.title}
                               </h3>
-                              <p className="text-xs sm:text-sm text-gray-400">{internship.duration} • {internship.type}</p>
+                              <p className="text-xs sm:text-sm text-[#1A1A1A]">{internship.duration} • {internship.type}</p>
                             </div>
                           </div>
 
-                          <p className="text-xs sm:text-sm text-gray-400 mb-4 line-clamp-2">
+                          <p className="text-xs sm:text-sm text-[#1A1A1A] mb-4 line-clamp-2">
                             {internship.description}
                           </p>
 
                           <div className="mb-4">
-                            <p className="text-xs text-gray-500 mb-2">Technologies:</p>
+                            <p className="text-xs text-[#1A1A1A] mb-2">Technologies:</p>
                             <div className="flex flex-wrap gap-1.5 sm:gap-2">
                               {internship.technologies.slice(0, 3).map((tech, j) => (
-                                <span key={j} className="px-2 py-0.5 sm:py-1 bg-yellow-400/10 text-yellow-400 text-xs rounded-full border border-yellow-400/20">
+                                <span key={j} className="px-2 py-0.5 sm:py-1 bg-[#E8F5E9] text-[#1E301E] text-xs rounded-full border border-[#D4AF37]/30">
                                   {tech}
                                 </span>
                               ))}
                               {internship.technologies.length > 3 && (
-                                <span className="px-2 py-0.5 sm:py-1 bg-gray-800 text-gray-400 text-xs rounded-full border border-gray-700">
+                                <span className="px-2 py-0.5 sm:py-1 bg-gray-100 text-[#1A1A1A] text-xs rounded-full border border-gray-200">
                                   +{internship.technologies.length - 3}
                                 </span>
                               )}
@@ -714,15 +796,15 @@ function Workshops() {
                           </div>
 
                           <div className="mb-4">
-                            <p className="text-xs text-gray-500 mb-2">Suited for:</p>
+                            <p className="text-xs text-[#1A1A1A] mb-2">Suited for:</p>
                             <div className="flex flex-wrap gap-1.5 sm:gap-2">
                               {internship.suitedFor.slice(0, 3).map((branch, j) => (
-                                <span key={j} className="px-2 py-0.5 sm:py-1 bg-blue-400/10 text-blue-400 text-xs rounded-full border border-blue-400/20">
+                                <span key={j} className="px-2 py-0.5 sm:py-1 bg-[#E8F5E9] text-[#1E301E] text-xs rounded-full border border-[#D4AF37]/30">
                                   {branch}
                                 </span>
                               ))}
                               {internship.suitedFor.length > 3 && (
-                                <span className="px-2 py-0.5 sm:py-1 bg-gray-800 text-gray-400 text-xs rounded-full border border-gray-700">
+                                <span className="px-2 py-0.5 sm:py-1 bg-gray-100 text-[#1A1A1A] text-xs rounded-full border border-gray-200">
                                   +{internship.suitedFor.length - 3}
                                 </span>
                               )}
@@ -738,13 +820,13 @@ function Workshops() {
                               }}
                               whileHover={{ scale: 1.02 }}
                               whileTap={{ scale: 0.98 }}
-                              className="w-full px-4 py-2.5 sm:py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-lg text-sm sm:text-base font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all flex items-center justify-center gap-2 group"
+                              className="w-full px-4 py-2.5 sm:py-3 bg-[#1E301E] text-white rounded-lg text-sm sm:text-base font-semibold hover:bg-[#2E7D32] transition-all shadow-sm hover:shadow flex items-center justify-center gap-2 group"
                             >
                               <span>Apply Now</span>
                               <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                             </motion.button>
                             
-                            {/* <motion.button
+                            <motion.button
                               onClick={() => {
                                 setQueryForm({
                                   ...queryForm,
@@ -756,11 +838,11 @@ function Workshops() {
                               }}
                               whileHover={{ scale: 1.02 }}
                               whileTap={{ scale: 0.98 }}
-                              className="w-full px-4 py-2 bg-purple-600/20 text-purple-400 rounded-lg text-sm border border-purple-500/30 hover:bg-purple-600/30 transition-all flex items-center justify-center gap-2"
+                              className="w-full px-4 py-2 bg-white text-[#1A1A1A] rounded-lg text-sm border border-[#D4AF37] hover:bg-[#E8F5E9] transition-all flex items-center justify-center gap-2"
                             >
-                              <HelpCircle className="w-3 h-3" />
+                              <HelpCircle className="w-3 h-3 text-[#D4AF37]" />
                               <span>Quick Query</span>
-                            </motion.button> */}
+                            </motion.button>
                           </div>
                         </div>
                       </motion.div>
@@ -771,12 +853,12 @@ function Workshops() {
             </section>
 
             {/* What Interns Gain */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-800">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
               <div className="max-w-6xl mx-auto">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-yellow-400"
+                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-[#1E301E]"
                 >
                   What Interns Gain at Stackenzo
                 </motion.h2>
@@ -794,10 +876,10 @@ function Workshops() {
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       transition={{ delay: i * 0.1 }}
-                      className="bg-gray-700 p-4 sm:p-6 rounded-xl border border-gray-600 hover:border-yellow-400/50 transition-all flex flex-col items-center text-center"
+                      className="bg-[#E8F5E9] p-4 sm:p-6 rounded-xl border border-gray-200 hover:border-[#D4AF37] transition-all flex flex-col items-center text-center shadow-sm"
                     >
-                      <BadgeCheck className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400 mb-3" />
-                      <p className="text-sm sm:text-base text-gray-300">
+                      <BadgeCheck className="w-6 h-6 sm:w-8 sm:h-8 text-[#D4AF37] mb-3" />
+                      <p className="text-sm sm:text-base text-[#1A1A1A]">
                         {gain}
                       </p>
                     </motion.div>
@@ -807,12 +889,12 @@ function Workshops() {
             </section>
 
             {/* Why Choose Stackenzo Internships */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-[#E8F5E9]">
               <div className="max-w-4xl mx-auto">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-yellow-400"
+                  className="text-2xl sm:text-3xl font-bold text-center mb-12 text-[#1E301E]"
                 >
                   Why Choose Stackenzo Internships
                 </motion.h2>
@@ -830,10 +912,10 @@ function Workshops() {
                       initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20 }}
                       whileInView={{ opacity: 1, x: 0 }}
                       transition={{ delay: i * 0.1 }}
-                      className="flex items-center gap-3 bg-gray-800 p-4 rounded-xl border border-gray-700 hover:border-yellow-400/30 transition-all"
+                      className="flex items-center gap-3 bg-white p-4 rounded-xl border border-gray-200 hover:border-[#D4AF37] transition-all shadow-sm"
                     >
-                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 flex-shrink-0" />
-                      <span className="text-sm sm:text-base text-gray-300">{reason}</span>
+                      <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37] flex-shrink-0" />
+                      <span className="text-sm sm:text-base text-[#1A1A1A]">{reason}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -841,19 +923,19 @@ function Workshops() {
             </section>
 
             {/* Internship Philosophy Banner */}
-            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-yellow-400 to-orange-500">
+            <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-[#1E301E] to-[#2E7D32]">
               <div className="max-w-4xl mx-auto text-center">
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  className="text-2xl sm:text-3xl font-bold text-black mb-6"
+                  className="text-2xl sm:text-3xl font-bold text-white mb-6"
                 >
                   Our Internship Philosophy
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="text-xl sm:text-2xl text-black/90 font-semibold mb-8"
+                  className="text-xl sm:text-2xl text-white/90 font-semibold mb-8"
                 >
                   Internships should not just train — they should transform careers.
                 </motion.p>
@@ -864,9 +946,9 @@ function Workshops() {
                       initial={{ opacity: 0, scale: 0.9 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ delay: i * 0.1 }}
-                      className="bg-black/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg"
+                      className="bg-white/10 backdrop-blur-sm p-3 sm:p-4 rounded-lg border border-white/20"
                     >
-                      <p className="text-sm sm:text-base text-black font-semibold">{item}</p>
+                      <p className="text-sm sm:text-base text-white font-semibold">{item}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -883,7 +965,7 @@ function Workshops() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50 p-4"
             onClick={() => setSelectedWorkshop(null)}
           >
             <motion.div
@@ -891,14 +973,14 @@ function Workshops() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border-2 border-yellow-400/30 shadow-2xl"
+              className="bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto border border-gray-200 shadow-2xl"
             >
               {/* Header */}
-              <div className="sticky top-0 bg-gradient-to-r from-yellow-400 to-orange-500 p-4 sm:p-6 flex items-center justify-between z-10">
-                <h2 className="text-xl sm:text-2xl font-bold text-black pr-8">{selectedWorkshop.title}</h2>
+              <div className="sticky top-0 bg-gradient-to-r from-[#1E301E] to-[#2E7D32] p-4 sm:p-6 flex items-center justify-between z-10">
+                <h2 className="text-xl sm:text-2xl font-bold text-white pr-8">{selectedWorkshop.title}</h2>
                 <button
                   onClick={() => setSelectedWorkshop(null)}
-                  className="text-black hover:text-gray-700 transition-colors p-1 hover:bg-black/10 rounded-full"
+                  className="text-white hover:text-gray-200 transition-colors p-1 hover:bg-white/10 rounded-full"
                 >
                   <X className="w-5 h-5 sm:w-6 sm:h-6" />
                 </button>
@@ -907,29 +989,29 @@ function Workshops() {
               {/* Content */}
               <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
                 {/* Description */}
-                <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-                  <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
+                <div className="bg-[#E8F5E9] p-4 rounded-xl border border-gray-200">
+                  <p className="text-sm sm:text-base text-[#1A1A1A] leading-relaxed">
                     {selectedWorkshop.description}
                   </p>
                 </div>
 
                 {/* Duration & Suited For */}
                 <div className="grid sm:grid-cols-2 gap-4">
-                  <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-                    <p className="text-yellow-400 font-semibold mb-2 flex items-center gap-2">
-                      <Clock className="w-4 h-4" />
+                  <div className="bg-[#E8F5E9] p-4 rounded-xl border border-gray-200">
+                    <p className="text-[#1E301E] font-semibold mb-2 flex items-center gap-2">
+                      <Clock className="w-4 h-4 text-[#D4AF37]" />
                       Duration
                     </p>
-                    <p className="text-white text-lg">{selectedWorkshop.duration}</p>
+                    <p className="text-[#1A1A1A] text-lg">{selectedWorkshop.duration}</p>
                   </div>
-                  <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-                    <p className="text-yellow-400 font-semibold mb-2 flex items-center gap-2">
-                      <Users className="w-4 h-4" />
+                  <div className="bg-[#E8F5E9] p-4 rounded-xl border border-gray-200">
+                    <p className="text-[#1E301E] font-semibold mb-2 flex items-center gap-2">
+                      <Users className="w-4 h-4 text-[#D4AF37]" />
                       Best Suited For
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {selectedWorkshop.suitedFor.map((branch, i) => (
-                        <span key={i} className="px-3 py-1 bg-yellow-400/10 text-yellow-400 text-sm rounded-full border border-yellow-400/20">
+                        <span key={i} className="px-3 py-1 bg-white text-[#1E301E] text-sm rounded-full border border-[#D4AF37]/30">
                           {branch}
                         </span>
                       ))}
@@ -939,8 +1021,8 @@ function Workshops() {
 
                 {/* Topics Covered */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-4 flex items-center gap-2">
-                    <Code className="w-5 h-5" />
+                  <h3 className="text-lg sm:text-xl font-bold text-[#1E301E] mb-4 flex items-center gap-2">
+                    <Code className="w-5 h-5 text-[#D4AF37]" />
                     Topics Covered
                   </h3>
                   <div className="space-y-2">
@@ -950,10 +1032,10 @@ function Workshops() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: i * 0.05 }}
-                        className="flex items-start gap-3 bg-gray-800/50 p-3 rounded-lg border border-gray-700 hover:border-yellow-400/30 transition-all"
+                        className="flex items-start gap-3 bg-[#E8F5E9] p-3 rounded-lg border border-gray-200 hover:border-[#D4AF37] transition-all"
                       >
-                        <CheckCircle className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm sm:text-base text-gray-300">{topic}</span>
+                        <CheckCircle className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                        <span className="text-sm sm:text-base text-[#1A1A1A]">{topic}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -961,8 +1043,8 @@ function Workshops() {
 
                 {/* Learning Outcomes */}
                 <div>
-                  <h3 className="text-lg sm:text-xl font-bold text-yellow-400 mb-4 flex items-center gap-2">
-                    <Target className="w-5 h-5" />
+                  <h3 className="text-lg sm:text-xl font-bold text-[#1E301E] mb-4 flex items-center gap-2">
+                    <Target className="w-5 h-5 text-[#D4AF37]" />
                     Learning Outcomes
                   </h3>
                   <div className="space-y-2">
@@ -972,10 +1054,10 @@ function Workshops() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: i * 0.05 }}
-                        className="flex items-start gap-3 bg-gray-800/50 p-3 rounded-lg border border-gray-700 hover:border-yellow-400/30 transition-all"
+                        className="flex items-start gap-3 bg-[#E8F5E9] p-3 rounded-lg border border-gray-200 hover:border-[#D4AF37] transition-all"
                       >
-                        <Target className="w-5 h-5 text-yellow-400 flex-shrink-0 mt-0.5" />
-                        <span className="text-sm sm:text-base text-gray-300">{outcome}</span>
+                        <Target className="w-5 h-5 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                        <span className="text-sm sm:text-base text-[#1A1A1A]">{outcome}</span>
                       </motion.div>
                     ))}
                   </div>
@@ -987,7 +1069,7 @@ function Workshops() {
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     onClick={() => setSelectedWorkshop(null)}
-                    className="flex-1 px-6 py-3 bg-gray-800 text-white rounded-xl font-semibold hover:bg-gray-700 transition border border-gray-700"
+                    className="flex-1 px-6 py-3 bg-gray-100 text-[#1A1A1A] rounded-xl font-semibold hover:bg-gray-200 transition border border-gray-200"
                   >
                     Close
                   </motion.button>
@@ -997,7 +1079,7 @@ function Workshops() {
                     onClick={() => {
                       setShowWorkshopRegModal(true);
                     }}
-                    className="flex-1 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-xl font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all flex items-center justify-center gap-2"
+                    className="flex-1 px-6 py-3 bg-[#1E301E] text-white rounded-xl font-semibold hover:bg-[#2E7D32] transition-all shadow-sm hover:shadow flex items-center justify-center gap-2"
                   >
                     <span>Register Now</span>
                     <ChevronRight className="w-4 h-4" />
@@ -1015,9 +1097,9 @@ function Workshops() {
                       });
                       setShowQueryForm(true);
                     }}
-                    className="flex-1 px-6 py-3 bg-purple-600/20 text-purple-400 rounded-xl font-semibold border border-purple-500/30 hover:bg-purple-600/30 transition-all flex items-center justify-center gap-2"
+                    className="flex-1 px-6 py-3 bg-white text-[#1A1A1A] rounded-xl font-semibold border border-[#D4AF37] hover:bg-[#E8F5E9] transition-all flex items-center justify-center gap-2"
                   >
-                    <HelpCircle className="w-4 h-4" />
+                    <HelpCircle className="w-4 h-4 text-[#D4AF37]" />
                     <span>Ask Question</span>
                   </motion.button>
                 </div>
@@ -1049,16 +1131,16 @@ function Workshops() {
       )}
 
       {/* Query Form Section */}
-      <section id="query-form" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+      <section id="query-form" className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <HelpCircle className="w-16 h-16 sm:w-20 sm:h-20 text-yellow-400 mx-auto mb-6" />
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-white">Have a Question?</h2>
-            <p className="text-lg sm:text-xl text-gray-300">
+            <HelpCircle className="w-16 h-16 sm:w-20 sm:h-20 text-[#D4AF37] mx-auto mb-6" />
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#1A1A1A]">Have a Question?</h2>
+            <p className="text-lg sm:text-xl text-[#1A1A1A]">
               We're here to help! Send us your queries and we'll get back to you within 24 hours.
             </p>
           </motion.div>
@@ -1067,12 +1149,12 @@ function Workshops() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-3xl p-6 sm:p-8 border border-yellow-400/30 shadow-2xl"
+            className="bg-white rounded-3xl p-6 sm:p-8 border border-gray-200 shadow-xl"
           >
             <form onSubmit={handleQuerySubmit} className="space-y-6">
               {/* Category Selection */}
-              <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-                <label className="block text-sm font-medium text-gray-300 mb-3">Category *</label>
+              <div className="bg-[#E8F5E9] p-4 rounded-xl border border-gray-200">
+                <label className="block text-sm font-medium text-[#1A1A1A] mb-3">Category *</label>
                 <div className="flex flex-wrap gap-3">
                   {[
                     { id: "workshop", label: "Workshops", icon: BookOpen },
@@ -1087,11 +1169,11 @@ function Workshops() {
                       }}
                       className={`flex items-center gap-2 px-4 py-2 rounded-lg border transition-all ${
                         queryForm.category === type.id
-                          ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-black border-transparent'
-                          : 'bg-gray-700 text-gray-300 border-gray-600 hover:bg-gray-600'
+                          ? 'bg-[#1E301E] text-white border-[#1E301E]'
+                          : 'bg-white text-[#1A1A1A] border-gray-200 hover:bg-[#E8F5E9] hover:border-[#1E301E]'
                       }`}
                     >
-                      <type.icon className="w-4 h-4" />
+                      <type.icon className="w-4 h-4 text-[#D4AF37]" />
                       {type.label}
                     </button>
                   ))}
@@ -1101,8 +1183,8 @@ function Workshops() {
               {/* Personal Information */}
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                    <User className="w-4 h-4 text-yellow-400" />
+                  <label className="block text-sm font-medium text-[#1A1A1A] mb-2 flex items-center gap-2">
+                    <User className="w-4 h-4 text-[#D4AF37]" />
                     Full Name *
                   </label>
                   <input
@@ -1111,13 +1193,13 @@ function Workshops() {
                     value={queryForm.name}
                     onChange={handleQueryChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1A1A1A] placeholder-gray-400 focus:border-[#1E301E] focus:outline-none"
                     placeholder="Enter your full name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                    <Mail className="w-4 h-4 text-yellow-400" />
+                  <label className="block text-sm font-medium text-[#1A1A1A] mb-2 flex items-center gap-2">
+                    <Mail className="w-4 h-4 text-[#D4AF37]" />
                     Email Address *
                   </label>
                   <input
@@ -1126,7 +1208,7 @@ function Workshops() {
                     value={queryForm.email}
                     onChange={handleQueryChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1A1A1A] placeholder-gray-400 focus:border-[#1E301E] focus:outline-none"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -1134,8 +1216,8 @@ function Workshops() {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-yellow-400" />
+                  <label className="block text-sm font-medium text-[#1A1A1A] mb-2 flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-[#D4AF37]" />
                     Phone Number
                   </label>
                   <input
@@ -1143,13 +1225,13 @@ function Workshops() {
                     name="phone"
                     value={queryForm.phone}
                     onChange={handleQueryChange}
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1A1A1A] placeholder-gray-400 focus:border-[#1E301E] focus:outline-none"
                     placeholder="Enter your phone number"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-yellow-400" />
+                  <label className="block text-sm font-medium text-[#1A1A1A] mb-2 flex items-center gap-2">
+                    <FileText className="w-4 h-4 text-[#D4AF37]" />
                     Subject *
                   </label>
                   <input
@@ -1158,7 +1240,7 @@ function Workshops() {
                     value={queryForm.subject}
                     onChange={handleQueryChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1A1A1A] placeholder-gray-400 focus:border-[#1E301E] focus:outline-none"
                     placeholder="Enter subject"
                   />
                 </div>
@@ -1166,8 +1248,8 @@ function Workshops() {
 
               {/* Query Message */}
               <div>
-                <label className="block text-sm font-medium text-gray-300 mb-2 flex items-center gap-2">
-                  <MessageCircle className="w-4 h-4 text-yellow-400" />
+                <label className="block text-sm font-medium text-[#1A1A1A] mb-2 flex items-center gap-2">
+                  <MessageCircle className="w-4 h-4 text-[#D4AF37]" />
                   Your Question/Message *
                 </label>
                 <textarea
@@ -1176,14 +1258,14 @@ function Workshops() {
                   onChange={handleQueryChange}
                   required
                   rows="4"
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none resize-none"
+                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-[#1A1A1A] placeholder-gray-400 focus:border-[#1E301E] focus:outline-none resize-none"
                   placeholder="Please type your question or message here..."
                 />
               </div>
 
               {/* Preferred Contact Method */}
-              <div className="bg-gray-800/50 p-4 rounded-xl border border-gray-700">
-                <label className="block text-sm font-medium text-gray-300 mb-3">Preferred Contact Method</label>
+              <div className="bg-[#E8F5E9] p-4 rounded-xl border border-gray-200">
+                <label className="block text-sm font-medium text-[#1A1A1A] mb-3">Preferred Contact Method</label>
                 <div className="flex flex-wrap gap-4">
                   <label className="flex items-center gap-2">
                     <input
@@ -1192,10 +1274,10 @@ function Workshops() {
                       value="email"
                       checked={queryForm.preferredContact === "email"}
                       onChange={handleQueryChange}
-                      className="text-yellow-400 focus:ring-yellow-400"
+                      className="text-[#1E301E] focus:ring-[#D4AF37]"
                     />
-                    <Mail className="w-4 h-4 text-gray-400" />
-                    <span className="text-sm text-gray-300">Email</span>
+                    <Mail className="w-4 h-4 text-[#D4AF37]" />
+                    <span className="text-sm text-[#1A1A1A]">Email</span>
                   </label>
                   <label className="flex items-center gap-2">
                     <input
@@ -1204,10 +1286,10 @@ function Workshops() {
                       value="phone"
                       checked={queryForm.preferredContact === "phone"}
                       onChange={handleQueryChange}
-                      className="text-yellow-400 focus:ring-yellow-400"
+                      className="text-[#1E301E] focus:ring-[#D4AF37]"
                     />
-                    <Phone className="w-4 h-4 text-gray-400" />
-                    <span className="text-sm text-gray-300">Phone</span>
+                    <Phone className="w-4 h-4 text-[#D4AF37]" />
+                    <span className="text-sm text-[#1A1A1A]">Phone</span>
                   </label>
                   <label className="flex items-center gap-2">
                     <input
@@ -1216,10 +1298,10 @@ function Workshops() {
                       value="whatsapp"
                       checked={queryForm.preferredContact === "whatsapp"}
                       onChange={handleQueryChange}
-                      className="text-yellow-400 focus:ring-yellow-400"
+                      className="text-[#1E301E] focus:ring-[#D4AF37]"
                     />
-                    <MessageCircle className="w-4 h-4 text-gray-400" />
-                    <span className="text-sm text-gray-300">WhatsApp</span>
+                    <MessageCircle className="w-4 h-4 text-[#D4AF37]" />
+                    <span className="text-sm text-[#1A1A1A]">WhatsApp</span>
                   </label>
                 </div>
               </div>
@@ -1230,7 +1312,7 @@ function Workshops() {
                   type="submit"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-xl font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all flex items-center justify-center gap-2"
+                  className="flex-1 px-6 py-3 bg-[#1E301E] text-white rounded-xl font-semibold hover:bg-[#2E7D32] transition-all shadow-sm hover:shadow flex items-center justify-center gap-2"
                 >
                   <Send className="w-4 h-4" />
                   Submit Query
@@ -1238,7 +1320,7 @@ function Workshops() {
               </div>
 
               {/* Note */}
-              <p className="text-xs text-gray-500 text-center">
+              <p className="text-xs text-[#1A1A1A] text-center">
                 We'll get back to you within 24 hours. Your information is safe with us.
               </p>
             </form>
@@ -1251,4 +1333,4 @@ function Workshops() {
   );
 }
 
-export default Workshops; 
+export default Workshops;

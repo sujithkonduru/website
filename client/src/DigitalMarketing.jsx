@@ -332,18 +332,18 @@ function DigitalMarketing() {
   ];
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen overflow-x-hidden">
+    <div className="bg-white text-gray-900 min-h-screen overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section - 100vh */}
       <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-green-900/30 via-blue-900/30 to-purple-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-olive green-100 via-blue-50 to-purple-100" />
 
         {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }} />
         </div>
@@ -353,7 +353,7 @@ function DigitalMarketing() {
           <motion.div
             animate={{ y: [0, -20, 0], rotate: [0, 10, -10, 0] }}
             transition={{ repeat: Infinity, duration: 4 }}
-            className="text-6xl opacity-20"
+            className="text-6xl opacity-30"
           >
             📈
           </motion.div>
@@ -363,7 +363,7 @@ function DigitalMarketing() {
           <motion.div
             animate={{ scale: [1, 1.2, 1], rotate: [0, 5, -5, 0] }}
             transition={{ repeat: Infinity, duration: 3 }}
-            className="text-5xl opacity-20"
+            className="text-5xl opacity-30"
           >
             📢
           </motion.div>
@@ -371,9 +371,9 @@ function DigitalMarketing() {
 
         <div className="absolute bottom-24 left-20 hidden lg:block">
           <motion.div
-            animate={{ scale: [1, 1.3, 1], opacity: [0.2, 0.4, 0.2] }}
+            animate={{ scale: [1, 1.3, 1], opacity: [0.3, 0.5, 0.3] }}
             transition={{ repeat: Infinity, duration: 2.5 }}
-            className="text-4xl opacity-20"
+            className="text-4xl opacity-30"
           >
             🎯
           </motion.div>
@@ -383,7 +383,7 @@ function DigitalMarketing() {
           <motion.div
             animate={{ y: [0, -15, 0], rotate: [0, 360] }}
             transition={{ y: { repeat: Infinity, duration: 4 }, rotate: { repeat: Infinity, duration: 10 } }}
-            className="text-5xl opacity-20"
+            className="text-5xl opacity-30"
           >
             📱
           </motion.div>
@@ -400,26 +400,26 @@ function DigitalMarketing() {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6"
+              className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 shadow-sm"
             >
-              <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
-              <span className="text-sm sm:text-base text-yellow-400 font-semibold">Results-Driven Digital Marketing</span>
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400/50" />
+              <TrendingUp className="w-4 h-4 sm:w-5 sm:h-5 text-olive green-600" />
+              <span className="text-sm sm:text-base text-olive green-600 font-semibold">Results-Driven Digital Marketing</span>
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-olive green-600/50" />
             </motion.div>
 
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 px-2">
-              <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+              <span className="text-gray-900">
                 Drive Growth with
               </span>
               <br />
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              <span className="text-olive green-600">
                 Data-Driven Marketing
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
               We help brands increase visibility, generate quality leads, and grow revenue
               through strategic, data-driven marketing solutions tailored to your business.
             </p>
@@ -430,7 +430,7 @@ function DigitalMarketing() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setShowAuditModal(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full text-sm sm:text-base font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-olive green-600 text-white rounded-full text-sm sm:text-base font-semibold hover:bg-olive green-700 transition-all shadow-md hover:shadow-lg"
               >
                 Get Free Marketing Audit
               </motion.button>
@@ -438,13 +438,12 @@ function DigitalMarketing() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => setShowExpertPopup(true)}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-yellow-400 text-yellow-400 rounded-full text-sm sm:text-base font-semibold hover:bg-yellow-400 hover:text-black transition-all"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-olive green-600 text-olive green-600 rounded-full text-sm sm:text-base font-semibold hover:bg-olive green-600 hover:text-white transition-all"
               >
                 Talk to a Marketing Expert
               </motion.button>
             </div>
 
-            {/* Scroll Indicator */}
             {/* Scroll Indicator */}
             <motion.div
               animate={{ y: [0, 15, 0] }}
@@ -463,15 +462,15 @@ function DigitalMarketing() {
             >
               <div className="flex flex-col items-center gap-1">
                 <span className="text-xs text-gray-400 mb-1">Scroll</span>
-                <ChevronDown className="w-5 h-5 text-yellow-400" />
+                <ChevronDown className="w-5 h-5 text-olive green-600" />
               </div>
             </motion.div>
-            </motion.div>
+          </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-900">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {achievements.map((stat, i) => (
@@ -481,12 +480,12 @@ function DigitalMarketing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all text-center"
+                className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 hover:border-olive green-600/50 transition-all text-center shadow-sm hover:shadow"
               >
-                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-yellow-400 mx-auto mb-2 sm:mb-3" />
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-xs sm:text-sm font-semibold text-yellow-400 mb-1">{stat.label}</div>
-                <p className="text-[10px] sm:text-xs text-gray-400">{stat.desc}</p>
+                <stat.icon className="w-6 h-6 sm:w-8 sm:h-8 text-olive green-600 mx-auto mb-2 sm:mb-3" />
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-1">{stat.value}</div>
+                <div className="text-xs sm:text-sm font-semibold text-olive green-600 mb-1">{stat.label}</div>
+                <p className="text-[10px] sm:text-xs text-gray-500">{stat.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -494,7 +493,7 @@ function DigitalMarketing() {
       </section>
 
       {/* Who This Is For */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-950">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -502,10 +501,10 @@ function DigitalMarketing() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Who We Help
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
               Tailored marketing solutions for businesses at every stage
             </p>
           </motion.div>
@@ -521,31 +520,21 @@ function DigitalMarketing() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="group bg-gradient-to-br from-gray-800 to-gray-900 p-5 sm:p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all"
+                  className="group bg-white p-5 sm:p-6 rounded-xl border border-gray-200 hover:border-olive green-600/50 transition-all shadow-sm hover:shadow"
                 >
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow-400/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
-                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400" />
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-olive green-100 rounded-lg flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform">
+                    <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-olive green-600" />
                   </div>
-                  <h3 className="text-base sm:text-lg font-bold text-white mb-1">{audience.title}</h3>
-                  <p className="text-[10px] sm:text-xs text-yellow-400/80 font-medium mb-2">{audience.segment}</p>
-                  <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4">{audience.desc}</p>
+                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1">{audience.title}</h3>
+                  <p className="text-[10px] sm:text-xs text-olive green-600/80 font-medium mb-2">{audience.segment}</p>
+                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">{audience.desc}</p>
 
                   <div className="space-y-2 sm:space-y-3">
-                    {/* <div>
-                      <p className="text-[10px] sm:text-xs font-semibold text-red-400 mb-1">Key Challenges:</p>
-                      <div className="flex flex-wrap gap-1">
-                        {audience.challenges.map((challenge, j) => (
-                          <span key={j} className="text-[8px] sm:text-[10px] bg-red-500/10 text-red-400 px-1.5 sm:px-2 py-0.5 rounded-full">
-                            {challenge}
-                          </span>
-                        ))}
-                      </div> */}
-                    {/* </div> */}
                     <div>
-                      <p className="text-[10px] sm:text-xs font-semibold text-green-400 mb-1">Strategic Solutions:</p>
+                      <p className="text-[10px] sm:text-xs font-semibold text-olive green-600 mb-1">Strategic Solutions:</p>
                       <div className="flex flex-wrap gap-1">
                         {audience.solutions.map((solution, j) => (
-                          <span key={j} className="text-[8px] sm:text-[10px] bg-green-500/10 text-green-400 px-1.5 sm:px-2 py-0.5 rounded-full">
+                          <span key={j} className="text-[8px] sm:text-[10px] bg-olive green-100 text-olive green-700 px-1.5 sm:px-2 py-0.5 rounded-full">
                             {solution}
                           </span>
                         ))}
@@ -560,7 +549,7 @@ function DigitalMarketing() {
       </section>
 
       {/* Services Grid */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -568,10 +557,10 @@ function DigitalMarketing() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Services We Offer
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
               Comprehensive marketing solutions to drive your business growth
             </p>
           </motion.div>
@@ -585,15 +574,15 @@ function DigitalMarketing() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-5 sm:p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all"
+                className="bg-white p-5 sm:p-6 rounded-xl border border-gray-200 hover:border-olive green-600/50 transition-all shadow-sm hover:shadow"
               >
-                <div className="text-yellow-400 mb-3 sm:mb-4">{service.icon}</div>
-                <h3 className="text-base sm:text-lg font-bold text-white mb-2">{service.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4">{service.desc}</p>
+                <div className="text-olive green-600 mb-3 sm:mb-4">{service.icon}</div>
+                <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">{service.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4">{service.desc}</p>
                 <div className="grid grid-cols-2 gap-1 sm:gap-2">
                   {service.features.map((feature, j) => (
-                    <div key={j} className="flex items-center gap-1 text-[10px] sm:text-xs text-gray-400">
-                      <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-400 flex-shrink-0" />
+                    <div key={j} className="flex items-center gap-1 text-[10px] sm:text-xs text-gray-600">
+                      <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-olive green-600 flex-shrink-0" />
                       <span className="truncate">{feature}</span>
                     </div>
                   ))}
@@ -604,12 +593,8 @@ function DigitalMarketing() {
         </div>
       </section>
 
-
-
-
-
       {/* Industry Use Cases */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-950">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -617,10 +602,10 @@ function DigitalMarketing() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Industry Success Stories
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
               Real results across diverse industries
             </p>
           </motion.div>
@@ -641,7 +626,7 @@ function DigitalMarketing() {
               <SwiperSlide key={i}>
                 <motion.div
                   whileHover={{ y: -5 }}
-                  className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all h-full overflow-hidden"
+                  className="bg-white rounded-xl border border-gray-200 hover:border-olive green-600/50 transition-all h-full overflow-hidden shadow-sm hover:shadow"
                 >
                   <div className="relative h-32 sm:h-40">
                     <img
@@ -649,20 +634,20 @@ function DigitalMarketing() {
                       alt={useCase.industry}
                       className="w-full h-full object-cover"
                     />
-                    <div className="absolute top-2 left-2 bg-black/60 backdrop-blur-sm px-2 py-1 rounded-full text-xs">
+                    <div className="absolute top-2 left-2 bg-white/90 backdrop-blur-sm border border-gray-200 px-2 py-1 rounded-full text-xs text-gray-900">
                       {useCase.icon} {useCase.industry}
                     </div>
                   </div>
                   <div className="p-4 sm:p-5">
-                    <p className="text-xs sm:text-sm text-gray-300 mb-2">
-                      <span className="font-semibold text-white">Challenge:</span> {useCase.challenge}
+                    <p className="text-xs sm:text-sm text-gray-700 mb-2">
+                      <span className="font-semibold text-gray-900">Challenge:</span> {useCase.challenge}
                     </p>
-                    <p className="text-xs sm:text-sm text-gray-300 mb-3">
-                      <span className="font-semibold text-white">Solution:</span> {useCase.solution}
+                    <p className="text-xs sm:text-sm text-gray-700 mb-3">
+                      <span className="font-semibold text-gray-900">Solution:</span> {useCase.solution}
                     </p>
                     <div className="space-y-1">
                       {useCase.results.map((result, j) => (
-                        <div key={j} className="flex items-center gap-1 text-[10px] sm:text-xs text-green-400">
+                        <div key={j} className="flex items-center gap-1 text-[10px] sm:text-xs text-olive green-600">
                           <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 flex-shrink-0" />
                           <span>{result}</span>
                         </div>
@@ -677,7 +662,7 @@ function DigitalMarketing() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -685,10 +670,10 @@ function DigitalMarketing() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Why Choose Us?
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
               What makes us different from other marketing agencies
             </p>
           </motion.div>
@@ -702,11 +687,11 @@ function DigitalMarketing() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-5 sm:p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all text-center"
+                className="bg-white p-5 sm:p-6 rounded-xl border border-gray-200 hover:border-olive green-600/50 transition-all text-center shadow-sm hover:shadow"
               >
                 <div className="text-3xl sm:text-4xl mb-2 sm:mb-3">{reason.icon}</div>
-                <h3 className="text-sm sm:text-base font-bold text-white mb-2">{reason.title}</h3>
-                <p className="text-xs sm:text-sm text-gray-400">{reason.desc}</p>
+                <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">{reason.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-600">{reason.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -714,7 +699,7 @@ function DigitalMarketing() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-950">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -722,10 +707,10 @@ function DigitalMarketing() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Frequently Asked Questions
             </h2>
-            <p className="text-sm sm:text-base text-gray-400">
+            <p className="text-sm sm:text-base text-gray-600">
               Got questions? We've got answers.
             </p>
           </motion.div>
@@ -738,14 +723,14 @@ function DigitalMarketing() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 overflow-hidden"
+                className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-olive green-600/50 transition-all"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full p-4 sm:p-5 text-left flex justify-between items-center hover:bg-gray-800/50 transition-all gap-2"
+                  className="w-full p-4 sm:p-5 text-left flex justify-between items-center hover:bg-gray-50 transition-all gap-2"
                 >
-                  <h3 className="text-xs sm:text-sm font-semibold text-white pr-2">{faq.q}</h3>
-                  <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 transition-transform flex-shrink-0 ${openFaq === i ? 'rotate-180' : ''}`} />
+                  <h3 className="text-xs sm:text-sm font-semibold text-gray-900 pr-2">{faq.q}</h3>
+                  <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 text-olive green-600 transition-transform flex-shrink-0 ${openFaq === i ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
                   {openFaq === i && (
@@ -755,8 +740,8 @@ function DigitalMarketing() {
                       exit={{ height: 0 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-4 sm:px-5 pb-4 sm:pb-5">
-                        <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{faq.a}</p>
+                      <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-100">
+                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed pt-3">{faq.a}</p>
                       </div>
                     </motion.div>
                   )}
@@ -768,7 +753,7 @@ function DigitalMarketing() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -776,8 +761,8 @@ function DigitalMarketing() {
             viewport={{ once: true }}
             className="relative rounded-xl sm:rounded-2xl overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-90" />
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2070')] bg-cover bg-center mix-blend-overlay opacity-30" />
+            <div className="absolute inset-0 bg-olive green-600" />
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=2070')] bg-cover bg-center mix-blend-overlay opacity-20" />
 
             <div className="relative z-10 p-6 sm:p-8 md:p-10 text-center">
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3">
@@ -791,7 +776,7 @@ function DigitalMarketing() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => setShowAuditModal(true)}
-                  className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-2.5 bg-white text-gray-900 rounded-full text-xs sm:text-sm font-semibold hover:shadow-lg transition-all"
+                  className="w-full sm:w-auto px-4 sm:px-6 py-2 sm:py-2.5 bg-white text-olive green-600 rounded-full text-xs sm:text-sm font-semibold hover:shadow-lg transition-all"
                 >
                   Get Free Marketing Audit
                 </motion.button>
@@ -809,7 +794,7 @@ function DigitalMarketing() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
             onClick={() => setShowExpertPopup(false)}
           >
             <motion.div
@@ -817,28 +802,28 @@ function DigitalMarketing() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl max-w-md w-full border border-yellow-400/30 shadow-2xl overflow-hidden"
+              className="bg-white rounded-xl max-w-md w-full border border-gray-200 shadow-2xl overflow-hidden"
             >
-              <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-4">
-                <h2 className="text-base sm:text-lg font-bold text-black">Contact Our Marketing Expert</h2>
+              <div className="bg-olive green-600 p-4">
+                <h2 className="text-base sm:text-lg font-bold text-white">Contact Our Marketing Expert</h2>
               </div>
               <div className="p-5 sm:p-6">
-                <p className="text-sm sm:text-base text-gray-300 mb-4">
+                <p className="text-sm sm:text-base text-gray-700 mb-4">
                   Please contact us. We will guide you with the best marketing strategy and required information.
                 </p>
                 <div className="space-y-3 mb-5">
                   <div className="flex items-center gap-3 text-sm">
-                    <HeadphonesIcon className="w-4 h-4 text-yellow-400" />
-                    <span className="text-gray-300">+91 98765 43210</span>
+                    <HeadphonesIcon className="w-4 h-4 text-olive green-600" />
+                    <span className="text-gray-700">+91 98765 43210</span>
                   </div>
                   <div className="flex items-center gap-3 text-sm">
-                    <Mail className="w-4 h-4 text-yellow-400" />
-                    <span className="text-gray-300">marketing@stackenzo.com</span>
+                    <Mail className="w-4 h-4 text-olive green-600" />
+                    <span className="text-gray-700">marketing@stackenzo.com</span>
                   </div>
                 </div>
                 <button
                   onClick={() => setShowExpertPopup(false)}
-                  className="w-full px-4 py-2.5 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-lg text-sm font-semibold hover:shadow-lg transition-all"
+                  className="w-full px-4 py-2.5 bg-olive green-600 text-white rounded-lg text-sm font-semibold hover:bg-olive green-700 transition-all"
                 >
                   Close
                 </button>
@@ -855,7 +840,7 @@ function DigitalMarketing() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50 p-4"
+            className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
             onClick={() => setShowAuditModal(false)}
           >
             <motion.div
@@ -863,13 +848,13 @@ function DigitalMarketing() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-yellow-400/30 shadow-2xl"
+              className="bg-white rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto border border-gray-200 shadow-2xl"
             >
-              <div className="sticky top-0 bg-gradient-to-r from-yellow-400 to-orange-500 p-4 flex justify-between items-center">
-                <h2 className="text-base sm:text-lg font-bold text-black">Free Marketing Audit</h2>
+              <div className="sticky top-0 bg-olive green-600 p-4 flex justify-between items-center">
+                <h2 className="text-base sm:text-lg font-bold text-white">Free Marketing Audit</h2>
                 <button
                   onClick={() => setShowAuditModal(false)}
-                  className="text-black hover:text-gray-700 p-1 hover:bg-white/20 rounded-lg transition-all"
+                  className="text-white hover:text-gray-200 p-1 hover:bg-white/20 rounded-lg transition-all"
                 >
                   <X className="w-4 h-4 sm:w-5 sm:h-5" />
                 </button>
@@ -882,7 +867,7 @@ function DigitalMarketing() {
                     placeholder="Full Name *"
                     value={auditForm.name}
                     onChange={(e) => setAuditForm({ ...auditForm, name: e.target.value })}
-                    className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm placeholder-gray-500 focus:border-yellow-400 outline-none transition-all"
+                    className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm placeholder-gray-500 focus:border-olive green-600 outline-none transition-all"
                     required
                   />
                   <input
@@ -890,7 +875,7 @@ function DigitalMarketing() {
                     placeholder="Email Address *"
                     value={auditForm.email}
                     onChange={(e) => setAuditForm({ ...auditForm, email: e.target.value })}
-                    className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm placeholder-gray-500 focus:border-yellow-400 outline-none transition-all"
+                    className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm placeholder-gray-500 focus:border-olive green-600 outline-none transition-all"
                     required
                   />
                 </div>
@@ -901,7 +886,7 @@ function DigitalMarketing() {
                     placeholder="Phone Number *"
                     value={auditForm.phone}
                     onChange={(e) => setAuditForm({ ...auditForm, phone: e.target.value })}
-                    className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm placeholder-gray-500 focus:border-yellow-400 outline-none transition-all"
+                    className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm placeholder-gray-500 focus:border-olive green-600 outline-none transition-all"
                     required
                   />
                   <input
@@ -909,7 +894,7 @@ function DigitalMarketing() {
                     placeholder="Company Name *"
                     value={auditForm.company}
                     onChange={(e) => setAuditForm({ ...auditForm, company: e.target.value })}
-                    className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm placeholder-gray-500 focus:border-yellow-400 outline-none transition-all"
+                    className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm placeholder-gray-500 focus:border-olive green-600 outline-none transition-all"
                     required
                   />
                 </div>
@@ -919,13 +904,13 @@ function DigitalMarketing() {
                   placeholder="Website URL"
                   value={auditForm.website}
                   onChange={(e) => setAuditForm({ ...auditForm, website: e.target.value })}
-                  className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm placeholder-gray-500 focus:border-yellow-400 outline-none transition-all"
+                  className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm placeholder-gray-500 focus:border-olive green-600 outline-none transition-all"
                 />
 
                 <select
                   value={auditForm.industry}
                   onChange={(e) => setAuditForm({ ...auditForm, industry: e.target.value })}
-                  className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm focus:border-yellow-400 outline-none"
+                  className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm focus:border-olive green-600 outline-none"
                   required
                 >
                   <option value="">Select Industry *</option>
@@ -943,7 +928,7 @@ function DigitalMarketing() {
                   value={auditForm.currentMarketing}
                   onChange={(e) => setAuditForm({ ...auditForm, currentMarketing: e.target.value })}
                   rows="2"
-                  className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm placeholder-gray-500 focus:border-yellow-400 outline-none transition-all resize-none"
+                  className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm placeholder-gray-500 focus:border-olive green-600 outline-none transition-all resize-none"
                 />
 
                 <textarea
@@ -951,14 +936,14 @@ function DigitalMarketing() {
                   value={auditForm.goals}
                   onChange={(e) => setAuditForm({ ...auditForm, goals: e.target.value })}
                   rows="2"
-                  className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm placeholder-gray-500 focus:border-yellow-400 outline-none transition-all resize-none"
+                  className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm placeholder-gray-500 focus:border-olive green-600 outline-none transition-all resize-none"
                   required
                 />
 
                 <select
                   value={auditForm.budget}
                   onChange={(e) => setAuditForm({ ...auditForm, budget: e.target.value })}
-                  className="w-full p-2.5 sm:p-3 bg-gray-800 border border-gray-700 rounded-lg text-white text-xs sm:text-sm focus:border-yellow-400 outline-none"
+                  className="w-full p-2.5 sm:p-3 bg-white border border-gray-200 rounded-lg text-gray-900 text-xs sm:text-sm focus:border-olive green-600 outline-none"
                   required
                 >
                   <option value="">Monthly Marketing Budget *</option>
@@ -972,7 +957,7 @@ function DigitalMarketing() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full px-4 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-lg text-sm sm:text-base font-semibold hover:shadow-lg disabled:opacity-50 transition-all"
+                  className="w-full px-4 py-3 bg-olive green-600 text-white rounded-lg text-sm sm:text-base font-semibold hover:bg-olive green-700 disabled:opacity-50 transition-all"
                 >
                   {isSubmitting ? 'Submitting...' : 'Get My Free Audit'}
                 </button>

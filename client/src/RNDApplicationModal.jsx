@@ -80,7 +80,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
         <div className="bg-gray-900 rounded-2xl w-full max-w-3xl max-h-[90vh] overflow-y-auto border border-gray-700">
           <div className="sticky top-0 bg-gray-900 border-b border-gray-700 p-4 sm:p-6 flex justify-between items-center z-10">
             <div>
-              <h2 className="text-xl sm:text-2xl font-bold text-yellow-400">Apply for R&D Program</h2>
+              <h2 className="text-xl sm:text-2xl font-bold text-olive green-400">Apply for R&D Program</h2>
               <p className="text-sm text-gray-400 mt-1">{projectTitle}</p>
             </div>
             <button onClick={onClose} className="text-gray-400 hover:text-white">
@@ -98,7 +98,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                 />
               </div>
 
@@ -110,7 +110,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                 />
               </div>
             </div>
@@ -124,7 +124,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                   value={formData.phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                 />
               </div>
 
@@ -135,7 +135,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                   value={formData.qualification}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                 >
                   <option value="">Select Qualification</option>
                   <option value="B.Tech">B.Tech</option>
@@ -156,7 +156,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                   value={formData.institution}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                 />
               </div>
 
@@ -168,7 +168,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                   value={formData.cgpa}
                   onChange={handleChange}
                   placeholder="e.g., 8.5 or 85%"
-                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                  className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
                 />
               </div>
             </div>
@@ -181,7 +181,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                 onChange={handleChange}
                 rows="3"
                 placeholder="Mention any relevant projects, internships, or research experience"
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
               />
             </div>
 
@@ -194,7 +194,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                 required
                 rows="3"
                 placeholder="Describe your research interests and areas of expertise"
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
               />
             </div>
 
@@ -207,7 +207,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
                 required
                 rows="4"
                 placeholder="Explain your motivation and what you hope to achieve"
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-yellow-400"
+                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-olive green-400"
               />
             </div>
 
@@ -215,7 +215,7 @@ function RNDApplicationModal({ isOpen, onClose, projectId = null, projectTitle =
               <button
                 type="submit"
                 disabled={loading}
-                className="flex-1 px-6 py-3 bg-yellow-400 text-black rounded-full font-semibold hover:bg-yellow-300 transition disabled:opacity-50"
+                className="flex-1 px-6 py-3 bg-olive green-400 text-black rounded-full font-semibold hover:bg-olive green-300 transition disabled:opacity-50"
               >
                 {loading ? "Submitting..." : "Submit Application"}
               </button>

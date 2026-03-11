@@ -140,9 +140,9 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4 overflow-y-auto">
-      <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-2xl w-full max-w-2xl my-8 border border-yellow-400/30 shadow-2xl">
+      <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-2xl w-full max-w-2xl my-8 border border-olive green-400/30 shadow-2xl">
         {/* Header */}
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-500 p-6 rounded-t-2xl">
+        <div className="bg-gradient-to-r from-olive green-400 to-orange-500 p-6 rounded-t-2xl">
           <div className="flex items-center justify-between mb-4">
             <div>
               <h2 className="text-2xl font-bold text-black flex items-center gap-2">
@@ -166,7 +166,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
               onClick={() => setEnrollmentType("student")}
               className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
                 enrollmentType === "student"
-                  ? "bg-black text-yellow-400 shadow-lg"
+                  ? "bg-black text-olive green-400 shadow-lg"
                   : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
@@ -178,7 +178,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
               onClick={() => setEnrollmentType("school")}
               className={`flex-1 py-3 px-4 rounded-xl font-semibold transition-all flex items-center justify-center gap-2 ${
                 enrollmentType === "school"
-                  ? "bg-black text-yellow-400 shadow-lg"
+                  ? "bg-black text-olive green-400 shadow-lg"
                   : "bg-white/10 text-white hover:bg-white/20"
               }`}
             >
@@ -193,8 +193,8 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
           {enrollmentType === "student" ? (
             /* Student Enrollment Form */
             <form onSubmit={handleStudentSubmit} className="space-y-5">
-              <div className="bg-yellow-400/10 border border-yellow-400/30 rounded-xl p-4 mb-4">
-                <h3 className="text-yellow-400 font-semibold flex items-center gap-2 mb-2">
+              <div className="bg-olive green-400/10 border border-olive green-400/30 rounded-xl p-4 mb-4">
+                <h3 className="text-olive green-400 font-semibold flex items-center gap-2 mb-2">
                   <GraduationCap className="w-5 h-5" />
                   Student Information
                 </h3>
@@ -203,7 +203,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
 
               {/* Student Name */}
               <div>
-                <label className="block text-sm font-medium text-yellow-400 mb-2">
+                <label className="block text-sm font-medium text-olive green-400 mb-2">
                   Student's Name *
                 </label>
                 <div className="relative">
@@ -214,7 +214,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                     value={studentForm.studentName}
                     onChange={handleStudentChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-olive green-400 focus:outline-none"
                     placeholder="Enter student's full name"
                   />
                 </div>
@@ -222,7 +222,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
 
               {/* Parent Name */}
               <div>
-                <label className="block text-sm font-medium text-yellow-400 mb-2">
+                <label className="block text-sm font-medium text-olive green-400 mb-2">
                   Parent/Guardian Name *
                 </label>
                 <div className="relative">
@@ -233,7 +233,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                     value={studentForm.parentName}
                     onChange={handleStudentChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-olive green-400 focus:outline-none"
                     placeholder="Enter parent/guardian name"
                   />
                 </div>
@@ -242,7 +242,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
               {/* Email & Phone */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-yellow-400 mb-2">
+                  <label className="block text-sm font-medium text-olive green-400 mb-2">
                     Email Address *
                   </label>
                   <div className="relative">
@@ -253,14 +253,14 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                       value={studentForm.email}
                       onChange={handleStudentChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                      className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-olive green-400 focus:outline-none"
                       placeholder="parent@email.com"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-400 mb-2">
+                  <label className="block text-sm font-medium text-olive green-400 mb-2">
                     Phone Number *
                   </label>
                   <div className="relative">
@@ -271,7 +271,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                       value={studentForm.phone}
                       onChange={handleStudentChange}
                       required
-                      className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                      className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-olive green-400 focus:outline-none"
                       placeholder="+91 XXXXX XXXXX"
                     />
                   </div>
@@ -281,7 +281,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
               {/* Class & Age */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-yellow-400 mb-2">
+                  <label className="block text-sm font-medium text-olive green-400 mb-2">
                     Current Class *
                   </label>
                   <select
@@ -289,7 +289,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                     value={studentForm.studentClass}
                     onChange={handleStudentChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:border-yellow-400 focus:outline-none"
+                    className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white focus:border-olive green-400 focus:outline-none"
                   >
                     <option value="" className="bg-gray-900">Select Class</option>
                     <option value="6" className="bg-gray-900">Class 6</option>
@@ -300,7 +300,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-yellow-400 mb-2">
+                  <label className="block text-sm font-medium text-olive green-400 mb-2">
                     Student's Age *
                   </label>
                   <div className="relative">
@@ -313,7 +313,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                       required
                       min="10"
                       max="16"
-                      className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                      className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-olive green-400 focus:outline-none"
                       placeholder="Age (10-16)"
                     />
                   </div>
@@ -322,7 +322,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
 
               {/* School */}
               <div>
-                <label className="block text-sm font-medium text-yellow-400 mb-2">
+                <label className="block text-sm font-medium text-olive green-400 mb-2">
                   School Name *
                 </label>
                 <div className="relative">
@@ -333,7 +333,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                     value={studentForm.school}
                     onChange={handleStudentChange}
                     required
-                    className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none"
+                    className="w-full pl-10 pr-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-olive green-400 focus:outline-none"
                     placeholder="Enter school name"
                   />
                 </div>
@@ -341,7 +341,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
 
               {/* Previous Experience */}
               <div>
-                <label className="block text-sm font-medium text-yellow-400 mb-2">
+                <label className="block text-sm font-medium text-olive green-400 mb-2">
                   Any previous robotics experience?
                 </label>
                 <div className="flex gap-4">
@@ -352,7 +352,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                       value="yes"
                       checked={studentForm.previousExperience === "yes"}
                       onChange={handleStudentChange}
-                      className="w-4 h-4 text-yellow-400"
+                      className="w-4 h-4 text-olive green-400"
                     />
                     <span className="text-white">Yes</span>
                   </label>
@@ -363,7 +363,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                       value="no"
                       checked={studentForm.previousExperience === "no"}
                       onChange={handleStudentChange}
-                      className="w-4 h-4 text-yellow-400"
+                      className="w-4 h-4 text-olive green-400"
                     />
                     <span className="text-white">No</span>
                   </label>
@@ -372,7 +372,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
 
               {/* Message */}
               <div>
-                <label className="block text-sm font-medium text-yellow-400 mb-2">
+                <label className="block text-sm font-medium text-olive green-400 mb-2">
                   Additional Information (Optional)
                 </label>
                 <textarea
@@ -380,7 +380,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                   value={studentForm.message}
                   onChange={handleStudentChange}
                   rows="3"
-                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-yellow-400 focus:outline-none resize-none"
+                  className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-olive green-400 focus:outline-none resize-none"
                   placeholder="Any questions or special requirements?"
                 />
               </div>
@@ -397,7 +397,7 @@ function RoboticsEnrollmentModal({ isOpen, onClose }) {
                 <button
                   type="submit"
                   disabled={loading}
-                  className="flex-1 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-xl font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="flex-1 px-6 py-3 bg-gradient-to-r from-olive green-400 to-orange-500 text-black rounded-xl font-semibold hover:shadow-lg hover:shadow-olive green-500/25 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {loading ? (
                     <>

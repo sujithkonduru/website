@@ -61,10 +61,12 @@ function Navbar() {
     setActiveDropdown(null);
   };
 
-  // About dropdown items
-  const aboutItems = [
-    { name: "About Us", path: "/About" },
-    { name: "Careers", path: "/Career" }
+  // Programs dropdown items
+  const programItems = [
+    {name: "All Programs", path:"/StackenzoPrograms"},
+    { name: "Events", path: "/Programs" },
+    { name: "College Programs", path: "/WorkShops" },
+    { name: "School Programs", path: "/Robotics" }
   ];
 
   // Services dropdown items
@@ -76,37 +78,34 @@ function Navbar() {
     { name: "GSIN", path: "/Community" }
   ];
 
-  // Programs dropdown items
-  const programItems = [
-    {name: "All Programs", path:"/StackenzoPrograms"},
-    { name: "Events", path: "/Programs" },
-    { name: "College Programs", path: "/WorkShops" },
-    { name: "School Programs", path: "/Robotics" }
-  ];
-
   const dropdowns = [
     {
       id: "programs",
       label: "Programs",
       items: programItems,
-      // icon: "📚"
     },
     {
       id: "services",
       label: "Services",
       items: serviceItems,
-      // icon: "⚙️"
     }
   ];
 
   return (
     <nav ref={navRef} className="fixed top-0 left-0 w-full flex justify-between items-center 
       px-4 sm:px-6 md:px-10 py-3 sm:py-4 
-      bg-black/40 backdrop-blur-xl border-b border-white/10 z-50">
+      bg-white backdrop-blur-xl border-b border-gray-200 z-50">
       
       {/* Logo */}
-      <Link to="/" onClick={closeAll} className="text-lg sm:text-xl md:text-2xl font-extrabold tracking-wide text-yellow-400 z-50 hover:text-yellow-300 transition-colors">
-        Stackenzo
+      <Link to="/" onClick={closeAll} className="z-50 flex items-center gap-2">
+        <img 
+          src="/images/Stackenzo small Logo.jpg.jpeg" 
+          alt="Stackenzo" 
+          className="h-8 sm:h-10 md:h-12 w-auto hover:opacity-80 transition-opacity"
+        />
+        <span className="text-lg sm:text-xl md:text-2xl font-extrabold tracking-wide text-[#1E301E] hover:text-[#2E7D32] transition-colors">
+          Stackenzo
+        </span>
       </Link>
 
       {/* Desktop Navigation */}
@@ -115,8 +114,8 @@ function Navbar() {
         <Link
           to="/"
           onClick={closeAll}
-          className={`px-3 py-2 text-white hover:text-yellow-300 transition font-medium rounded-lg hover:bg-white/5 ${
-            isActivePage('/') ? 'bg-yellow-400/20 text-yellow-300' : ''
+          className={`px-3 py-2 text-[#1A1A1A] hover:text-[#1E301E] transition font-medium rounded-lg hover:bg-[#E8F5E9] ${
+            isActivePage('/') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
           }`}
         >
           Home
@@ -126,8 +125,8 @@ function Navbar() {
         <Link
           to="/About"
           onClick={closeAll}
-          className={`px-3 py-2 text-white hover:text-yellow-300 transition font-medium rounded-lg hover:bg-white/5 ${
-            isActivePage('/About') ? 'bg-yellow-400/20 text-yellow-300' : ''
+          className={`px-3 py-2 text-[#1A1A1A] hover:text-[#1E301E] transition font-medium rounded-lg hover:bg-[#E8F5E9] ${
+            isActivePage('/About') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
           }`}
         >
           About
@@ -137,8 +136,8 @@ function Navbar() {
         <Link
           to="/Career"
           onClick={closeAll}
-          className={`px-3 py-2 text-white hover:text-yellow-300 transition font-medium rounded-lg hover:bg-white/5 ${
-            isActivePage('/Career') ? 'bg-yellow-400/20 text-yellow-300' : ''
+          className={`px-3 py-2 text-[#1A1A1A] hover:text-[#1E301E] transition font-medium rounded-lg hover:bg-[#E8F5E9] ${
+            isActivePage('/Career') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
           }`}
         >
           Careers
@@ -148,8 +147,8 @@ function Navbar() {
         <Link
           to="/Gallerypage"
           onClick={closeAll}
-          className={`px-3 py-2 text-white hover:text-yellow-300 transition font-medium rounded-lg hover:bg-white/5 ${
-            isActivePage('/Gallerypage') ? 'bg-yellow-400/20 text-yellow-300' : ''
+          className={`px-3 py-2 text-[#1A1A1A] hover:text-[#1E301E] transition font-medium rounded-lg hover:bg-[#E8F5E9] ${
+            isActivePage('/Gallerypage') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
           }`}
         >
           Gallery
@@ -164,13 +163,12 @@ function Navbar() {
             onMouseLeave={handleMouseLeave}
           >
             <button
-              className={`flex items-center space-x-1 px-3 py-2 text-white hover:text-yellow-300 transition font-medium rounded-lg hover:bg-white/5 ${
-                activeDropdown === dropdown.id ? 'text-yellow-300 bg-white/5' : ''
+              className={`flex items-center space-x-1 px-3 py-2 text-[#1A1A1A] hover:text-[#1E301E] transition font-medium rounded-lg hover:bg-[#E8F5E9] ${
+                activeDropdown === dropdown.id ? 'text-[#1E301E] bg-[#E8F5E9]' : ''
               } ${
-                isActiveDropdown(dropdown.items) ? 'bg-yellow-400/20 text-yellow-300' : ''
+                isActiveDropdown(dropdown.items) ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
               }`}
             >
-              <span className="mr-1">{dropdown.icon}</span>
               <span>{dropdown.label}</span>
               {activeDropdown === dropdown.id ? 
                 <ChevronUp className="w-4 h-4 ml-1" /> : 
@@ -180,21 +178,21 @@ function Navbar() {
             
             {activeDropdown === dropdown.id && (
               <div 
-                className="absolute top-full left-0 mt-2 w-56 bg-gradient-to-b from-gray-900 to-black 
-                backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl py-2 overflow-hidden
+                className="absolute top-full left-0 mt-2 w-56 bg-white 
+                backdrop-blur-xl border border-gray-200 rounded-xl shadow-2xl py-2 overflow-hidden
                 animate-in fade-in slide-in-from-top-2 duration-200"
               >
                 {/* Decorative gradient line */}
-                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-500" />
+                <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#1E301E] to-[#2E7D32]" />
                 
                 {dropdown.items.map((item) => (
                   <Link
                     key={item.name}
                     to={item.path}
-                    className={`block px-4 py-2.5 text-white hover:text-yellow-300 
-                      hover:bg-white/5 transition-all duration-200 border-l-2 border-transparent
-                      hover:border-yellow-400 ml-1 mr-1 rounded ${
-                      isActivePage(item.path) ? 'bg-yellow-400/20 text-yellow-300 border-yellow-400' : ''
+                    className={`block px-4 py-2.5 text-[#1A1A1A] hover:text-[#1E301E] 
+                      hover:bg-[#E8F5E9] transition-all duration-200 border-l-2 border-transparent
+                      hover:border-[#1E301E] ml-1 mr-1 rounded ${
+                      isActivePage(item.path) ? 'bg-[#E8F5E9] text-[#1E301E] border-[#1E301E]' : ''
                     }`}
                     onClick={closeAll}
                   >
@@ -210,8 +208,8 @@ function Navbar() {
         <Link
           to="/Contact"
           onClick={closeAll}
-          className={`px-3 py-2 text-white hover:text-yellow-300 transition font-medium rounded-lg hover:bg-white/5 ${
-            isActivePage('/Contact') ? 'bg-yellow-400/20 text-yellow-300' : ''
+          className={`px-3 py-2 text-[#1A1A1A] hover:text-[#1E301E] transition font-medium rounded-lg hover:bg-[#E8F5E9] ${
+            isActivePage('/Contact') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
           }`}
         >
           Contact
@@ -221,7 +219,7 @@ function Navbar() {
       {/* Mobile Menu Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="lg:hidden text-white hover:text-yellow-400 transition p-2 rounded-md hover:bg-white/10 z-50 flex items-center justify-center"
+        className="lg:hidden text-[#1A1A1A] hover:text-[#1E301E] transition p-2 rounded-md hover:bg-[#E8F5E9] z-50 flex items-center justify-center"
         aria-label="Toggle menu"
       >
         {isOpen ? 
@@ -232,19 +230,18 @@ function Navbar() {
 
       {/* Mobile Navigation - Click based for mobile */}
       {isOpen && (
-        <div className="absolute top-full left-0 w-full bg-gradient-to-b from-gray-900 to-black 
-          backdrop-blur-xl border-b border-white/10 lg:hidden shadow-2xl max-h-[80vh] overflow-y-auto">
+        <div className="absolute top-full left-0 w-full bg-white 
+          backdrop-blur-xl border-b border-gray-200 lg:hidden shadow-2xl max-h-[80vh] overflow-y-auto">
           <div className="flex flex-col space-y-0 px-4 py-3">
             {/* Home Link */}
             <Link
               to="/"
               onClick={closeAll}
-              className={`py-3 px-4 text-white hover:text-yellow-300 hover:bg-white/5 transition font-medium
-                border-b border-white/5 text-base flex items-center ${
-                isActivePage('/') ? 'bg-yellow-400/20 text-yellow-300' : ''
+              className={`py-3 px-4 text-[#1A1A1A] hover:text-[#1E301E] hover:bg-[#E8F5E9] transition font-medium
+                border-b border-gray-100 text-base flex items-center ${
+                isActivePage('/') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
               }`}
             >
-              <span className="mr-2"></span>
               Home
             </Link>
 
@@ -252,12 +249,11 @@ function Navbar() {
             <Link
               to="/About"
               onClick={closeAll}
-              className={`py-3 px-4 text-white hover:text-yellow-300 hover:bg-white/5 transition font-medium
-                border-b border-white/5 text-base flex items-center ${
-                isActivePage('/About') ? 'bg-yellow-400/20 text-yellow-300' : ''
+              className={`py-3 px-4 text-[#1A1A1A] hover:text-[#1E301E] hover:bg-[#E8F5E9] transition font-medium
+                border-b border-gray-100 text-base flex items-center ${
+                isActivePage('/About') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
               }`}
             >
-              <span className="mr-2"></span>
               About
             </Link>
 
@@ -265,12 +261,11 @@ function Navbar() {
             <Link
               to="/Career"
               onClick={closeAll}
-              className={`py-3 px-4 text-white hover:text-yellow-300 hover:bg-white/5 transition font-medium
-                border-b border-white/5 text-base flex items-center ${
-                isActivePage('/Career') ? 'bg-yellow-400/20 text-yellow-300' : ''
+              className={`py-3 px-4 text-[#1A1A1A] hover:text-[#1E301E] hover:bg-[#E8F5E9] transition font-medium
+                border-b border-gray-100 text-base flex items-center ${
+                isActivePage('/Career') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
               }`}
             >
-              <span className="mr-2"></span>
               Careers
             </Link>
 
@@ -278,29 +273,27 @@ function Navbar() {
             <Link
               to="/Gallerypage"
               onClick={closeAll}
-              className={`py-3 px-4 text-white hover:text-yellow-300 hover:bg-white/5 transition font-medium
-                border-b border-white/5 text-base flex items-center ${
-                isActivePage('/Gallerypage') ? 'bg-yellow-400/20 text-yellow-300' : ''
+              className={`py-3 px-4 text-[#1A1A1A] hover:text-[#1E301E] hover:bg-[#E8F5E9] transition font-medium
+                border-b border-gray-100 text-base flex items-center ${
+                isActivePage('/Gallerypage') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
               }`}
             >
-              <span className="mr-2"></span>
               Gallery
             </Link>
 
             {/* Mobile Dropdowns - Click based for mobile */}
             {dropdowns.map((dropdown) => (
-              <div key={dropdown.id} className="border-b border-white/5">
+              <div key={dropdown.id} className="border-b border-gray-100">
                 <button
                   onClick={() => toggleDropdown(dropdown.id)}
                   className={`flex justify-between items-center w-full py-3 px-4 
-                    text-white hover:text-yellow-300 hover:bg-white/5 transition font-medium text-base ${
-                    activeDropdown === dropdown.id ? 'text-yellow-300 bg-white/5' : ''
+                    text-[#1A1A1A] hover:text-[#1E301E] hover:bg-[#E8F5E9] transition font-medium text-base ${
+                    activeDropdown === dropdown.id ? 'text-[#1E301E] bg-[#E8F5E9]' : ''
                   } ${
-                    isActiveDropdown(dropdown.items) ? 'bg-yellow-400/20 text-yellow-300' : ''
+                    isActiveDropdown(dropdown.items) ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
                   }`}
                 >
                   <span className="flex items-center">
-                    <span className="mr-2">{dropdown.icon}</span>
                     {dropdown.label}
                   </span>
                   {activeDropdown === dropdown.id ? 
@@ -316,9 +309,9 @@ function Navbar() {
                         key={item.name}
                         to={item.path}
                         onClick={closeAll}
-                        className={`block py-2.5 px-4 text-white/80 hover:text-yellow-300 hover:bg-white/5 
-                          transition-all duration-200 border-l-2 border-yellow-400/30 ml-2 text-base ${
-                          isActivePage(item.path) ? 'bg-yellow-400/20 text-yellow-300 border-yellow-400' : ''
+                        className={`block py-2.5 px-4 text-[#1A1A1A] hover:text-[#1E301E] hover:bg-[#E8F5E9] 
+                          transition-all duration-200 border-l-2 border-[#1E301E]/30 ml-2 text-base ${
+                          isActivePage(item.path) ? 'bg-[#E8F5E9] text-[#1E301E] border-[#1E301E]' : ''
                         }`}
                       >
                         {item.name}
@@ -333,12 +326,11 @@ function Navbar() {
             <Link
               to="/Contact"
               onClick={closeAll}
-              className={`py-3 px-4 text-white hover:text-yellow-300 hover:bg-white/5 transition font-medium
-                border-b border-white/5 text-base flex items-center ${
-                isActivePage('/Contact') ? 'bg-yellow-400/20 text-yellow-300' : ''
+              className={`py-3 px-4 text-[#1A1A1A] hover:text-[#1E301E] hover:bg-[#E8F5E9] transition font-medium
+                border-b border-gray-100 text-base flex items-center ${
+                isActivePage('/Contact') ? 'bg-[#E8F5E9] text-[#1E301E]' : ''
               }`}
             >
-              <span className="mr-2"></span>
               Contact
             </Link>
           </div>

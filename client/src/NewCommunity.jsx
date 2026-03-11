@@ -218,7 +218,7 @@ function NewCommunity() {
           </button>
           <button
             onClick={() => handleLogin("Guide")}
-            className="w-full py-3 bg-yellow-400 text-black rounded-lg"
+            className="w-full py-3 bg-olive green-400 text-black rounded-lg"
           >
             Guide
           </button>
@@ -247,7 +247,7 @@ function NewCommunity() {
         {/* Sidebar */}
         <div className="hidden lg:block lg:col-span-1">
           <div className="bg-gray-900 p-6 rounded-xl border border-gray-800">
-            <h3 className="text-yellow-400 font-semibold mb-4 flex gap-2">
+            <h3 className="text-olive green-400 font-semibold mb-4 flex gap-2">
               <Filter size={18} /> Categories
             </h3>
             {categories.map((cat) => (
@@ -256,7 +256,7 @@ function NewCommunity() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`block w-full text-left px-3 py-2 rounded-lg mb-2 ${
                   selectedCategory === cat
-                    ? "bg-yellow-400 text-black"
+                    ? "bg-olive green-400 text-black"
                     : "hover:bg-gray-800"
                 }`}
               >
@@ -295,7 +295,7 @@ function NewCommunity() {
               <div className="flex justify-between items-center mb-2">
                 <h3 className="text-lg font-semibold">{post.title}</h3>
                 {post.isAnswered && (
-                  <span className="text-green-400 text-xs">Answered</span>
+                  <span className="text-olive green-400 text-xs">Answered</span>
                 )}
               </div>
 
@@ -374,7 +374,7 @@ function NewCommunity() {
                   />
                   <button
                     onClick={() => handleAddComment(post.id)}
-                    className="px-4 py-2 bg-yellow-400 text-black rounded-lg"
+                    className="px-4 py-2 bg-olive green-400 text-black rounded-lg"
                   >
                     Answer
                   </button>

@@ -1,4 +1,39 @@
 @import "tailwindcss";
+
+/* Custom Color Theme for Stackenzo */
+@theme {
+  /* Primary - Dark Green #1E301E */
+  --color-primary: #1E301E;
+  --color-primary-light: #2a452a;
+  --color-primary-dark: #152315;
+  
+  /* Secondary - Leaf Green #2E7D32 */
+  --color-secondary: #2E7D32;
+  --color-secondary-light: #4caf50;
+  --color-secondary-dark: #1b5e20;
+  
+  /* Accent - Gold #D4AF37 */
+  --color-accent: #D4AF37;
+  --color-accent-light: #e5c158;
+  --color-accent-dark: #b8962e;
+  
+  /* Light Background - Soft Green #E8F5E9 */
+  --color-light-bg: #E8F5E9;
+  
+  /* Text - Dark Gray #1A1A1A */
+  --color-text: #1A1A1A;
+  --color-text-light: #4a4a4a;
+  
+  /* Background - White #FFFFFF */
+  --color-background: #FFFFFF;
+}
+
+/* Global white background */
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
 /* Chrome, Edge, Safari */
 ::-webkit-scrollbar {
   display: none;

@@ -15,7 +15,7 @@ function Privacy() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
           >
-            <Shield className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
+            <Shield className="w-16 h-16 text-olive green-400 mx-auto mb-6" />
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">
               Privacy Policy
             </h1>
@@ -36,7 +36,7 @@ function Privacy() {
           >
             {/* Introduction */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">1. Introduction</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">1. Introduction</h2>
               <p className="text-gray-300 mb-3">
                 At Stackenzo, we are committed to protecting your privacy and ensuring the security of your 
                 personal information. This Privacy Policy explains how we collect, use, disclose, and 
@@ -49,7 +49,7 @@ function Privacy() {
 
             {/* Information We Collect */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">2. Information We Collect</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">2. Information We Collect</h2>
               
               <h3 className="text-xl font-semibold mb-3 text-white">2.1 Personal Information</h3>
               <p className="text-gray-300 mb-3">We collect information you provide directly:</p>
@@ -82,7 +82,7 @@ function Privacy() {
 
             {/* How We Use Your Information */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">3. How We Use Your Information</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">3. How We Use Your Information</h2>
               <p className="text-gray-300 mb-3">We use collected information for:</p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Providing and improving our educational services</li>
@@ -99,7 +99,7 @@ function Privacy() {
 
             {/* Information Sharing */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">4. Information Sharing and Disclosure</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">4. Information Sharing and Disclosure</h2>
               <p className="text-gray-300 mb-3">We may share your information with:</p>
               
               <h3 className="text-xl font-semibold mb-3 text-white">4.1 Service Providers</h3>
@@ -129,7 +129,7 @@ function Privacy() {
 
             {/* Data Security */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">5. Data Security</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">5. Data Security</h2>
               <p className="text-gray-300 mb-3">
                 We implement appropriate technical and organizational measures to protect your data:
               </p>
@@ -149,7 +149,7 @@ function Privacy() {
 
             {/* Data Retention */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">6. Data Retention</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">6. Data Retention</h2>
               <p className="text-gray-300 mb-3">
                 We retain your personal information for as long as necessary to:
               </p>
@@ -166,7 +166,7 @@ function Privacy() {
 
             {/* Your Rights */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">7. Your Rights and Choices</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">7. Your Rights and Choices</h2>
               <p className="text-gray-300 mb-3">You have the right to:</p>
               <ul className="space-y-2 text-gray-300">
                 <li>• Access your personal information</li>
@@ -184,7 +184,7 @@ function Privacy() {
 
             {/* Cookies */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">8. Cookies and Tracking Technologies</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">8. Cookies and Tracking Technologies</h2>
               <p className="text-gray-300 mb-3">
                 We use cookies and similar technologies to:
               </p>
@@ -203,7 +203,7 @@ function Privacy() {
 
             {/* Third-Party Links */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">9. Third-Party Links and Services</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">9. Third-Party Links and Services</h2>
               <p className="text-gray-300">
                 Our platform may contain links to third-party websites and services. We are not responsible 
                 for their privacy practices. We encourage you to review their privacy policies before 
@@ -213,7 +213,7 @@ function Privacy() {
 
             {/* Children's Privacy */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">10. Children's Privacy</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">10. Children's Privacy</h2>
               <p className="text-gray-300">
                 Our services are not intended for individuals under 18 years of age. We do not knowingly 
                 collect personal information from children. If you believe we have collected information 
@@ -223,7 +223,7 @@ function Privacy() {
 
             {/* International Transfers */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">11. International Data Transfers</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">11. International Data Transfers</h2>
               <p className="text-gray-300">
                 Your information may be transferred to and processed in countries other than your country 
                 of residence. We ensure appropriate safeguards are in place to protect your data in 
@@ -233,7 +233,7 @@ function Privacy() {
 
             {/* Changes to Policy */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">12. Changes to This Privacy Policy</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">12. Changes to This Privacy Policy</h2>
               <p className="text-gray-300">
                 We may update this Privacy Policy periodically to reflect changes in our practices or legal 
                 requirements. We will notify you of significant changes via email or platform notification. 
@@ -243,7 +243,7 @@ function Privacy() {
 
             {/* Contact */}
             <div>
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">13. Contact Us</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">13. Contact Us</h2>
               <p className="text-gray-300 mb-3">
                 For questions or concerns about this Privacy Policy or our data practices:
               </p>
@@ -257,7 +257,7 @@ function Privacy() {
 
             {/* Consent */}
             <div className="bg-gray-700 p-6 rounded-lg">
-              <h2 className="text-2xl font-bold mb-4 text-yellow-400">Your Consent</h2>
+              <h2 className="text-2xl font-bold mb-4 text-olive green-400">Your Consent</h2>
               <p className="text-gray-300">
                 By using our platform and services, you acknowledge that you have read and understood this 
                 Privacy Policy and consent to the collection, use, and disclosure of your personal 
@@ -271,15 +271,15 @@ function Privacy() {
       {/* Footer */}
       <footer className="bg-black py-16 px-4 border-t border-white/10">
         <div className="max-w-6xl mx-auto text-center">
-          <Link to="/" className="text-2xl font-bold text-yellow-400 mb-4 block">
+          <Link to="/" className="text-2xl font-bold text-olive green-400 mb-4 block">
             Stackenzo
           </Link>
           <div className="flex justify-center space-x-6 text-sm">
-            <Link to="/" className="hover:text-yellow-400 transition">Home</Link>
-            <Link to="/About" className="hover:text-yellow-400 transition">About</Link>
-            <Link to="/Contact" className="hover:text-yellow-400 transition">Contact</Link>
-            <Link to="/Privacy" className="hover:text-yellow-400 transition">Privacy</Link>
-            <Link to="/Terms" className="hover:text-yellow-400 transition">Terms</Link>
+            <Link to="/" className="hover:text-olive green-400 transition">Home</Link>
+            <Link to="/About" className="hover:text-olive green-400 transition">About</Link>
+            <Link to="/Contact" className="hover:text-olive green-400 transition">Contact</Link>
+            <Link to="/Privacy" className="hover:text-olive green-400 transition">Privacy</Link>
+            <Link to="/Terms" className="hover:text-olive green-400 transition">Terms</Link>
           </div>
           <p className="text-gray-500 text-sm mt-8">
             © {new Date().getFullYear()} Stackenzo. All Rights Reserved.

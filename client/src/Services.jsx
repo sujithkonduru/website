@@ -22,9 +22,9 @@ function Services() {
       subtitle: "Innovation & Research",
       description: "Cutting-edge research and development in AI/ML, IoT, robotics, and emerging technologies to drive future-ready solutions.",
       icon: <Rocket className="w-8 h-8" />,
-      gradient: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-500/10 to-pink-500/10",
-      lightBg: "bg-purple-50",
+      gradient: "from-[#1E301E] to-[#2E7D32]",
+      bgGradient: "from-[#E8F5E9] to-[#E8F5E9]",
+      lightBg: "bg-[#E8F5E9]",
       features: [
         "Artificial Intelligence & Machine Learning",
         "Internet of Things (IoT)",
@@ -37,7 +37,7 @@ function Services() {
       technologies: ["TensorFlow", "PyTorch", "OpenCV", "ROS", "Solidity", "Spark"],
       link: "/R_AND_D",
       stats: { patents: "15+", publications: "50+", innovations: "25+" },
-      color: "purple"
+      color: "[#1E301E]"
     },
     {
       id: "it-services",
@@ -45,9 +45,9 @@ function Services() {
       subtitle: "Custom Software Solutions",
       description: "End-to-end web development, mobile apps, enterprise solutions, and system integrations tailored to your business needs.",
       icon: <Code className="w-8 h-8" />,
-      gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-500/10 to-cyan-500/10",
-      lightBg: "bg-blue-50",
+      gradient: "from-[#1E301E] to-[#2E7D32]",
+      bgGradient: "from-[#E8F5E9] to-[#E8F5E9]",
+      lightBg: "bg-[#E8F5E9]",
       features: [
         "Web Application Development",
         "Mobile App Development",
@@ -60,7 +60,7 @@ function Services() {
       technologies: ["React", "Node.js", "Python", "AWS", "Docker", "Kubernetes"],
       link: "/WebServices",
       stats: { projects: "150+", clients: "50+", satisfaction: "98%" },
-      color: "blue"
+      color: "[#1E301E]"
     },
     {
       id: "digital-marketing",
@@ -68,9 +68,9 @@ function Services() {
       subtitle: "Strategic Online Presence",
       description: "Comprehensive digital marketing strategies including SEO, social media management, content creation, and analytics-driven campaigns.",
       icon: <TrendingUp className="w-8 h-8" />,
-      gradient: "from-green-500 to-emerald-500",
-      bgGradient: "from-green-500/10 to-emerald-500/10",
-      lightBg: "bg-green-50",
+      gradient: "from-[#1E301E] to-[#2E7D32]",
+      bgGradient: "from-[#E8F5E9] to-[#E8F5E9]",
+      lightBg: "bg-[#E8F5E9]",
       features: [
         "Search Engine Optimization (SEO)",
         "Social Media Marketing",
@@ -83,7 +83,7 @@ function Services() {
       technologies: ["Google Analytics", "SEMrush", "HubSpot", "Meta Ads", "Mailchimp"],
       link: "/DigitalMarketing",
       stats: { reach: "2M+", campaigns: "200+", growth: "300%" },
-      color: "green"
+      color: "[#1E301E]"
     }
   ];
 
@@ -151,16 +151,16 @@ function Services() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-gray-950 via-gray-900 to-indigo-950 text-white min-h-screen overflow-x-hidden">
+    <div className="bg-white text-[#1A1A1A] min-h-screen overflow-x-hidden">
       {/* Animated Background */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-[#D4AF37] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
+        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-[#1E301E] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-[#2E7D32] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-4000"></div>
         
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-5" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, white 1px, transparent 0)`,
+          backgroundImage: `radial-gradient(circle at 1px 1px, #1E301E 1px, transparent 0)`,
           backgroundSize: '50px 50px'
         }} />
       </div>
@@ -176,7 +176,7 @@ function Services() {
             x: [0, 10, 0],
           }}
           transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-40 left-10 w-64 h-64 bg-yellow-400/5 rounded-full blur-3xl"
+          className="absolute top-40 left-10 w-64 h-64 bg-[#D4AF37]/5 rounded-full blur-3xl"
         />
         <motion.div
           animate={{
@@ -184,7 +184,7 @@ function Services() {
             x: [0, -10, 0],
           }}
           transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-40 right-10 w-96 h-96 bg-blue-400/5 rounded-full blur-3xl"
+          className="absolute bottom-40 right-10 w-96 h-96 bg-[#1E301E]/5 rounded-full blur-3xl"
         />
 
         <div className="max-w-7xl mx-auto relative z-10">
@@ -200,24 +200,24 @@ function Services() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.2 }}
-                className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 py-2 mb-6"
+                className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 mb-6 shadow-sm"
               >
-                <Sparkles className="w-4 h-4 text-yellow-400" />
-                <span className="text-sm font-medium text-yellow-400">Premium Services</span>
+                <Sparkles className="w-4 h-4 text-[#D4AF37]" />
+                <span className="text-sm font-medium text-[#1E301E]">Premium Services</span>
               </motion.div>
 
               {/* Title */}
               <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent">
+                <span className="text-[#1A1A1A]">
                   Transform Your
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+                <span className="text-[#1E301E]">
                   Business With Us
                 </span>
               </h1>
 
-              <p className="text-lg text-gray-300 mb-8 max-w-lg leading-relaxed">
+              <p className="text-lg text-[#1A1A1A] mb-8 max-w-lg leading-relaxed">
                 Comprehensive technology solutions and innovative strategies designed to accelerate your growth and digital transformation journey.
               </p>
 
@@ -227,18 +227,12 @@ function Services() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black rounded-xl font-semibold overflow-hidden"
+                    className="group relative px-8 py-4 bg-[#1E301E] text-white rounded-xl font-semibold overflow-hidden shadow-md hover:shadow-lg hover:bg-[#2E7D32] transition-all"
                   >
                     <span className="relative z-10 flex items-center gap-2">
                       Get Started
                       <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </span>
-                    <motion.div
-                      className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-300"
-                      initial={{ x: "100%" }}
-                      whileHover={{ x: 0 }}
-                      transition={{ duration: 0.3 }}
-                    />
                   </motion.button>
                 </Link>
                 
@@ -246,7 +240,7 @@ function Services() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="px-8 py-4 border border-gray-600 text-gray-300 rounded-xl font-semibold hover:border-yellow-400 hover:text-yellow-400 transition-all flex items-center gap-2"
+                    className="px-8 py-4 border border-gray-200 text-[#1A1A1A] rounded-xl font-semibold hover:border-[#1E301E] hover:text-[#1E301E] transition-all flex items-center gap-2 bg-white"
                   >
                     <Briefcase className="w-5 h-5" />
                     Learn More
@@ -265,17 +259,17 @@ function Services() {
                   {[1, 2, 3, 4].map((i) => (
                     <div
                       key={i}
-                      className="w-10 h-10 rounded-full border-2 border-gray-800 bg-gradient-to-br from-gray-600 to-gray-700"
+                      className="w-10 h-10 rounded-full border-2 border-white bg-gradient-to-br from-[#E8F5E9] to-[#E8F5E9]"
                     />
                   ))}
                 </div>
                 <div>
                   <div className="flex items-center gap-1">
                     {[1, 2, 3, 4, 5].map((i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="w-4 h-4 fill-[#D4AF37] text-[#D4AF37]" />
                     ))}
                   </div>
-                  <p className="text-sm text-gray-400">Trusted by 500+ businesses</p>
+                  <p className="text-sm text-[#1A1A1A]">Trusted by 500+ businesses</p>
                 </div>
               </motion.div>
             </motion.div>
@@ -288,19 +282,19 @@ function Services() {
               className="grid grid-cols-2 gap-4"
             >
               {[
-                { value: "10+", label: "Years Experience of Team Members", icon: Users, color: "yellow" },
-{ value: "50+", label: "Happy Clients", icon: Briefcase, color: "blue" },
-{ value: "98%", label: "Client Retention", icon: Star, color: "green" },
-{ value: "24/7", label: "Always Available", icon: Clock, color: "purple" }
+                { value: "10+", label: "Years Experience", icon: Users, color: "[#1E301E]" },
+                { value: "500+", label: "Happy Clients", icon: Briefcase, color: "[#2E7D32]" },
+                { value: "98%", label: "Client Retention", icon: Star, color: "[#D4AF37]" },
+                { value: "24/7", label: "Support Available", icon: Clock, color: "[#1E301E]" }
               ].map((stat, i) => (
                 <motion.div
                   key={i}
                   whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white/5 backdrop-blur-lg rounded-2xl p-6 border border-white/10 hover:border-yellow-400/30 transition-all"
+                  className="bg-white rounded-2xl p-6 border border-gray-200 hover:border-[#D4AF37] transition-all shadow-sm hover:shadow"
                 >
-                  <stat.icon className={`w-8 h-8 text-${stat.color}-400 mb-3`} />
-                  <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                  <div className="text-sm text-gray-400">{stat.label}</div>
+                  <stat.icon className={`w-8 h-8 text-${stat.color} mb-3`} />
+                  <div className="text-3xl font-bold text-[#1A1A1A] mb-1">{stat.value}</div>
+                  <div className="text-sm text-[#1A1A1A]">{stat.label}</div>
                 </motion.div>
               ))}
             </motion.div>
@@ -314,17 +308,17 @@ function Services() {
           >
             <button
               onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
-              className="flex flex-col items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
+              className="flex flex-col items-center gap-2 text-[#1A1A1A] hover:text-[#1E301E] transition-colors"
             >
               <span className="text-sm">Scroll to explore</span>
-              <ChevronRight className="w-5 h-5 rotate-90" />
+              <ChevronRight className="w-5 h-5 rotate-90 text-[#D4AF37]" />
             </button>
           </motion.div>
         </div>
       </section>
 
       {/* Services Showcase */}
-      <section id="services" className="py-20 px-4 sm:px-6 relative">
+      <section id="services" className="py-20 px-4 sm:px-6 relative bg-[#E8F5E9]">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <motion.div
@@ -334,11 +328,11 @@ function Services() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+              <span className="text-[#1E301E]">
                 Our Services
               </span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[#1A1A1A] max-w-2xl mx-auto">
               Comprehensive solutions tailored to your business needs, delivered with excellence
             </p>
           </motion.div>
@@ -356,38 +350,38 @@ function Services() {
                 className="group relative"
               >
                 <Link to={service.link}>
-                  <div className={`relative bg-gradient-to-br ${service.bgGradient} backdrop-blur-lg rounded-3xl border border-gray-700/50 hover:border-yellow-400/50 transition-all duration-500 overflow-hidden h-full`}>
+                  <div className={`relative bg-white rounded-3xl border border-gray-200 hover:border-[#1E301E] transition-all duration-500 overflow-hidden h-full shadow-sm hover:shadow`}>
                     {/* Animated Background */}
                     <motion.div
-                      className={`absolute inset-0 bg-gradient-to-br ${service.gradient}`}
+                      className={`absolute inset-0 bg-gradient-to-br from-[#E8F5E9] to-[#E8F5E9]`}
                       initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 0.1 }}
+                      whileHover={{ opacity: 1 }}
                       transition={{ duration: 0.5 }}
                     />
 
                     {/* Glow Effect */}
-                    <div className={`absolute -inset-0.5 bg-gradient-to-r ${service.gradient} rounded-3xl opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-500`} />
+                    <div className={`absolute -inset-0.5 bg-gradient-to-r from-[#1E301E] to-[#2E7D32] rounded-3xl opacity-0 group-hover:opacity-10 blur-xl transition-opacity duration-500`} />
 
                     <div className="relative p-8">
                       {/* Icon with Animation */}
                       <motion.div
                         whileHover={{ rotate: 360, scale: 1.1 }}
                         transition={{ duration: 0.6 }}
-                        className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${service.gradient} p-0.5 mb-6`}
+                        className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-[#1E301E] to-[#2E7D32] p-0.5 mb-6`}
                       >
-                        <div className="w-full h-full rounded-2xl bg-gray-900 flex items-center justify-center">
-                          {service.icon}
+                        <div className="w-full h-full rounded-2xl bg-white flex items-center justify-center">
+                          <div className="text-[#1E301E]">{service.icon}</div>
                         </div>
                       </motion.div>
 
                       {/* Title */}
-                      <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">
+                      <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2 group-hover:text-[#1E301E] transition-colors">
                         {service.title}
                       </h3>
-                      <p className="text-yellow-400 font-semibold mb-4">{service.subtitle}</p>
+                      <p className="text-[#1E301E] font-semibold mb-4">{service.subtitle}</p>
 
                       {/* Description */}
-                      <p className="text-gray-300 mb-6 leading-relaxed">
+                      <p className="text-[#1A1A1A] mb-6 leading-relaxed">
                         {service.description}
                       </p>
 
@@ -401,26 +395,26 @@ function Services() {
                             transition={{ delay: i * 0.1 }}
                             className="flex items-center gap-2"
                           >
-                            <CheckCircle className={`w-4 h-4 text-${service.color}-400 flex-shrink-0`} />
-                            <span className="text-sm text-gray-300">{feature}</span>
+                            <CheckCircle className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
+                            <span className="text-sm text-[#1A1A1A]">{feature}</span>
                           </motion.div>
                         ))}
                       </div>
 
                       {/* Tech Stack */}
                       <div className="mb-6">
-                        <p className="text-xs text-gray-500 mb-2">TECHNOLOGIES</p>
+                        <p className="text-xs text-[#1A1A1A] mb-2">TECHNOLOGIES</p>
                         <div className="flex flex-wrap gap-2">
                           {service.technologies.slice(0, 3).map((tech, i) => (
                             <span
                               key={i}
-                              className={`text-xs px-2 py-1 rounded-full bg-${service.color}-500/10 text-${service.color}-400 border border-${service.color}-500/20`}
+                              className={`text-xs px-2 py-1 rounded-full bg-[#E8F5E9] text-[#1E301E] border border-[#D4AF37]/30`}
                             >
                               {tech}
                             </span>
                           ))}
                           {service.technologies.length > 3 && (
-                            <span className="text-xs px-2 py-1 rounded-full bg-gray-800 text-gray-400">
+                            <span className="text-xs px-2 py-1 rounded-full bg-gray-100 text-[#1A1A1A] border border-gray-200">
                               +{service.technologies.length - 3}
                             </span>
                           )}
@@ -428,11 +422,11 @@ function Services() {
                       </div>
 
                       {/* Stats Preview */}
-                      <div className="grid grid-cols-3 gap-2 mb-6 p-4 bg-black/20 rounded-xl">
+                      <div className="grid grid-cols-3 gap-2 mb-6 p-4 bg-[#E8F5E9] rounded-xl border border-gray-200">
                         {Object.entries(service.stats).map(([key, value]) => (
                           <div key={key} className="text-center">
-                            <div className="text-lg font-bold text-white">{value}</div>
-                            <div className="text-xs text-gray-400 capitalize">
+                            <div className="text-lg font-bold text-[#1A1A1A]">{value}</div>
+                            <div className="text-xs text-[#1A1A1A] capitalize">
                               {key.replace(/([A-Z])/g, ' $1').trim()}
                             </div>
                           </div>
@@ -441,15 +435,15 @@ function Services() {
 
                       {/* CTA */}
                       <div className="flex items-center justify-between group/btn">
-                        <span className="text-yellow-400 font-semibold group-hover:text-yellow-300 transition-colors">
+                        <span className="text-[#1E301E] font-semibold group-hover:text-[#2E7D32] transition-colors">
                           Explore Service
                         </span>
                         <motion.div
                           animate={{ x: 0 }}
                           whileHover={{ x: 5 }}
-                          className="w-8 h-8 rounded-full bg-yellow-400/10 flex items-center justify-center"
+                          className="w-8 h-8 rounded-full bg-[#E8F5E9] flex items-center justify-center border border-[#D4AF37]/30"
                         >
-                          <ExternalLink className="w-4 h-4 text-yellow-400" />
+                          <ExternalLink className="w-4 h-4 text-[#1E301E]" />
                         </motion.div>
                       </div>
                     </div>
@@ -462,7 +456,7 @@ function Services() {
       </section>
 
       {/* Why Choose Us - Enhanced Section */}
-      <section className="py-20 px-4 sm:px-6 bg-gradient-to-b from-transparent to-gray-900/50">
+      <section className="py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -470,15 +464,15 @@ function Services() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="inline-block px-4 py-2 bg-white/5 rounded-full text-yellow-400 text-sm font-semibold mb-4">
+            <span className="inline-block px-4 py-2 bg-[#E8F5E9] rounded-full text-[#1E301E] text-sm font-semibold mb-4 border border-[#D4AF37]/30">
               Why Choose Us
             </span>
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+              <span className="text-[#1E301E]">
                 The Stackenzo Advantage
               </span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[#1A1A1A] max-w-2xl mx-auto">
               We combine technical excellence with business acumen to deliver exceptional results
             </p>
           </motion.div>
@@ -497,15 +491,15 @@ function Services() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 className="group relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
-                <div className="relative bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 hover:border-yellow-400/30 transition-all">
-                  <div className="text-yellow-400 mb-4 p-3 bg-yellow-400/10 rounded-xl inline-block">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#1E301E] to-[#2E7D32] rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-300" />
+                <div className="relative bg-white p-6 rounded-2xl border border-gray-200 hover:border-[#D4AF37] transition-all shadow-sm hover:shadow">
+                  <div className="text-[#D4AF37] mb-4 p-3 bg-[#E8F5E9] rounded-xl inline-block border border-[#D4AF37]/30">
                     {benefit.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">
+                  <h3 className="text-lg font-bold text-[#1A1A1A] mb-2 group-hover:text-[#1E301E] transition-colors">
                     {benefit.title}
                   </h3>
-                  <p className="text-sm text-gray-400">{benefit.desc}</p>
+                  <p className="text-sm text-[#1A1A1A]">{benefit.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -527,11 +521,11 @@ function Services() {
               <motion.div
                 key={i}
                 whileHover={{ scale: 1.05 }}
-                className="text-center p-6 bg-white/5 rounded-2xl border border-white/10"
+                className="text-center p-6 bg-white rounded-2xl border border-gray-200 shadow-sm hover:border-[#D4AF37] transition-all"
               >
-                <stat.icon className="w-8 h-8 text-yellow-400 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-                <div className="text-sm text-gray-400">{stat.label}</div>
+                <stat.icon className="w-8 h-8 text-[#D4AF37] mx-auto mb-3" />
+                <div className="text-3xl font-bold text-[#1A1A1A] mb-1">{stat.value}</div>
+                <div className="text-sm text-[#1A1A1A]">{stat.label}</div>
               </motion.div>
             ))}
           </motion.div>
@@ -539,7 +533,7 @@ function Services() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 px-4 sm:px-6">
+      <section className="py-20 px-4 sm:px-6 bg-[#E8F5E9]">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -548,11 +542,11 @@ function Services() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+              <span className="text-[#1E301E]">
                 Our Process
               </span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-[#1A1A1A] max-w-2xl mx-auto">
               A systematic approach to deliver exceptional results
             </p>
           </motion.div>
@@ -573,15 +567,15 @@ function Services() {
                 className="relative"
               >
                 {i < 3 && (
-                  <div className="absolute top-12 left-1/2 w-full h-0.5 bg-gradient-to-r from-yellow-400/50 to-transparent hidden md:block" />
+                  <div className="absolute top-12 left-1/2 w-full h-0.5 bg-gradient-to-r from-[#D4AF37]/30 to-transparent hidden md:block" />
                 )}
-                <div className="relative z-10 bg-gray-800/50 backdrop-blur-sm p-6 rounded-2xl border border-gray-700/50 text-center">
-                  <div className="w-12 h-12 rounded-full bg-yellow-400/10 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-xl font-bold text-yellow-400">{item.step}</span>
+                <div className="relative z-10 bg-white p-6 rounded-2xl border border-gray-200 text-center shadow-sm hover:shadow hover:border-[#D4AF37] transition-all">
+                  <div className="w-12 h-12 rounded-full bg-[#E8F5E9] flex items-center justify-center mx-auto mb-4 border border-[#D4AF37]/30">
+                    <span className="text-xl font-bold text-[#1E301E]">{item.step}</span>
                   </div>
-                  <item.icon className="w-8 h-8 text-yellow-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-bold text-white mb-2">{item.title}</h3>
-                  <p className="text-sm text-gray-400">{item.desc}</p>
+                  <item.icon className="w-8 h-8 text-[#D4AF37] mx-auto mb-4" />
+                  <h3 className="text-lg font-bold text-[#1A1A1A] mb-2">{item.title}</h3>
+                  <p className="text-sm text-[#1A1A1A]">{item.desc}</p>
                 </div>
               </motion.div>
             ))}
@@ -589,39 +583,8 @@ function Services() {
         </div>
       </section>
 
-      {/* Portfolio Preview Section */}
-      {/* <section className="py-20 px-4 sm:px-6">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-4xl sm:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
-                Our Work Speaks for Itself
-              </span>
-            </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-              Explore our portfolio of successful projects and see how we've helped businesses achieve their goals
-            </p>
-            <Link to="/Portfolio">
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-xl font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all flex items-center justify-center gap-2"
-              >
-                <span>View Our Portfolio</span>
-                <ArrowRight className="w-5 h-5" />
-              </motion.button>
-            </Link>
-          </motion.div>
-        </div>
-      </section> */}
-
       {/* CTA Section - Enhanced */}
-      <section className="py-20 px-4 sm:px-6">
+      <section className="py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
@@ -630,26 +593,26 @@ function Services() {
             className="relative overflow-hidden rounded-3xl"
           >
             {/* Background Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-orange-400/20 to-red-400/20" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#D4AF37]/10 via-[#E8F5E9] to-[#E8F5E9]" />
             
             {/* Animated Pattern */}
-            <div className="absolute inset-0 opacity-30" style={{
-              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            <div className="absolute inset-0 opacity-20" style={{
+              backgroundImage: `radial-gradient(circle at 2px 2px, rgba(30, 48, 30, 0.05) 1px, transparent 0)`,
               backgroundSize: '40px 40px'
             }} />
 
-            <div className="relative bg-gray-900/50 backdrop-blur-xl border border-white/10 p-12 md:p-16 text-center">
+            <div className="relative bg-white border border-gray-200 p-12 md:p-16 text-center shadow-lg">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
               >
                 <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                  <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+                  <span className="text-[#1E301E]">
                     Ready to Transform Your Business?
                   </span>
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                <p className="text-xl text-[#1A1A1A] mb-8 max-w-2xl mx-auto">
                   Let's discuss how our services can help you achieve your goals. Get a free consultation today.
                 </p>
                 
@@ -658,18 +621,12 @@ function Services() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-black rounded-xl font-semibold overflow-hidden"
+                      className="group relative px-8 py-4 bg-[#1E301E] text-white rounded-xl font-semibold overflow-hidden shadow-md hover:shadow-lg hover:bg-[#2E7D32] transition-all"
                     >
                       <span className="relative z-10 flex items-center gap-2">
                         Get Free Consultation
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                       </span>
-                      <motion.div
-                        className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-300"
-                        initial={{ x: "100%" }}
-                        whileHover={{ x: 0 }}
-                        transition={{ duration: 0.3 }}
-                      />
                     </motion.button>
                   </Link>
                   
@@ -677,7 +634,7 @@ function Services() {
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-8 py-4 border border-gray-600 text-gray-300 rounded-xl font-semibold hover:border-yellow-400 hover:text-yellow-400 transition-all flex items-center justify-center gap-2"
+                      className="px-8 py-4 border border-gray-200 bg-white text-[#1A1A1A] rounded-xl font-semibold hover:border-[#1E301E] hover:text-[#1E301E] transition-all flex items-center justify-center gap-2"
                     >
                       <Layers className="w-5 h-5" />
                       View Our Work
@@ -692,8 +649,8 @@ function Services() {
                     { icon: Award, text: "Award Winning" },
                     { icon: Users, text: "Expert Team" }
                   ].map((badge, i) => (
-                    <div key={i} className="flex items-center gap-2 text-gray-400">
-                      <badge.icon className="w-4 h-4 text-yellow-400" />
+                    <div key={i} className="flex items-center gap-2 text-[#1A1A1A]">
+                      <badge.icon className="w-4 h-4 text-[#D4AF37]" />
                       <span className="text-sm">{badge.text}</span>
                     </div>
                   ))}

@@ -59,16 +59,14 @@ function GalleryPage() {
     loadImages();
   }, []);
 
-
-
   if (loading) {
     return (
-      <div className="bg-white text-gray-800 min-h-screen">
+      <div className="bg-white text-[#1A1A1A] min-h-screen">
         <Navbar />
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
-            <div className="w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-            <p className="text-gray-600">Loading gallery...</p>
+            <div className="w-16 h-16 border-4 border-[#D4AF37] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+            <p className="text-[#1A1A1A]">Loading gallery...</p>
           </div>
         </div>
         <Footer />
@@ -77,14 +75,14 @@ function GalleryPage() {
   }
 
   return (
-    <div className="bg-white text-gray-800 min-h-screen">
+    <div className="bg-white text-[#1A1A1A] min-h-screen">
       <Navbar />
 
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900 relative overflow-hidden min-h-screen">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-b from-[#E8F5E9] to-white relative overflow-hidden min-h-screen">
         {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(30, 48, 30, 0.1) 1px, transparent 0)`,
             backgroundSize: '50px 50px'
           }} />
         </div>
@@ -95,14 +93,14 @@ function GalleryPage() {
             animate={{ opacity: 1, y: 0 }}
             className="text-center mb-12"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#1E301E] to-[#2E7D32] text-transparent bg-clip-text">
               Our Gallery
             </h1>
-            <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+            <p className="text-[#1A1A1A] max-w-2xl mx-auto text-lg">
               Explore our world of innovation, collaboration, and technological excellence
             </p>
             {images.length > 0 && (
-              <p className="text-yellow-400 text-sm mt-2">
+              <p className="text-[#D4AF37] text-sm mt-2">
                 {images.length} {images.length === 1 ? 'image' : 'images'} found
               </p>
             )}
@@ -117,7 +115,7 @@ function GalleryPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200"
                 >
                   <img
                     src={image.src}
@@ -128,10 +126,13 @@ function GalleryPage() {
                       e.target.style.display = 'none';
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#1E301E]/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-0 left-0 right-0 p-4 text-white transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                     <h3 className="text-lg font-semibold mb-1">{image.title}</h3>
-                    <p className="text-sm text-gray-200">{image.alt}</p>
+                    <p className="text-sm text-[#E8F5E9]">{image.alt}</p>
+                  </div>
+                  <div className="absolute top-2 right-2 bg-[#D4AF37] text-white px-2 py-1 rounded-full text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                    View
                   </div>
                 </motion.div>
               ))}
@@ -142,15 +143,15 @@ function GalleryPage() {
           {images.length === 0 && (
             <div className="text-center py-20">
               <div className="text-6xl mb-4">📷</div>
-              <h3 className="text-2xl font-bold text-white mb-2">No Images Found</h3>
-              <p className="text-gray-400">Add images to the /images folder to display them here</p>
+              <h3 className="text-2xl font-bold text-[#1A1A1A] mb-2">No Images Found</h3>
+              <p className="text-[#1A1A1A]">Add images to the /images folder to display them here</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Ratings and Feedback Section */}
-      <section className="py-20 px-6 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-20 px-6 bg-gradient-to-br from-[#E8F5E9] to-white">
         <div className="max-w-7xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,10 +159,10 @@ function GalleryPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-[#1E301E] to-[#2E7D32] text-transparent bg-clip-text">
               What Our Students Say
             </h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
+            <p className="text-[#1A1A1A] max-w-2xl mx-auto">
               Hear from our community of learners and innovators
             </p>
           </motion.div>
@@ -173,14 +174,14 @@ function GalleryPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg p-8 max-w-md mx-auto border border-gray-200">
               <div className="flex justify-center mb-4">
                 {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-8 h-8 text-yellow-400 fill-current" />
+                  <Star key={star} className="w-8 h-8 text-[#D4AF37] fill-current" />
                 ))}
               </div>
-              <div className="text-4xl font-bold text-gray-800 mb-2">4.9/5</div>
-              <p className="text-gray-600">Based on 500+ reviews</p>
+              <div className="text-4xl font-bold text-[#1A1A1A] mb-2">4.9/5</div>
+              <p className="text-[#1A1A1A]">Based on 500+ reviews</p>
             </div>
           </motion.div>
 
@@ -236,15 +237,15 @@ function GalleryPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow duration-300 border border-gray-200"
               >
                 <div className="flex items-center mb-4">
-                  <div className="w-12 h-12 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  <div className="w-12 h-12 bg-gradient-to-r from-[#1E301E] to-[#2E7D32] rounded-full flex items-center justify-center text-white font-bold mr-4">
                     {testimonial.avatar}
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-800">{testimonial.name}</h4>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
+                    <h4 className="font-semibold text-[#1A1A1A]">{testimonial.name}</h4>
+                    <p className="text-sm text-[#1A1A1A]">{testimonial.role}</p>
                   </div>
                 </div>
 
@@ -254,7 +255,7 @@ function GalleryPage() {
                       key={star}
                       className={`w-4 h-4 ${
                         star <= testimonial.rating
-                          ? 'text-yellow-400 fill-current'
+                          ? 'text-[#D4AF37] fill-current'
                           : 'text-gray-300'
                       }`}
                     />
@@ -262,8 +263,8 @@ function GalleryPage() {
                 </div>
 
                 <div className="relative">
-                  <Quote className="w-8 h-8 text-yellow-400 opacity-20 absolute -top-2 -left-2" />
-                  <p className="text-gray-700 italic pl-6">"{testimonial.feedback}"</p>
+                  <Quote className="w-8 h-8 text-[#D4AF37] opacity-20 absolute -top-2 -left-2" />
+                  <p className="text-[#1A1A1A] italic pl-6">"{testimonial.feedback}"</p>
                 </div>
               </motion.div>
             ))}

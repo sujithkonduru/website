@@ -45,8 +45,8 @@ function WorkshopRegistrationModal({ workshop, onClose }) {
 
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-      <div className="bg-gray-900 rounded-2xl max-w-md w-full border-2 border-yellow-400">
-        <div className="bg-gradient-to-r from-yellow-400 to-orange-400 p-6 flex items-center justify-between rounded-t-xl">
+      <div className="bg-gray-900 rounded-2xl max-w-md w-full border-2 border-olive green-400">
+        <div className="bg-gradient-to-r from-olive green-400 to-orange-400 p-6 flex items-center justify-between rounded-t-xl">
           <h2 className="text-2xl font-bold text-black">Register for {workshop.title}</h2>
           <button onClick={onClose} className="text-black hover:text-gray-700">
             <X className="w-6 h-6" />
@@ -61,7 +61,7 @@ function WorkshopRegistrationModal({ workshop, onClose }) {
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-olive green-400 focus:outline-none"
             />
           </div>
 
@@ -72,7 +72,7 @@ function WorkshopRegistrationModal({ workshop, onClose }) {
               required
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-olive green-400 focus:outline-none"
             />
           </div>
 
@@ -83,7 +83,7 @@ function WorkshopRegistrationModal({ workshop, onClose }) {
               required
               value={formData.phone}
               onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-olive green-400 focus:outline-none"
             />
           </div>
 
@@ -94,7 +94,7 @@ function WorkshopRegistrationModal({ workshop, onClose }) {
               value={formData.department}
               onChange={(e) => setFormData({ ...formData, department: e.target.value })}
               placeholder="e.g., CSE, ECE, EEE"
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-olive green-400 focus:outline-none"
             />
           </div>
 
@@ -104,7 +104,7 @@ function WorkshopRegistrationModal({ workshop, onClose }) {
               required
               value={formData.education}
               onChange={(e) => setFormData({ ...formData, education: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-olive green-400 focus:outline-none"
             >
               <option value="">Select...</option>
               <option value="undergraduate">Undergraduate</option>
@@ -119,7 +119,7 @@ function WorkshopRegistrationModal({ workshop, onClose }) {
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
               rows="3"
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-yellow-400 focus:outline-none"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:border-olive green-400 focus:outline-none"
             />
           </div>
 
@@ -134,7 +134,7 @@ function WorkshopRegistrationModal({ workshop, onClose }) {
             <button
               type="submit"
               disabled={loading}
-              className="flex-1 px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-400 text-black rounded-lg font-semibold hover:shadow-lg transition disabled:opacity-50"
+              className="flex-1 px-6 py-3 bg-gradient-to-r from-olive green-400 to-orange-400 text-black rounded-lg font-semibold hover:shadow-lg transition disabled:opacity-50"
             >
               {loading ? "Submitting..." : "Register"}
             </button>

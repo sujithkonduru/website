@@ -1,22 +1,32 @@
-- [x] Add faqData array to Contact.jsx to define sample FAQs
-- [x] Fix the map iframe src in Contact.jsx for proper rendering
-- [x] Test the contact page rendering after fixes
-- [x] Test the gallery page rendering with ratings and feedback section
-- [x] Create GalleryPage.jsx component
-- [x] Add GalleryPage import and route in App.jsx
-- [x] Add "View Gallery" button to Navbar.jsx (desktop and mobile)
-- [x] Create client/public/images/ folder and move images there
-- [x] Update Gallery.jsx and GalleryPage.jsx to import images from /images/ folder
-- [x] Add ratings and feedback section to GalleryPage.jsx with testimonials and overall rating
-- [x] Confirm everywhere uses GalleryPage only (not Gallery component)
-- [x] Update Home.jsx to use Gallery component (image scrolling only) instead of GalleryPage
-- [x] Remove auto-scrolling from GalleryPage.jsx and display images in a grid layout
-- [x] Fix JSX syntax errors in Home.jsx motion.h4 element
-- [x] Update hero section title to "Advancing Humanity Through Research. Driving Innovation Through Technology. Inspiring Minds Through Education."
-- [x] Revert all changes to Home.jsx (restore original hero section with motion.h4 and original title)
-- [x] Reorder programs list: R&D Projects, IT Services, Robotics Education, Workshops & Internships, Digital Marketing, GSIN Platform
-- [x] Add EdTech point to homepage mission section
-- [x] Correct alignment of About.jsx (consistent pillar ordering)
-- [x] Fix StackenzoPrograms.jsx rendering issue (GraduationCamp -> GraduationCap) - Build successful ✅
-- [x] Ensure StackenzoPrograms page font alignment matches other pages (added font-sans)
-- [x] Remove highlights from StackenzoPrograms.jsx description text
+# TODO - Change Application Background to White
+
+## Task
+Change the whole application background from dark to white across all pages.
+
+## Files to Update
+1. [ ] client/src/Home.jsx - Main landing page with many dark backgrounds
+2. [x] client/src/Navbar.jsx - Navigation bar ✓
+3. [ ] client/src/Footer.jsx - Footer
+4. [ ] client/src/About.jsx - About page
+5. [ ] client/src/Career.jsx - Career page
+6. [ ] client/src/Services.jsx - Services page
+7. [ ] client/src/Programs.jsx - Programs page
+8. [ ] client/src/robotics.jsx - Robotics page
+9. [ ] client/src/workshops.jsx - Workshops page
+10. [ ] client/src/RND.jsx - R&D page
+11. [ ] client/src/DigitalMarketing.jsx - Digital Marketing page
+12. [ ] client/src/Contact.jsx - Contact page
+13. [ ] client/src/Portfolio.jsx - Portfolio page
+14. [ ] client/src/Gallery.jsx - Gallery page
+15. [ ] client/src/GalleryPage.jsx - Gallery Page
+16. [ ] client/src/StackenzoPrograms.jsx - Stackenzo Programs page
+17. [ ] client/src/webservices.jsx - Web Services page
+18. [ ] client/src/community.jsx - Community page
+19. [ ] client/src/NewCommunity.jsx - New Community page
+
+## Changes Needed
+- Replace dark background classes (bg-gray-950, bg-black, bg-zinc-900, bg-gradient-to-b from-gray-950 to-black, etc.) with white/light backgrounds
+- Update text colors from white to black where needed
+- Adjust gradient backgrounds to use light colors
+
+## Status: In Progress

@@ -7,7 +7,8 @@ import {
   ChevronRight, Star, MessageSquare, Share2, Bookmark,
   Eye, CalendarDays, Building, Rocket, Grid3X3,
   List, Archive, Download, BellRing, Sparkles,
-  ChevronDown, X, Search, BookOpen, Briefcase
+  ChevronDown, X, Search, BookOpen, Briefcase,
+  CheckCircle
 } from "lucide-react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
@@ -59,23 +60,23 @@ function Programs() {
   };
 
   const types = [
-    { value: "all", label: "All Updates", icon: "📢", color: "blue" },
+    { value: "all", label: "All Updates", icon: "📢", color: "green" },
     { value: "workshop", label: "Workshops", icon: "🎓", color: "green" },
-    { value: "hackathon", label: "Hackathons", icon: "💻", color: "purple" },
-    { value: "challenge", label: "Challenges", icon: "🏆", color: "yellow" },
-    { value: "school-program", label: "School Programs", icon: "🏫", color: "pink" },
-    { value: "expo", label: "Expos", icon: "🎪", color: "orange" },
-    { value: "announcement", label: "Announcements", icon: "📢", color: "red" },
-    { value: "partnership", label: "Partnerships", icon: "🤝", color: "teal" },
-    { value: "achievement", label: "Achievements", icon: "⭐", color: "amber" }
+    { value: "hackathon", label: "Hackathons", icon: "💻", color: "green" },
+    { value: "challenge", label: "Challenges", icon: "🏆", color: "green" },
+    { value: "school-program", label: "School Programs", icon: "🏫", color: "green" },
+    { value: "expo", label: "Expos", icon: "🎪", color: "green" },
+    { value: "announcement", label: "Announcements", icon: "📢", color: "green" },
+    { value: "partnership", label: "Partnerships", icon: "🤝", color: "green" },
+    { value: "achievement", label: "Achievements", icon: "⭐", color: "green" }
   ];
 
   const statuses = [
-    { value: "all", label: "All Status", icon: Eye, color: "gray" },
+    { value: "all", label: "All Status", icon: Eye, color: "blue" },
     { value: "upcoming", label: "Upcoming", icon: CalendarDays, color: "blue" },
-    { value: "ongoing", label: "Live Now", icon: Zap, color: "green" },
-    { value: "registration-open", label: "Registration Open", icon: Users, color: "yellow" },
-    { value: "featured", label: "Featured", icon: Star, color: "purple" }
+    { value: "ongoing", label: "Live Now", icon: Zap, color: "blue" },
+    { value: "registration-open", label: "Registration Open", icon: Users, color: "blue" },
+    { value: "featured", label: "Featured", icon: Star, color: "blue" }
   ];
 
   // Filter and search programs
@@ -92,7 +93,7 @@ function Programs() {
     switch (status) {
       case "upcoming": return "blue";
       case "ongoing": return "green";
-      case "registration-open": return "yellow";
+      case "registration-open": return "green";
       case "featured": return "purple";
       default: return "gray";
     }
@@ -100,11 +101,11 @@ function Programs() {
 
   const getStatusGradient = (status) => {
     switch (status) {
-      case "upcoming": return "from-blue-500 to-cyan-500";
-      case "ongoing": return "from-green-500 to-emerald-500";
-      case "registration-open": return "from-yellow-500 to-orange-500";
-      case "featured": return "from-purple-500 to-pink-500";
-      default: return "from-gray-500 to-gray-600";
+      case "upcoming": return "from-blue-600 to-cyan-600";
+      case "ongoing": return "from-[#1E301E] to-[#2E7D32]";
+      case "registration-open": return "from-[#1E301E] to-[#D4AF37]";
+      case "featured": return "from-purple-600 to-pink-600";
+      default: return "from-gray-600 to-gray-700";
     }
   };
 
@@ -143,25 +144,25 @@ function Programs() {
   const orderedPrograms = [...pinnedPrograms, ...otherPrograms];
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen overflow-x-hidden">
+    <div className="bg-white text-[#1A1A1A] min-h-screen overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section - Enhanced */}
-      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden">
+      <section className="relative pt-24 sm:pt-32 pb-16 sm:pb-24 px-4 sm:px-6 overflow-hidden bg-gradient-to-br from-[#E8F5E9] via-white to-[#E8F5E9]">
         {/* Animated background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/30 via-purple-900/30 to-indigo-900/30" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1E301E]/5 via-transparent to-[#2E7D32]/5" />
         
         {/* Animated grid pattern */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(30, 48, 30, 0.1) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }} />
         </div>
 
         {/* Floating elements */}
-        <div className="absolute top-20 left-10 w-64 h-64 bg-yellow-400/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-400/10 rounded-full blur-3xl animate-pulse delay-1000" />
+        <div className="absolute top-20 left-10 w-64 h-64 bg-[#D4AF37]/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#1E301E]/10 rounded-full blur-3xl animate-pulse delay-1000" />
 
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <motion.div
@@ -174,26 +175,26 @@ function Programs() {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, duration: 0.5 }}
-              className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8"
+              className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 sm:mb-8 shadow-sm"
             >
-              <BellRing className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
-              <span className="text-sm sm:text-base text-yellow-400 font-semibold">Company Updates & Announcements</span>
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400/50" />
+              <BellRing className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
+              <span className="text-sm sm:text-base text-[#1E301E] font-semibold">Company Updates & Announcements</span>
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-[#D4AF37]/50" />
             </motion.div>
 
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 px-2">
-              <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+              <span className="text-[#1A1A1A]">
                 Stackenzo
               </span>
               <br />
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              <span className="text-[#1E301E]">
                 Updates
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4 mb-8 sm:mb-12">
+            <p className="text-base sm:text-lg md:text-xl text-[#1A1A1A] max-w-3xl mx-auto leading-relaxed px-4 mb-8 sm:mb-12">
               Stay informed about our latest workshops, hackathons, achievements, partnerships, and announcements. Be the first to know!
             </p>
 
@@ -210,11 +211,11 @@ function Programs() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + i * 0.1 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10 hover:border-yellow-400/30 transition-all"
+                  className="bg-white border border-gray-200 rounded-xl sm:rounded-2xl p-3 sm:p-4 hover:border-[#D4AF37] transition-all shadow-sm"
                 >
-                  <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 text-${stat.color}-400 mx-auto mb-1 sm:mb-2`} />
-                  <div className="text-lg sm:text-2xl font-bold text-white">{stat.value}</div>
-                  <div className="text-xs sm:text-sm text-gray-400">{stat.label}</div>
+                  <stat.icon className={`w-5 h-5 sm:w-6 sm:h-6 text-[#1E301E] mx-auto mb-1 sm:mb-2`} />
+                  <div className="text-lg sm:text-2xl font-bold text-[#1A1A1A]">{stat.value}</div>
+                  <div className="text-xs sm:text-sm text-[#1A1A1A]">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -227,10 +228,10 @@ function Programs() {
             >
               <button
                 onClick={() => document.getElementById('updates')?.scrollIntoView({ behavior: 'smooth' })}
-                className="inline-flex flex-col items-center gap-2 text-gray-400 hover:text-yellow-400 transition-colors"
+                className="inline-flex flex-col items-center gap-2 text-[#1A1A1A] hover:text-[#1E301E] transition-colors"
               >
                 <span className="text-xs sm:text-sm">Scroll to explore</span>
-                <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
+                <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37]" />
               </button>
             </motion.div>
           </motion.div>
@@ -238,7 +239,7 @@ function Programs() {
       </section>
 
       {/* Main Content Section */}
-      <section id="updates" className="scroll-mt-20 py-8 sm:py-12 px-3 sm:px-6">
+      <section id="updates" className="scroll-mt-20 py-8 sm:py-12 px-3 sm:px-6 bg-[#E8F5E9]">
         <div className="max-w-7xl mx-auto">
 
           {/* Search and Filter Bar - Mobile Optimized */}
@@ -248,18 +249,18 @@ function Programs() {
             <div className="flex flex-col sm:flex-row gap-3">
               {/* Search Bar */}
               <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 sm:w-5 sm:h-5 text-[#1A1A1A]" />
                 <input
                   type="text"
                   placeholder="Search updates..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full bg-gray-800/50 border border-gray-700 rounded-xl sm:rounded-2xl pl-10 pr-4 py-3 sm:py-3.5 text-sm sm:text-base text-white placeholder-gray-400 focus:outline-none focus:border-yellow-400 transition-colors"
+                  className="w-full bg-white border border-gray-200 rounded-xl sm:rounded-2xl pl-10 pr-4 py-3 sm:py-3.5 text-sm sm:text-base text-[#1A1A1A] placeholder-[#1A1A1A] focus:outline-none focus:border-[#1E301E] transition-colors shadow-sm"
                 />
                 {searchQuery && (
                   <button
                     onClick={() => setSearchQuery("")}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-[#1A1A1A] hover:text-[#1E301E]"
                   >
                     <X className="w-4 h-4" />
                   </button>
@@ -271,7 +272,7 @@ function Programs() {
                 {/* Mobile Filter Toggle */}
                 <button
                   onClick={() => setShowMobileFilters(!showMobileFilters)}
-                  className="sm:hidden flex-1 bg-gray-800/50 border border-gray-700 rounded-xl px-4 py-3 text-gray-300 hover:text-yellow-400 transition-colors flex items-center justify-center gap-2"
+                  className="sm:hidden flex-1 bg-white border border-gray-200 rounded-xl px-4 py-3 text-[#1A1A1A] hover:text-[#1E301E] transition-colors flex items-center justify-center gap-2 shadow-sm"
                 >
                   <Filter className="w-4 h-4" />
                   <span>Filters</span>
@@ -279,16 +280,16 @@ function Programs() {
                 </button>
 
                 {/* View Toggle - Hidden on mobile (shown in filters) */}
-                <div className="hidden sm:flex bg-gray-800/50 border border-gray-700 rounded-xl p-1">
+                <div className="hidden sm:flex bg-white border border-gray-200 rounded-xl p-1 shadow-sm">
                   <button
                     onClick={() => setViewMode("grid")}
-                    className={`p-2 rounded-lg transition-all ${viewMode === "grid" ? 'bg-yellow-400 text-black' : 'text-gray-400 hover:text-white'}`}
+                    className={`p-2 rounded-lg transition-all ${viewMode === "grid" ? 'bg-[#1E301E] text-white' : 'text-[#1A1A1A] hover:text-[#1E301E]'}`}
                   >
                     <Grid3X3 className="w-5 h-5" />
                   </button>
                   <button
                     onClick={() => setViewMode("timeline")}
-                    className={`p-2 rounded-lg transition-all ${viewMode === "timeline" ? 'bg-yellow-400 text-black' : 'text-gray-400 hover:text-white'}`}
+                    className={`p-2 rounded-lg transition-all ${viewMode === "timeline" ? 'bg-[#1E301E] text-white' : 'text-[#1A1A1A] hover:text-[#1E301E]'}`}
                   >
                     <List className="w-5 h-5" />
                   </button>
@@ -297,10 +298,10 @@ function Programs() {
                 {/* Archive Toggle */}
                 <button
                   onClick={() => setShowArchived(!showArchived)}
-                  className={`px-4 py-2 rounded-xl border transition-all flex items-center gap-2 ${
+                  className={`px-4 py-2 rounded-xl border transition-all flex items-center gap-2 shadow-sm ${
                     showArchived
-                      ? 'bg-yellow-400/10 border-yellow-400 text-yellow-400'
-                      : 'bg-gray-800/50 border-gray-700 text-gray-400 hover:text-white'
+                      ? 'bg-[#D4AF37]/10 border-[#D4AF37] text-[#D4AF37]'
+                      : 'bg-white border-gray-200 text-[#1A1A1A] hover:text-[#1E301E] hover:border-[#1E301E]'
                   }`}
                 >
                   <Archive className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -317,10 +318,10 @@ function Programs() {
                   <button
                     key={type.value}
                     onClick={() => setSelectedType(type.value)}
-                    className={`px-4 py-2 rounded-xl text-sm font-medium transition-all flex items-center gap-2 ${
+                    className={`px-4 py-2 rounded-xl text-sm font-medium transition-all flex items-center gap-2 border ${
                       selectedType === type.value
-                        ? `bg-${type.color}-500/20 text-${type.color}-400 border border-${type.color}-500/30`
-                        : 'bg-gray-800/50 text-gray-400 border border-gray-700 hover:bg-gray-700/50'
+                        ? `bg-[${type.color === 'green' ? '#1E301E' : type.color + '-100'}] text-${type.color === 'green' ? 'white' : type.color + '-700'} border-[${type.color === 'green' ? '#1E301E' : type.color + '-200'}]`
+                        : 'bg-white text-[#1A1A1A] border-gray-200 hover:border-[#1E301E] hover:text-[#1E301E]'
                     }`}
                   >
                     <span className="text-base">{type.icon}</span>
@@ -335,10 +336,10 @@ function Programs() {
                   <button
                     key={status.value}
                     onClick={() => setSelectedStatus(status.value)}
-                    className={`px-4 py-2 rounded-xl text-sm font-medium transition-all flex items-center gap-2 ${
+                    className={`px-4 py-2 rounded-xl text-sm font-medium transition-all flex items-center gap-2 border ${
                       selectedStatus === status.value
-                        ? `bg-${status.color}-500/20 text-${status.color}-400 border border-${status.color}-500/30`
-                        : 'bg-gray-800/50 text-gray-400 border border-gray-700 hover:bg-gray-700/50'
+                        ? `bg-[${status.color === 'green' ? '#1E301E' : status.color + '-100'}] text-${status.color === 'green' ? 'white' : status.color + '-700'} border-[${status.color === 'green' ? '#1E301E' : status.color + '-200'}]`
+                        : 'bg-white text-[#1A1A1A] border-gray-200 hover:border-[#1E301E] hover:text-[#1E301E]'
                     }`}
                   >
                     <status.icon className="w-4 h-4" />
@@ -358,11 +359,11 @@ function Programs() {
                   className="sm:hidden space-y-3 overflow-hidden"
                 >
                   {/* View Mode Toggle */}
-                  <div className="flex gap-2 p-1 bg-gray-800/50 border border-gray-700 rounded-xl">
+                  <div className="flex gap-2 p-1 bg-white border border-gray-200 rounded-xl shadow-sm">
                     <button
                       onClick={() => setViewMode("grid")}
                       className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all flex items-center justify-center gap-2 ${
-                        viewMode === "grid" ? 'bg-yellow-400 text-black' : 'text-gray-400'
+                        viewMode === "grid" ? 'bg-[#1E301E] text-white' : 'text-[#1A1A1A]'
                       }`}
                     >
                       <Grid3X3 className="w-4 h-4" />
@@ -371,7 +372,7 @@ function Programs() {
                     <button
                       onClick={() => setViewMode("timeline")}
                       className={`flex-1 py-2 rounded-lg text-sm font-medium transition-all flex items-center justify-center gap-2 ${
-                        viewMode === "timeline" ? 'bg-yellow-400 text-black' : 'text-gray-400'
+                        viewMode === "timeline" ? 'bg-[#1E301E] text-white' : 'text-[#1A1A1A]'
                       }`}
                     >
                       <List className="w-4 h-4" />
@@ -381,16 +382,16 @@ function Programs() {
 
                   {/* Type Filters - Scrollable */}
                   <div className="space-y-2">
-                    <div className="text-xs font-semibold text-gray-400 px-1">Type</div>
+                    <div className="text-xs font-semibold text-[#1A1A1A] px-1">Type</div>
                     <div className="flex flex-wrap gap-2">
                       {types.map((type) => (
                         <button
                           key={type.value}
                           onClick={() => setSelectedType(type.value)}
-                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 border ${
                             selectedType === type.value
-                              ? `bg-${type.color}-500/20 text-${type.color}-400 border border-${type.color}-500/30`
-                              : 'bg-gray-800/50 text-gray-400 border border-gray-700'
+                              ? `bg-[${type.color === 'green' ? '#1E301E' : type.color + '-100'}] text-${type.color === 'green' ? 'white' : type.color + '-700'} border-[${type.color === 'green' ? '#1E301E' : type.color + '-200'}]`
+                              : 'bg-white text-[#1A1A1A] border-gray-200'
                           }`}
                         >
                           <span>{type.icon}</span>
@@ -402,16 +403,16 @@ function Programs() {
 
                   {/* Status Filters */}
                   <div className="space-y-2">
-                    <div className="text-xs font-semibold text-gray-400 px-1">Status</div>
+                    <div className="text-xs font-semibold text-[#1A1A1A] px-1">Status</div>
                     <div className="flex flex-wrap gap-2">
                       {statuses.map((status) => (
                         <button
                           key={status.value}
                           onClick={() => setSelectedStatus(status.value)}
-                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 ${
+                          className={`px-3 py-1.5 rounded-lg text-xs font-medium transition-all flex items-center gap-1.5 border ${
                             selectedStatus === status.value
-                              ? `bg-${status.color}-500/20 text-${status.color}-400 border border-${status.color}-500/30`
-                              : 'bg-gray-800/50 text-gray-400 border border-gray-700'
+                              ? `bg-[${status.color === 'green' ? '#1E301E' : status.color + '-100'}] text-${status.color === 'green' ? 'white' : status.color + '-700'} border-[${status.color === 'green' ? '#1E301E' : status.color + '-200'}]`
+                              : 'bg-white text-[#1A1A1A] border-gray-200'
                           }`}
                         >
                           <status.icon className="w-3 h-3" />
@@ -425,7 +426,7 @@ function Programs() {
             </AnimatePresence>
 
             {/* Results Count */}
-            <div className="flex items-center justify-between text-xs sm:text-sm text-gray-400 px-1">
+            <div className="flex items-center justify-between text-xs sm:text-sm text-[#1A1A1A] px-1">
               <span>Showing {orderedPrograms.length} updates</span>
               {pinnedPosts.length > 0 && (
                 <span>{pinnedPosts.length} pinned</span>
@@ -444,9 +445,9 @@ function Programs() {
                 className="flex justify-center items-center py-20"
               >
                 <div className="relative">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-gray-700 border-t-yellow-400 rounded-full animate-spin" />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 border-4 border-gray-200 border-t-[#D4AF37] rounded-full animate-spin" />
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Bell className="w-5 h-5 sm:w-6 sm:h-6 text-yellow-400 animate-pulse" />
+                    <Bell className="w-5 h-5 sm:w-6 sm:h-6 text-[#D4AF37] animate-pulse" />
                   </div>
                 </div>
               </motion.div>
@@ -458,11 +459,11 @@ function Programs() {
                 exit={{ opacity: 0 }}
                 className="text-center py-16 sm:py-20 px-4"
               >
-                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-gray-800/50 rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 border border-gray-700">
-                  <Bell className="w-10 h-10 sm:w-12 sm:h-12 text-gray-600" />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 bg-white rounded-full flex items-center justify-center mx-auto mb-4 sm:mb-6 border border-gray-200 shadow-sm">
+                  <Bell className="w-10 h-10 sm:w-12 sm:h-12 text-[#1A1A1A]" />
                 </div>
-                <h3 className="text-xl sm:text-2xl font-semibold text-gray-300 mb-2">No updates found</h3>
-                <p className="text-sm sm:text-base text-gray-500 max-w-md mx-auto mb-6">
+                <h3 className="text-xl sm:text-2xl font-semibold text-[#1A1A1A] mb-2">No updates found</h3>
+                <p className="text-sm sm:text-base text-[#1A1A1A] max-w-md mx-auto mb-6">
                   {searchQuery ? "Try adjusting your search or filters" : "Check back later for new announcements"}
                 </p>
                 {(searchQuery || selectedType !== 'all' || selectedStatus !== 'all') && (
@@ -473,7 +474,7 @@ function Programs() {
                       setSelectedStatus("all");
                       setShowArchived(false);
                     }}
-                    className="px-6 py-2 bg-yellow-400 text-black rounded-full text-sm font-semibold hover:bg-yellow-300 transition"
+                    className="px-6 py-2 bg-[#1E301E] text-white rounded-full text-sm font-semibold hover:bg-[#2E7D32] transition shadow-md"
                   >
                     Clear Filters
                   </button>
@@ -485,7 +486,7 @@ function Programs() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6"
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6"
               >
                 {orderedPrograms.map((program, i) => (
                   <NotificationCard
@@ -511,7 +512,7 @@ function Programs() {
                 className="relative"
               >
                 {/* Timeline line - Desktop only */}
-                <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-blue-500/20 via-purple-500/20 to-pink-500/20" />
+                <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-gradient-to-b from-[#D4AF37]/20 via-[#1E301E]/20 to-[#2E7D32]/20" />
 
                 <div className="space-y-4 sm:space-y-8">
                   {orderedPrograms.map((program, i) => (
@@ -536,31 +537,24 @@ function Programs() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-12 sm:py-16 px-3 sm:px-6">
+      <section className="py-12 sm:py-16 px-3 sm:px-6 bg-white">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-gray-900 to-gray-950 rounded-2xl sm:rounded-3xl border border-gray-800 p-6 sm:p-8 md:p-10">
+          <div className="bg-gradient-to-br from-[#1E301E] to-[#2E7D32] rounded-2xl sm:rounded-3xl border border-gray-200 p-6 sm:p-8 md:p-10 shadow-lg">
             <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8 text-center md:text-left">
               <div className="flex items-center gap-4 md:gap-6">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0">
-                  <Bell className="w-6 h-6 sm:w-7 sm:h-7 text-black" />
+                <div className="w-12 h-12 sm:w-14 sm:h-14 bg-white/20 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0">
+                  <Bell className="w-6 h-6 sm:w-7 sm:h-7 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-1">Never Miss an Update!</h3>
-                  <p className="text-xs sm:text-sm text-gray-400">Get notified about new programs and events</p>
+                  <p className="text-xs sm:text-sm text-white/80">Get notified about new programs and events</p>
                 </div>
               </div>
-              {/* <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="flex-1 px-4 sm:px-5 py-2.5 sm:py-3 bg-gray-800 border border-gray-700 rounded-xl text-sm text-white placeholder-gray-500 focus:outline-none focus:border-yellow-400 transition-colors"
-                /> */}
                 <Link to="/Contact" className="whitespace-nowrap">
-                  <button className="px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-xl text-sm font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all">
+                  <button className="px-5 sm:px-6 py-2.5 sm:py-3 bg-white text-[#1E301E] rounded-xl text-sm font-semibold hover:bg-gray-100 transition-all shadow-md hover:shadow-lg">
                     Get In Touch
                   </button>
                 </Link>
-              {/* </div> */}
             </div>
           </div>
         </div>
@@ -580,9 +574,9 @@ function NotificationCard({ program, index, getStatusColor, getStatusGradient, g
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
       whileHover={{ y: -5 }}
-      className={`group relative bg-gradient-to-br from-gray-900 to-gray-950 rounded-xl sm:rounded-2xl border ${
-        isPinned ? 'border-yellow-400/50' : 'border-gray-800'
-      } hover:border-yellow-400/30 transition-all overflow-hidden`}
+      className={`group relative bg-white rounded-xl sm:rounded-2xl border ${
+        isPinned ? 'border-[#D4AF37]' : 'border-gray-200'
+      } hover:border-[#1E301E] transition-all overflow-hidden shadow-sm hover:shadow`}
     >
       {/* Top gradient bar */}
       <div className={`h-1.5 sm:h-2 bg-gradient-to-r ${getStatusGradient(program.status)}`} />
@@ -590,7 +584,7 @@ function NotificationCard({ program, index, getStatusColor, getStatusGradient, g
       {/* Pin indicator */}
       {isPinned && (
         <div className="absolute top-3 right-3 z-10">
-          <Bookmark className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400 fill-current" />
+          <Bookmark className="w-4 h-4 sm:w-5 sm:h-5 text-[#D4AF37] fill-current" />
         </div>
       )}
 
@@ -598,21 +592,21 @@ function NotificationCard({ program, index, getStatusColor, getStatusGradient, g
         {/* Header */}
         <div className="flex items-start justify-between mb-3 sm:mb-4">
           <div className="flex items-center gap-2 sm:gap-3">
-            <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-${getTypeColor(program.type)}-500/20 flex items-center justify-center text-lg sm:text-xl`}>
+            <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-[#E8F5E9] flex items-center justify-center text-lg sm:text-xl border border-gray-200`}>
               {getTypeIcon(program.type)}
             </div>
             <div>
-              <div className={`text-xs font-semibold text-${getTypeColor(program.type)}-400 uppercase`}>
+              <div className="text-xs font-semibold text-[#1E301E] uppercase">
                 {program.type.replace("-", " ")}
               </div>
-              <div className="text-xs text-gray-500">{formatDate(program.date)}</div>
+              <div className="text-xs text-[#1A1A1A]">{formatDate(program.date)}</div>
             </div>
           </div>
           
           <button
             onClick={() => togglePin(program.id)}
             className={`p-1.5 rounded-lg transition-colors ${
-              isPinned ? 'text-yellow-400' : 'text-gray-500 hover:text-yellow-400'
+              isPinned ? 'text-[#D4AF37]' : 'text-[#1A1A1A] hover:text-[#D4AF37]'
             }`}
           >
             <Bookmark className={`w-4 h-4 sm:w-5 sm:h-5 ${isPinned ? 'fill-current' : ''}`} />
@@ -620,23 +614,23 @@ function NotificationCard({ program, index, getStatusColor, getStatusGradient, g
         </div>
 
         {/* Title */}
-        <h3 className="text-base sm:text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors line-clamp-2">
+        <h3 className="text-base sm:text-lg font-bold text-[#1A1A1A] mb-2 group-hover:text-[#1E301E] transition-colors line-clamp-2">
           {program.title}
         </h3>
 
         {/* Description */}
-        <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">
+        <p className="text-xs sm:text-sm text-[#1A1A1A] mb-3 sm:mb-4 line-clamp-2 sm:line-clamp-3">
           {program.description}
         </p>
 
         {/* Quick Info */}
         <div className="flex flex-wrap gap-3 sm:gap-4 mb-3 sm:mb-4 text-xs sm:text-sm">
-          <div className="flex items-center gap-1 text-gray-400">
-            <MapPin className="w-3 h-3 sm:w-4 sm:h-4" />
+          <div className="flex items-center gap-1 text-[#1A1A1A]">
+            <MapPin className="w-3 h-3 sm:w-4 sm:h-4 text-[#D4AF37]" />
             <span className="truncate max-w-[100px]">{program.location}</span>
           </div>
-          <div className="flex items-center gap-1 text-gray-400">
-            <Clock className="w-3 h-3 sm:w-4 sm:h-4" />
+          <div className="flex items-center gap-1 text-[#1A1A1A]">
+            <Clock className="w-3 h-3 sm:w-4 sm:h-4 text-[#D4AF37]" />
             <span>{program.duration}</span>
           </div>
         </div>
@@ -644,33 +638,33 @@ function NotificationCard({ program, index, getStatusColor, getStatusGradient, g
         {/* Tags */}
         <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-4 sm:mb-6">
           {program.tags.slice(0, 3).map((tag, j) => (
-            <span key={j} className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-700">
+            <span key={j} className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#E8F5E9] text-[#1A1A1A] text-xs rounded-full border border-gray-200">
               {tag}
             </span>
           ))}
           {program.tags.length > 3 && (
-            <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-gray-800 text-gray-400 text-xs rounded-full border border-gray-700">
+            <span className="px-2 sm:px-2.5 py-0.5 sm:py-1 bg-[#E8F5E9] text-[#1A1A1A] text-xs rounded-full border border-gray-200">
               +{program.tags.length - 3}
             </span>
           )}
         </div>
 
         {/* Actions */}
-        <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-gray-800">
+        <div className="flex items-center justify-between pt-3 sm:pt-4 border-t border-gray-200">
           <div className="flex items-center gap-3 sm:gap-4">
-            <button className="flex items-center gap-1 text-xs sm:text-sm text-gray-400 hover:text-blue-400 transition-colors">
-              <Eye className="w-3 h-3 sm:w-4 sm:h-4" />
+            <button className="flex items-center gap-1 text-xs sm:text-sm text-[#1A1A1A] hover:text-blue-600 transition-colors">
+              <Eye className="w-3 h-3 sm:w-4 sm:h-4 text-[#D4AF37]" />
               <span>{program.views || Math.floor(Math.random() * 900) + 100}</span>
             </button>
-            <button className="flex items-center gap-1 text-xs sm:text-sm text-gray-400 hover:text-green-400 transition-colors">
-              <MessageSquare className="w-3 h-3 sm:w-4 sm:h-4" />
+            <button className="flex items-center gap-1 text-xs sm:text-sm text-[#1A1A1A] hover:text-[#1E301E] transition-colors">
+              <MessageSquare className="w-3 h-3 sm:w-4 sm:h-4 text-[#D4AF37]" />
               <span>{program.comments || Math.floor(Math.random() * 50)}</span>
             </button>
           </div>
 
           <Link
             to={`/Programs/${program.id}`}
-            className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-lg text-xs sm:text-sm font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all"
+            className="flex items-center gap-1 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-[#1E301E] text-white rounded-lg text-xs sm:text-sm font-semibold hover:bg-[#2E7D32] transition-all shadow-sm hover:shadow"
           >
             <span>Details</span>
             <ChevronRight className="w-3 h-3 sm:w-4 sm:h-4" />
@@ -694,40 +688,40 @@ function TimelineNotification({ program, index, getStatusColor, getStatusGradien
     >
       {/* Mobile Timeline View */}
       <div className="sm:hidden">
-        <div className={`bg-gradient-to-br from-gray-900 to-gray-950 rounded-xl border ${isPinned ? 'border-yellow-400/50' : 'border-gray-800'} p-4`}>
+        <div className={`bg-white rounded-xl border ${isPinned ? 'border-[#D4AF37]' : 'border-gray-200'} p-4 shadow-sm`}>
           {/* Date and Pin */}
           <div className="flex items-center justify-between mb-2">
             <div className="flex items-center gap-1.5">
-              <Calendar className="w-3 h-3 text-gray-500" />
-              <span className="text-xs text-gray-400">{formatDate(program.date)}</span>
+              <Calendar className="w-3 h-3 text-[#D4AF37]" />
+              <span className="text-xs text-[#1A1A1A]">{formatDate(program.date)}</span>
             </div>
             <button onClick={() => togglePin(program.id)}>
-              <Bookmark className={`w-3 h-3 ${isPinned ? 'text-yellow-400 fill-current' : 'text-gray-500'}`} />
+              <Bookmark className={`w-3 h-3 ${isPinned ? 'text-[#D4AF37] fill-current' : 'text-[#1A1A1A]'}`} />
             </button>
           </div>
 
           {/* Type and Status */}
           <div className="flex items-center gap-2 mb-2">
-            <span className={`text-lg bg-${getTypeColor(program.type)}-500/20 w-6 h-6 rounded-lg flex items-center justify-center`}>
+            <span className={`text-lg bg-[#E8F5E9] w-6 h-6 rounded-lg flex items-center justify-center border border-gray-200`}>
               {getTypeIcon(program.type)}
             </span>
-            <span className={`px-2 py-0.5 text-xs font-semibold rounded-full bg-gradient-to-r ${getStatusGradient(program.status)}`}>
+            <span className={`px-2 py-0.5 text-xs font-semibold rounded-full bg-gradient-to-r ${getStatusGradient(program.status)} text-white`}>
               {program.status.replace("-", " ")}
             </span>
           </div>
 
           {/* Title and Description */}
-          <h3 className="text-sm font-bold text-white mb-1">{program.title}</h3>
-          <p className="text-xs text-gray-400 mb-3 line-clamp-2">{program.description}</p>
+          <h3 className="text-sm font-bold text-[#1A1A1A] mb-1">{program.title}</h3>
+          <p className="text-xs text-[#1A1A1A] mb-3 line-clamp-2">{program.description}</p>
 
           {/* Location and Duration */}
-          <div className="flex items-center gap-3 mb-3 text-xs text-gray-500">
+          <div className="flex items-center gap-3 mb-3 text-xs text-[#1A1A1A]">
             <div className="flex items-center gap-1">
-              <MapPin className="w-3 h-3" />
+              <MapPin className="w-3 h-3 text-[#D4AF37]" />
               <span className="truncate max-w-[100px]">{program.location}</span>
             </div>
             <div className="flex items-center gap-1">
-              <Clock className="w-3 h-3" />
+              <Clock className="w-3 h-3 text-[#D4AF37]" />
               <span>{program.duration}</span>
             </div>
           </div>
@@ -735,12 +729,12 @@ function TimelineNotification({ program, index, getStatusColor, getStatusGradien
           {/* Tags */}
           <div className="flex flex-wrap gap-1 mb-3">
             {program.tags.slice(0, 2).map((tag, j) => (
-              <span key={j} className="px-2 py-0.5 bg-gray-800 text-gray-300 text-xs rounded-full">
+              <span key={j} className="px-2 py-0.5 bg-[#E8F5E9] text-[#1A1A1A] text-xs rounded-full border border-gray-200">
                 {tag}
               </span>
             ))}
             {program.tags.length > 2 && (
-              <span className="px-2 py-0.5 bg-gray-800 text-gray-400 text-xs rounded-full">
+              <span className="px-2 py-0.5 bg-[#E8F5E9] text-[#1A1A1A] text-xs rounded-full border border-gray-200">
                 +{program.tags.length - 2}
               </span>
             )}
@@ -749,7 +743,7 @@ function TimelineNotification({ program, index, getStatusColor, getStatusGradien
           {/* Link */}
           <Link
             to={`/Programs/${program.id}`}
-            className="inline-flex items-center gap-1 text-xs text-yellow-400 font-semibold"
+            className="inline-flex items-center gap-1 text-xs text-[#1E301E] font-semibold hover:text-[#2E7D32]"
           >
             View Details
             <ChevronRight className="w-3 h-3" />
@@ -766,44 +760,44 @@ function TimelineNotification({ program, index, getStatusColor, getStatusGradien
 
         {/* Content */}
         <div className={`w-5/12 ${isEven ? 'ml-auto pl-8' : 'pr-8'}`}>
-          <div className={`group bg-gradient-to-br from-gray-900 to-gray-950 rounded-2xl border ${isPinned ? 'border-yellow-400/50' : 'border-gray-800'} p-6 hover:border-yellow-400/30 transition-all`}>
+          <div className={`group bg-white rounded-2xl border ${isPinned ? 'border-[#D4AF37]' : 'border-gray-200'} p-6 hover:border-[#1E301E] transition-all shadow-sm hover:shadow`}>
             {/* Date and Pin */}
             <div className="flex items-center justify-between mb-3">
               <div className="flex items-center gap-2">
-                <Calendar className="w-4 h-4 text-gray-500" />
-                <span className="text-sm text-gray-400">{formatDate(program.date)}</span>
+                <Calendar className="w-4 h-4 text-[#D4AF37]" />
+                <span className="text-sm text-[#1A1A1A]">{formatDate(program.date)}</span>
               </div>
               <button onClick={() => togglePin(program.id)} className="group-hover:opacity-100 transition-opacity">
-                <Bookmark className={`w-4 h-4 ${isPinned ? 'text-yellow-400 fill-current' : 'text-gray-500 hover:text-yellow-400'}`} />
+                <Bookmark className={`w-4 h-4 ${isPinned ? 'text-[#D4AF37] fill-current' : 'text-[#1A1A1A] hover:text-[#D4AF37]'}`} />
               </button>
             </div>
 
             {/* Type and Status */}
             <div className="flex items-center gap-2 mb-3">
-              <div className={`w-8 h-8 rounded-lg bg-${getTypeColor(program.type)}-500/20 flex items-center justify-center text-lg`}>
+              <div className={`w-8 h-8 rounded-lg bg-[#E8F5E9] flex items-center justify-center text-lg border border-gray-200`}>
                 {getTypeIcon(program.type)}
               </div>
-              <span className={`px-2 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${getStatusGradient(program.status)}`}>
+              <span className={`px-2 py-1 text-xs font-semibold rounded-full bg-gradient-to-r ${getStatusGradient(program.status)} text-white`}>
                 {program.status.replace("-", " ")}
               </span>
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors">
+            <h3 className="text-lg font-bold text-[#1A1A1A] mb-2 group-hover:text-[#1E301E] transition-colors">
               {program.title}
             </h3>
 
             {/* Description */}
-            <p className="text-sm text-gray-400 mb-4 line-clamp-2">{program.description}</p>
+            <p className="text-sm text-[#1A1A1A] mb-4 line-clamp-2">{program.description}</p>
 
             {/* Location and Duration */}
-            <div className="flex items-center gap-4 mb-4 text-sm text-gray-500">
+            <div className="flex items-center gap-4 mb-4 text-sm text-[#1A1A1A]">
               <div className="flex items-center gap-1">
-                <MapPin className="w-4 h-4" />
+                <MapPin className="w-4 h-4 text-[#D4AF37]" />
                 <span>{program.location}</span>
               </div>
               <div className="flex items-center gap-1">
-                <Clock className="w-4 h-4" />
+                <Clock className="w-4 h-4 text-[#D4AF37]" />
                 <span>{program.duration}</span>
               </div>
             </div>
@@ -811,7 +805,7 @@ function TimelineNotification({ program, index, getStatusColor, getStatusGradien
             {/* Tags */}
             <div className="flex flex-wrap gap-2 mb-4">
               {program.tags.slice(0, 3).map((tag, j) => (
-                <span key={j} className="px-2 py-1 bg-gray-800 text-gray-300 text-xs rounded-full border border-gray-700">
+                <span key={j} className="px-2 py-1 bg-[#E8F5E9] text-[#1A1A1A] text-xs rounded-full border border-gray-200">
                   {tag}
                 </span>
               ))}
@@ -820,7 +814,7 @@ function TimelineNotification({ program, index, getStatusColor, getStatusGradien
             {/* Link */}
             <Link
               to={`/Programs/${program.id}`}
-              className="inline-flex items-center gap-1 text-sm text-yellow-400 font-semibold hover:gap-2 transition-all"
+              className="inline-flex items-center gap-1 text-sm text-[#1E301E] font-semibold hover:gap-2 transition-all"
             >
               View Details
               <ChevronRight className="w-4 h-4" />

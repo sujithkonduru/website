@@ -45,6 +45,35 @@
       "timeline": "3-8 weeks depending on scope"
     },
     {
+  "title": "Mobile App Development",
+  "detailedDesc": "Our mobile app development services focus on building high-performance, scalable, and user-friendly applications for both Android and iOS platforms. We design and develop apps that deliver seamless user experiences, robust functionality, and secure performance. From concept and UI design to development, testing, and deployment, we ensure your mobile application meets modern industry standards and business goals.",
+  "benefits": [
+    "Enhanced customer engagement",
+    "Increased brand visibility",
+    "Faster business operations",
+    "Improved user experience",
+    "Cross-platform compatibility",
+    "Scalable and secure architecture"
+  ],
+  "technologies": [
+    "React Native",
+    "Flutter",
+    "Swift",
+    "Kotlin",
+    "Firebase",
+    "Node.js"
+  ],
+  "deliverables": [
+    "Mobile app UI/UX design",
+    "Android and iOS application",
+    "API integration",
+    "Performance optimization",
+    "App store deployment",
+    "Maintenance and updates"
+  ],
+  "timeline": "6-12 weeks depending on complexity"
+},
+    {
       "title": "CMS Solutions",
       "detailedDesc": "Empower your team with powerful Content Management Systems that make updating and managing your digital content effortless. We implement and customize leading CMS platforms or build custom solutions tailored to your specific needs. Our CMS solutions enable non-technical users to manage content efficiently while maintaining security, performance, and scalability.",
       "benefits": [
@@ -70,7 +99,7 @@
   "core": [
     {
       "title": "Software Development",
-      "detailedDesc": "Custom enterprise software solutions built with cutting-edge technologies. We develop scalable, secure applications tailored to your business needs. From legacy modernization to greenfield projects, our software development services deliver high-quality solutions that drive business value.",
+      "detailedDesc": "Custom enterprise software solutions built with cutting-edge technologies. We develop scalable, secure applications tailored to your business needs. From legacy modernization to olive greenfield projects, our software development services deliver high-quality solutions that drive business value.",
       "benefits": [
         "Custom solutions",
         "Scalable architecture",

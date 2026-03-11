@@ -23,56 +23,56 @@ function RND() {
     {
       title: 'Artificial Intelligence & Machine Learning',
       icon: <Brain className="w-6 h-6" />,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-600 to-cyan-600',
       desc: 'Advanced AI algorithms, deep learning, and intelligent systems for real-world applications',
       areas: ['Computer Vision', 'Natural Language Processing', 'Reinforcement Learning', 'Neural Networks', 'Generative AI', 'Edge AI']
     },
     {
       title: 'Internet of Things (IoT)',
       icon: <Network className="w-6 h-6" />,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-olive green-600 to-emerald-600',
       desc: 'Connected devices, smart systems, and edge computing for intelligent infrastructure',
       areas: ['Smart Cities', 'Industrial IoT', 'Healthcare IoT', 'Agricultural IoT', 'Wearable Technology', 'Vehicle Telematics']
     },
     {
       title: 'Robotics & Automation',
       icon: <Bot className="w-6 h-6" />,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-600 to-pink-600',
       desc: 'Autonomous systems, robotic control, and intelligent automation for industry 4.0',
       areas: ['Autonomous Vehicles', 'Service Robots', 'Industrial Automation', 'Swarm Robotics', 'Human-Robot Interaction', 'Soft Robotics']
     },
     {
       title: 'Cybersecurity',
       icon: <Shield className="w-6 h-6" />,
-      color: 'from-red-500 to-rose-500',
+      color: 'from-red-600 to-rose-600',
       desc: 'Information security, threat detection, and secure systems for digital protection',
       areas: ['Blockchain Security', 'IoT Security', 'AI-based Threat Detection', 'Cryptography', 'Zero Trust Architecture', 'Cloud Security']
     },
     {
       title: 'Sustainable Technology',
       icon: <Globe2 className="w-6 h-6" />,
-      color: 'from-teal-500 to-cyan-500',
-      desc: 'Green computing, renewable energy systems, and environmental solutions for sustainability',
+      color: 'from-teal-600 to-cyan-600',
+      desc: 'olive green computing, renewable energy systems, and environmental solutions for sustainability',
       areas: ['Smart Grid', 'Energy Optimization', 'Environmental Monitoring', 'Waste Management', 'Carbon Capture Tech', 'Circular Economy']
     },
     {
       title: 'Healthcare Technology',
       icon: <Microscope className="w-6 h-6" />,
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-indigo-600 to-purple-600',
       desc: 'Medical devices, health informatics, and telemedicine solutions for better healthcare',
       areas: ['Medical Imaging', 'Wearable Health Devices', 'Telemedicine', 'Drug Discovery', 'Bioinformatics', 'Digital Therapeutics']
     },
     {
       title: 'Quantum Computing',
       icon: <Atom className="w-6 h-6" />,
-      color: 'from-violet-500 to-purple-500',
+      color: 'from-violet-600 to-purple-600',
       desc: 'Quantum algorithms, quantum machine learning, and quantum simulation for breakthrough computing',
       areas: ['Quantum Algorithms', 'Quantum Machine Learning', 'Quantum Simulation', 'Quantum Cryptography', 'Quantum Hardware', 'Error Correction']
     },
     {
       title: 'Blockchain Technology',
       icon: <Layers className="w-6 h-6" />,
-      color: 'from-orange-500 to-red-500',
+      color: 'from-orange-600 to-red-600',
       desc: 'Distributed ledger technology, smart contracts, and decentralized applications',
       areas: ['Smart Contracts', 'DeFi', 'NFTs', 'Supply Chain', 'Digital Identity', 'Consensus Mechanisms']
     }
@@ -84,7 +84,7 @@ function RND() {
       title: 'Problem Identification',
       desc: 'Identify real-world problems and research gaps through systematic literature review and industry analysis',
       icon: Search,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-600 to-cyan-600',
       deliverables: ['Literature Review', 'Gap Analysis', 'Problem Statement', 'Research Questions']
     },
     {
@@ -92,7 +92,7 @@ function RND() {
       title: 'Research Planning',
       desc: 'Develop comprehensive research methodology, timeline, and resource allocation for systematic investigation',
       icon: FileText,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-olive green-600 to-emerald-600',
       deliverables: ['Methodology Design', 'Timeline Planning', 'Resource Allocation', 'Ethics Approval']
     },
     {
@@ -100,7 +100,7 @@ function RND() {
       title: 'Prototype Development',
       desc: 'Build proof-of-concept solutions using cutting-edge technologies and frameworks for validation',
       icon: Code,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-600 to-pink-600',
       deliverables: ['Proof of Concept', 'Minimum Viable Product', 'Technical Documentation', 'Architecture Design']
     },
     {
@@ -108,7 +108,7 @@ function RND() {
       title: 'Testing & Validation',
       desc: 'Rigorous testing, performance evaluation, and validation against industry standards and benchmarks',
       icon: Beaker,
-      color: 'from-yellow-500 to-orange-500',
+      color: 'from-olive green-600 to-orange-600',
       deliverables: ['Test Reports', 'Performance Metrics', 'Benchmark Results', 'Validation Studies']
     },
     {
@@ -116,7 +116,7 @@ function RND() {
       title: 'Publication & Patent',
       desc: 'Document findings in research papers, conferences, and patent applications for IP protection',
       icon: FileText,
-      color: 'from-indigo-500 to-purple-500',
+      color: 'from-indigo-600 to-purple-600',
       deliverables: ['Research Papers', 'Conference Presentations', 'Patent Filings', 'Technical Reports']
     },
     {
@@ -124,7 +124,7 @@ function RND() {
       title: 'Commercialization',
       desc: 'Transform research outcomes into market-ready products and solutions for real-world impact',
       icon: Rocket,
-      color: 'from-red-500 to-rose-500',
+      color: 'from-red-600 to-rose-600',
       deliverables: ['Market Analysis', 'Business Model', 'Product Launch', 'Industry Partnerships']
     }
   ];
@@ -160,17 +160,17 @@ function RND() {
   };
 
   const outcomes = [
-    { icon: <FileText className="w-8 h-8" />, title: 'Research Papers', count: '50+', desc: 'Published in top-tier conferences and journals', color: 'from-blue-500 to-cyan-500' },
-    { icon: <Award className="w-8 h-8" />, title: 'Patents Filed', count: '25+', desc: 'Intellectual property protection for innovations', color: 'from-purple-500 to-pink-500' },
-    { icon: <Rocket className="w-8 h-8" />, title: 'Products Launched', count: '15+', desc: 'Commercial products derived from research', color: 'from-orange-500 to-red-500' },
-    { icon: <Users className="w-8 h-8" />, title: 'Industry Partners', count: '30+', desc: 'Collaborations with leading companies', color: 'from-green-500 to-emerald-500' }
+    { icon: <FileText className="w-8 h-8" />, title: 'Research Papers', count: '50+', desc: 'Published in top-tier conferences and journals', color: 'from-blue-600 to-cyan-600' },
+    { icon: <Award className="w-8 h-8" />, title: 'Patents Filed', count: '25+', desc: 'Intellectual property protection for innovations', color: 'from-purple-600 to-pink-600' },
+    { icon: <Rocket className="w-8 h-8" />, title: 'Products Launched', count: '15+', desc: 'Commercial products derived from research', color: 'from-orange-600 to-red-600' },
+    { icon: <Users className="w-8 h-8" />, title: 'Industry Partners', count: '30+', desc: 'Collaborations with leading companies', color: 'from-olive green-600 to-emerald-600' }
   ];
 
   const eligibility = [
     {
       category: 'Students',
       icon: GraduationCap,
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-blue-600 to-cyan-600',
       requirements: ['Final year B.Tech/M.Tech students', 'Strong academic record (CGPA > 7.5)', 'Passion for research and innovation', 'Basic programming knowledge', 'Research proposal submission'],
       duration: '6-12 months',
       stipend: '₹15,000 - ₹25,000/month'
@@ -178,7 +178,7 @@ function RND() {
     {
       category: 'Professionals',
       icon: Briefcase,
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-olive green-600 to-emerald-600',
       requirements: ['2+ years industry experience', 'Relevant technical background', 'Commitment to research goals', 'Available for part-time engagement', 'Industry problem proposal'],
       duration: '3-6 months',
       stipend: '₹30,000 - ₹50,000/month'
@@ -186,7 +186,7 @@ function RND() {
     {
       category: 'Researchers',
       icon: Microscope,
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-purple-600 to-pink-600',
       requirements: ['PhD/Post-doc candidates', 'Published research experience', 'Domain expertise', 'Full-time availability', 'Research grant proposal'],
       duration: '12-24 months',
       stipend: '₹50,000 - ₹80,000/month'
@@ -228,18 +228,18 @@ function RND() {
   ];
 
   return (
-    <div className="bg-gray-950 text-white min-h-screen overflow-x-hidden">
+    <div className="bg-white text-gray-900 min-h-screen overflow-x-hidden">
       <Navbar />
 
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center px-4 sm:px-6 overflow-hidden">
         {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-purple-900/40 via-blue-900/40 to-indigo-900/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50" />
 
         {/* Grid Pattern */}
-        <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.1) 1px, transparent 0)`,
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(0,0,0,0.1) 1px, transparent 0)`,
             backgroundSize: '40px 40px'
           }} />
         </div>
@@ -296,26 +296,26 @@ function RND() {
               initial={{ scale: 0.9 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2 }}
-              className="inline-flex items-center gap-2 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6"
+              className="inline-flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 sm:px-6 py-2 sm:py-3 mb-6 shadow-sm"
             >
-              <Microscope className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
-              <span className="text-sm sm:text-base text-yellow-400 font-semibold">Research & Development Division</span>
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-400/50" />
+              <Microscope className="w-4 h-4 sm:w-5 sm:h-5 text-olive green-600" />
+              <span className="text-sm sm:text-base text-olive green-600 font-semibold">Research & Development Division</span>
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-olive green-600/50" />
             </motion.div>
 
             {/* Title */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4 sm:mb-6 px-2">
-              <span className="bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent">
+              <span className="text-gray-900">
                 Engineering Innovation
               </span>
               <br />
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
+              <span className="text-olive green-600">
                 Through Applied Research
               </span>
             </h1>
 
             {/* Description */}
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 leading-relaxed">
               We Explore, Experiment and Engineer cutting-edge solutions that transform real-world challenges into scalable technological breakthroughs.
             </p>
 
@@ -325,7 +325,7 @@ function RND() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => window.location.href = '/Career'}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full text-sm sm:text-base font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-olive green-600 text-white rounded-full text-sm sm:text-base font-semibold hover:bg-olive green-700 transition-all shadow-md hover:shadow-lg"
               >
                 Apply for R&D Program
               </motion.button>
@@ -333,7 +333,7 @@ function RND() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
-                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-yellow-400 text-yellow-400 rounded-full text-sm sm:text-base font-semibold hover:bg-yellow-400 hover:text-black transition-all"
+                className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-olive green-600 text-olive green-600 rounded-full text-sm sm:text-base font-semibold hover:bg-olive green-600 hover:text-white transition-all"
               >
                 Explore Research Projects
               </motion.button>
@@ -352,16 +352,16 @@ function RND() {
           }}
         >
           <div className="flex flex-col items-center gap-1 group">
-            <span className="text-[10px] sm:text-xs text-gray-400 mb-1 group-hover:text-yellow-400 transition-colors">
+            <span className="text-[10px] sm:text-xs text-gray-400 mb-1 group-hover:text-olive green-600 transition-colors">
               Explore Research
             </span>
-            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
+            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 text-olive green-600" />
           </div>
         </motion.div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-900">
+      <section className="py-12 sm:py-16 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {outcomes.map((stat, i) => (
@@ -371,14 +371,14 @@ function RND() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className={`bg-gradient-to-br from-gray-800 to-gray-900 p-4 sm:p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all text-center group`}
+                className="bg-white p-4 sm:p-6 rounded-xl border border-gray-200 hover:border-olive green-600/50 transition-all text-center group shadow-sm hover:shadow"
               >
-                <div className={`w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 sm:mb-3 rounded-lg bg-gradient-to-br ${stat.color} bg-opacity-20 flex items-center justify-center group-hover:scale-110 transition-transform`}>
-                  <div className="text-white">{stat.icon}</div>
+                <div className={`w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 sm:mb-3 rounded-lg bg-gradient-to-br ${stat.color} bg-opacity-10 flex items-center justify-center group-hover:scale-110 transition-transform border border-${stat.color.split('-')[1]}-200`}>
+                  <div className={`text-${stat.color.split('-')[1]}-600`}>{stat.icon}</div>
                 </div>
-                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">{stat.count}</div>
-                <div className="text-xs sm:text-sm font-semibold text-yellow-400 mb-1">{stat.title}</div>
-                <p className="text-[10px] sm:text-xs text-gray-400">{stat.desc}</p>
+                <div className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-1">{stat.count}</div>
+                <div className="text-xs sm:text-sm font-semibold text-olive green-600 mb-1">{stat.title}</div>
+                <p className="text-[10px] sm:text-xs text-gray-600">{stat.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -386,7 +386,7 @@ function RND() {
       </section>
 
       {/* Research Domains */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-950">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -394,10 +394,10 @@ function RND() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Research Domains
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
               Exploring cutting-edge technologies across multiple disciplines
             </p>
           </motion.div>
@@ -411,22 +411,22 @@ function RND() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="group bg-gradient-to-br from-gray-800 to-gray-900 p-5 sm:p-6 rounded-xl border border-gray-700 hover:border-transparent relative overflow-hidden"
+                className="group bg-white p-5 sm:p-6 rounded-xl border border-gray-200 hover:border-olive green-600/50 relative overflow-hidden shadow-sm hover:shadow"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${domain.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${domain.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
                 <div className="relative">
-                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br ${domain.color} bg-opacity-20 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform`}>
-                    <div className="text-white">{domain.icon}</div>
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br ${domain.color} bg-opacity-10 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform border border-${domain.color.split('-')[1]}-200`}>
+                    <div className={`text-${domain.color.split('-')[1]}-600`}>{domain.icon}</div>
                   </div>
-                  <h3 className="text-sm sm:text-base font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300">
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2 group-hover:text-olive green-600 transition-colors">
                     {domain.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 line-clamp-2">{domain.desc}</p>
+                  <p className="text-xs sm:text-sm text-gray-600 mb-3 sm:mb-4 line-clamp-2">{domain.desc}</p>
                   <div className="space-y-1">
                     {domain.areas.slice(0, 4).map((area, j) => (
                       <div key={j} className="flex items-center gap-1 sm:gap-2">
-                        <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-400 flex-shrink-0" />
-                        <span className="text-[10px] sm:text-xs text-gray-400">{area}</span>
+                        <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-olive green-600 flex-shrink-0" />
+                        <span className="text-[10px] sm:text-xs text-gray-600">{area}</span>
                       </div>
                     ))}
                   </div>
@@ -438,7 +438,7 @@ function RND() {
       </section>
 
       {/* Research GIF Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
             <motion.div
@@ -447,10 +447,10 @@ function RND() {
               viewport={{ once: true }}
               className="lg:w-1/2"
             >
-              <h2 className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-4">
+              <h2 className="text-2xl sm:text-3xl font-bold text-olive green-600 mb-4">
                 Innovation Through Research
               </h2>
-              <p className="text-sm sm:text-base text-gray-300 mb-6 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 mb-6 leading-relaxed">
                 Our Research & Development division focuses on cutting-edge technology solutions
                 that address real-world challenges. We combine academic rigor with industry
                 relevance to create impactful innovations that shape the future.
@@ -463,8 +463,8 @@ function RND() {
                   'Technology transfer and commercialization'
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-2">
-                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-400 flex-shrink-0 mt-0.5" />
-                    <span className="text-xs sm:text-sm text-gray-300">{item}</span>
+                    <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-olive green-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-xs sm:text-sm text-gray-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -478,8 +478,8 @@ function RND() {
               className="lg:w-1/2"
             >
               <div className="relative group">
-                <div className="absolute -inset-1 bg-gradient-to-r from-purple-500 to-blue-500 rounded-2xl opacity-20 group-hover:opacity-30 blur transition-all" />
-                <div className="relative bg-gray-800 p-3 sm:p-4 rounded-2xl border border-gray-700">
+                <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl opacity-20 group-hover:opacity-30 blur transition-all" />
+                <div className="relative bg-white p-3 sm:p-4 rounded-2xl border border-gray-200 shadow-lg">
                   <img
                     src="https://i.pinimg.com/originals/2a/53/65/2a53651a35816f499270d8275fd5318f.gif"
                     alt="Research and Innovation"
@@ -487,7 +487,7 @@ function RND() {
                     loading="lazy"
                   />
                   <div className="absolute bottom-4 left-4 right-4 bg-gradient-to-t from-black/80 to-transparent p-3 rounded-lg">
-                    <p className="text-yellow-400 font-semibold text-sm sm:text-base">Research & Innovation Lab</p>
+                    <p className="text-olive green-400 font-semibold text-sm sm:text-base">Research & Innovation Lab</p>
                     <p className="text-gray-300 text-xs">Pushing the boundaries of technology</p>
                   </div>
                 </div>
@@ -498,7 +498,7 @@ function RND() {
       </section>
 
       {/* Research Methodology */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-950">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -506,10 +506,10 @@ function RND() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Research Methodology
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
               A systematic approach to research and innovation
             </p>
           </motion.div>
@@ -523,23 +523,23 @@ function RND() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 whileHover={{ y: -5 }}
-                className="group bg-gradient-to-br from-gray-800 to-gray-900 p-5 sm:p-6 rounded-xl border border-gray-700 hover:border-transparent relative overflow-hidden"
+                className="group bg-white p-5 sm:p-6 rounded-xl border border-gray-200 hover:border-olive green-600/50 relative overflow-hidden shadow-sm hover:shadow"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${step.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
                 <div className="relative">
                   <div className="flex items-center gap-3 mb-3 sm:mb-4">
-                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br ${step.color} bg-opacity-20 flex items-center justify-center text-xs sm:text-sm font-bold text-yellow-400`}>
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br ${step.color} bg-opacity-10 flex items-center justify-center text-xs sm:text-sm font-bold text-${step.color.split('-')[1]}-600 border border-${step.color.split('-')[1]}-200`}>
                       {step.step}
                     </div>
-                    <step.icon className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
+                    <step.icon className={`w-4 h-4 sm:w-5 sm:h-5 text-${step.color.split('-')[1]}-600`} />
                   </div>
-                  <h3 className="text-sm sm:text-base font-bold text-white mb-2">{step.title}</h3>
-                  <p className="text-xs sm:text-sm text-gray-400 mb-3">{step.desc}</p>
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">{step.title}</h3>
+                  <p className="text-xs sm:text-sm text-gray-600 mb-3">{step.desc}</p>
                   <div className="space-y-1">
                     {step.deliverables.map((item, j) => (
                       <div key={j} className="flex items-center gap-1">
-                        <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-400 flex-shrink-0" />
-                        <span className="text-[10px] sm:text-xs text-gray-400">{item}</span>
+                        <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-olive green-600 flex-shrink-0" />
+                        <span className="text-[10px] sm:text-xs text-gray-600">{item}</span>
                       </div>
                     ))}
                   </div>
@@ -550,55 +550,8 @@ function RND() {
         </div>
       </section>
 
-      {/* Tools & Technologies */}
-      {/* <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-10 sm:mb-12"
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
-              Research Tools & Technologies
-            </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
-              Cutting-edge tools for breakthrough research
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {tools.map((category, i) => {
-              const Icon = category.icon;
-              return (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="bg-gradient-to-br from-gray-800 to-gray-900 p-5 sm:p-6 rounded-xl border border-gray-700 hover:border-yellow-400/50 transition-all"
-                >
-                  <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-                    <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-yellow-400" />
-                    <h3 className="text-sm sm:text-base font-bold text-white">{category.category}</h3>
-                  </div>
-                  <div className="grid grid-cols-2 gap-1 sm:gap-2">
-                    {category.tools.map((tool, j) => (
-                      <span key={j} className="bg-gray-700 px-2 py-1 sm:px-3 sm:py-1.5 rounded text-[10px] sm:text-xs text-gray-300 text-center border border-gray-600">
-                        {tool}
-                      </span>
-                    ))}
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
-        </div>
-      </section> */}
-
       {/* Research Projects */}
-      <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-950">
+      <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <motion.div
@@ -608,11 +561,11 @@ function RND() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text">
+              <span className="text-olive green-600">
                 Research Projects
               </span>
             </h2>
-            <p className="text-base sm:text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
               Transforming real-world challenges through innovative research
             </p>
           </motion.div>
@@ -628,25 +581,25 @@ function RND() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: groupIndex * 0.1 }}
-                  className="bg-gray-900/50 rounded-2xl border border-gray-800 overflow-hidden"
+                  className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm"
                 >
                   {/* Project Group Header */}
                   <motion.div
-                    className="p-6 cursor-pointer hover:bg-gray-800/30 transition-colors"
+                    className="p-6 cursor-pointer hover:bg-gray-50 transition-colors"
                     onClick={() => setExpandedGroups(prev => ({ ...prev, [groupKey]: !prev[groupKey] }))}
                   >
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
                         {/* Project Count Badge */}
-                        <div className="w-10 h-10 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-lg flex items-center justify-center text-black font-bold">
+                        <div className="w-10 h-10 bg-olive green-600 rounded-lg flex items-center justify-center text-white font-bold">
                           {groupIndex + 1}
                         </div>
 
                         <div>
-                          <h3 className="text-xl sm:text-2xl font-semibold text-white mb-1">
+                          <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-1">
                             {group.title}
                           </h3>
-                          <p className="text-sm text-gray-400 line-clamp-1">
+                          <p className="text-sm text-gray-600 line-clamp-1">
                             {group.desc}
                           </p>
                         </div>
@@ -659,9 +612,9 @@ function RND() {
                         <motion.div
                           animate={{ rotate: isExpanded ? 180 : 0 }}
                           transition={{ duration: 0.3 }}
-                          className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center"
+                          className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center border border-gray-200"
                         >
-                          <ChevronDown className="w-5 h-5 text-yellow-400" />
+                          <ChevronDown className="w-5 h-5 text-olive green-600" />
                         </motion.div>
                       </div>
                     </div>
@@ -675,7 +628,7 @@ function RND() {
                         animate={{ height: 'auto', opacity: 1 }}
                         exit={{ height: 0, opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="border-t border-gray-800"
+                        className="border-t border-gray-200"
                       >
                         <div className="p-6">
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -687,10 +640,10 @@ function RND() {
                                 transition={{ delay: i * 0.05 }}
                               >
                                 <Link to={`/R_AND_D/${project.id}`}>
-                                  <div className="bg-gray-800/50 rounded-xl p-5 border border-gray-700 hover:border-yellow-400/50 transition-all group/project">
+                                  <div className="bg-white rounded-xl p-5 border border-gray-200 hover:border-olive green-600/50 transition-all group/project shadow-sm hover:shadow">
                                     {/* Domain Tag */}
                                     <div className="flex items-center justify-between mb-3">
-                                      <span className="text-xs font-medium text-yellow-400 bg-yellow-400/10 px-2.5 py-1 rounded-full">
+                                      <span className="text-xs font-medium text-olive green-600 bg-olive green-50 px-2.5 py-1 rounded-full border border-olive green-200">
                                         {project.domain}
                                       </span>
                                       <span className="text-xs text-gray-500">
@@ -699,19 +652,19 @@ function RND() {
                                     </div>
 
                                     {/* Title */}
-                                    <h4 className="text-lg font-semibold text-white mb-2 group-hover/project:text-yellow-400 transition-colors">
+                                    <h4 className="text-lg font-semibold text-gray-900 mb-2 group-hover/project:text-olive green-600 transition-colors">
                                       {project.title}
                                     </h4>
 
                                     {/* Description */}
-                                    <p className="text-sm text-gray-400 mb-3 line-clamp-2">
+                                    <p className="text-sm text-gray-600 mb-3 line-clamp-2">
                                       {project.desc}
                                     </p>
 
                                     {/* Impact Preview */}
-                                    <div className="bg-gray-900/50 rounded-lg p-3 mb-3">
-                                      <p className="text-xs text-gray-300 line-clamp-1">
-                                        <span className="text-green-400 font-medium">Impact: </span>
+                                    <div className="bg-gray-50 rounded-lg p-3 mb-3 border border-gray-200">
+                                      <p className="text-xs text-gray-700 line-clamp-1">
+                                        <span className="text-olive green-600 font-medium">Impact: </span>
                                         {project.impact}
                                       </p>
                                     </div>
@@ -722,7 +675,7 @@ function RND() {
                                         <Users className="w-3.5 h-3.5" />
                                         <span>{project.teamSize}</span>
                                       </div>
-                                      <span className="text-xs text-yellow-400 group-hover/project:underline">
+                                      <span className="text-xs text-olive green-600 group-hover/project:underline">
                                         View Details →
                                       </span>
                                     </div>
@@ -741,44 +694,9 @@ function RND() {
           </div>
         </div>
       </section>
-      {/* Publications Section */}
-      {/* <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
-        <div className="max-w-6xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-10 sm:mb-12"
-          >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
-              Recent Publications
-            </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
-              Our research contributions to top-tier venues
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            {publications.map((pub, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 p-5 rounded-xl border border-gray-700 text-center"
-              >
-                <div className="text-2xl sm:text-3xl font-bold text-yellow-400 mb-2">{pub.count}</div>
-                <div className="text-sm font-semibold text-white mb-1">Papers in {pub.year}</div>
-                <div className="text-xs text-gray-400">{pub.venue}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Eligibility */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-950">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -786,10 +704,10 @@ function RND() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Who Can Apply
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
               Opportunities for students, professionals, and researchers
             </p>
           </motion.div>
@@ -805,29 +723,25 @@ function RND() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   whileHover={{ y: -5 }}
-                  className="group bg-gradient-to-br from-gray-800 to-gray-900 p-5 sm:p-6 rounded-xl border border-gray-700 hover:border-transparent relative overflow-hidden"
+                  className="group bg-white p-5 sm:p-6 rounded-xl border border-gray-200 hover:border-olive green-600/50 relative overflow-hidden shadow-sm hover:shadow"
                 >
-                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                  <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
                   <div className="relative">
-                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br ${item.color} bg-opacity-20 flex items-center justify-center mb-3 sm:mb-4`}>
-                      <Icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
+                    <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-gradient-to-br ${item.color} bg-opacity-10 flex items-center justify-center mb-3 sm:mb-4 border border-${item.color.split('-')[1]}-200`}>
+                      <Icon className={`w-5 h-5 sm:w-6 sm:h-6 text-${item.color.split('-')[1]}-600`} />
                     </div>
-                    <h3 className="text-sm sm:text-base font-bold text-white mb-2">{item.category}</h3>
+                    <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2">{item.category}</h3>
                     <div className="space-y-2 mb-3">
-                      <div className="flex items-center gap-1 text-[10px] sm:text-xs text-gray-400">
+                      <div className="flex items-center gap-1 text-[10px] sm:text-xs text-gray-600">
                         <Clock className="w-3 h-3" />
                         <span>Duration: {item.duration}</span>
                       </div>
-                      {/* <div className="flex items-center gap-1 text-[10px] sm:text-xs text-green-400">
-                        <Award className="w-3 h-3" />
-                        <span>Stipend: {item.stipend}</span>
-                      </div> */}
                     </div>
                     <div className="space-y-1">
                       {item.requirements.map((req, j) => (
                         <div key={j} className="flex items-start gap-1">
-                          <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-green-400 flex-shrink-0 mt-0.5" />
-                          <span className="text-[10px] sm:text-xs text-gray-400">{req}</span>
+                          <CheckCircle className="w-2 h-2 sm:w-3 sm:h-3 text-olive green-600 flex-shrink-0 mt-0.5" />
+                          <span className="text-[10px] sm:text-xs text-gray-600">{req}</span>
                         </div>
                       ))}
                     </div>
@@ -840,7 +754,7 @@ function RND() {
       </section>
 
       {/* Mentorship */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-900">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -848,10 +762,10 @@ function RND() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Mentorship & Collaboration
             </h2>
-            <p className="text-sm sm:text-base text-gray-400 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto">
               Guided by experts, powered by collaboration
             </p>
           </motion.div>
@@ -864,30 +778,30 @@ function RND() {
               className="space-y-4"
             >
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-500/10 rounded-lg flex items-center justify-center">
-                  <Users className="w-4 h-4 sm:w-5 sm:h-5 text-blue-400" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-50 rounded-lg flex items-center justify-center border border-blue-200">
+                  <Users className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base font-bold text-white mb-1">Industry Experts</h3>
-                  <p className="text-xs sm:text-sm text-gray-400">Guidance from seasoned professionals with decades of experience</p>
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Industry Experts</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">Guidance from seasoned professionals with decades of experience</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-green-500/10 rounded-lg flex items-center justify-center">
-                  <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-green-400" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-olive green-50 rounded-lg flex items-center justify-center border border-olive green-200">
+                  <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-olive green-600" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base font-bold text-white mb-1">Academic Advisors</h3>
-                  <p className="text-xs sm:text-sm text-gray-400">PhD holders and research scientists providing academic rigor</p>
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Academic Advisors</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">PhD holders and research scientists providing academic rigor</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-500/10 rounded-lg flex items-center justify-center">
-                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-purple-400" />
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-purple-50 rounded-lg flex items-center justify-center border border-purple-200">
+                  <Award className="w-4 h-4 sm:w-5 sm:h-5 text-purple-600" />
                 </div>
                 <div>
-                  <h3 className="text-sm sm:text-base font-bold text-white mb-1">Peer Learning</h3>
-                  <p className="text-xs sm:text-sm text-gray-400">Collaborative research environment with cross-domain exposure</p>
+                  <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-1">Peer Learning</h3>
+                  <p className="text-xs sm:text-sm text-gray-600">Collaborative research environment with cross-domain exposure</p>
                 </div>
               </div>
             </motion.div>
@@ -896,9 +810,9 @@ function RND() {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-gradient-to-br from-gray-800 to-gray-900 p-5 sm:p-6 rounded-xl border border-gray-700"
+              className="bg-white p-5 sm:p-6 rounded-xl border border-gray-200 shadow-sm"
             >
-              <h3 className="text-sm sm:text-base font-bold text-yellow-400 mb-3 sm:mb-4">Collaboration Benefits</h3>
+              <h3 className="text-sm sm:text-base font-bold text-olive green-600 mb-3 sm:mb-4">Collaboration Benefits</h3>
               <div className="space-y-2">
                 {[
                   'Weekly one-on-one mentoring sessions',
@@ -909,8 +823,8 @@ function RND() {
                   'Career guidance and placement support'
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-green-400 flex-shrink-0" />
-                    <span className="text-xs sm:text-sm text-gray-300">{item}</span>
+                    <CheckCircle className="w-3 h-3 sm:w-4 sm:h-4 text-olive green-600 flex-shrink-0" />
+                    <span className="text-xs sm:text-sm text-gray-700">{item}</span>
                   </div>
                 ))}
               </div>
@@ -920,7 +834,7 @@ function RND() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-950">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -928,10 +842,10 @@ function RND() {
             viewport={{ once: true }}
             className="text-center mb-10 sm:mb-12"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-yellow-400">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-4 text-olive green-600">
               Frequently Asked Questions
             </h2>
-            <p className="text-sm sm:text-base text-gray-400">
+            <p className="text-sm sm:text-base text-gray-600">
               Got questions about our R&D program?
             </p>
           </motion.div>
@@ -944,14 +858,14 @@ function RND() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg border border-gray-700 overflow-hidden"
+                className="bg-white rounded-lg border border-gray-200 overflow-hidden hover:border-olive green-600/50 transition-all"
               >
                 <button
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
-                  className="w-full p-4 sm:p-5 text-left flex justify-between items-center hover:bg-gray-800/50 transition-all gap-2"
+                  className="w-full p-4 sm:p-5 text-left flex justify-between items-center hover:bg-gray-50 transition-all gap-2"
                 >
-                  <h3 className="text-xs sm:text-sm font-semibold text-white pr-2">{faq.q}</h3>
-                  <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 text-yellow-400 transition-transform flex-shrink-0 ${openFaq === i ? 'rotate-180' : ''}`} />
+                  <h3 className="text-xs sm:text-sm font-semibold text-gray-900 pr-2">{faq.q}</h3>
+                  <ChevronDown className={`w-3 h-3 sm:w-4 sm:h-4 text-olive green-600 transition-transform flex-shrink-0 ${openFaq === i ? 'rotate-180' : ''}`} />
                 </button>
                 <AnimatePresence>
                   {openFaq === i && (
@@ -961,8 +875,8 @@ function RND() {
                       exit={{ height: 0 }}
                       className="overflow-hidden"
                     >
-                      <div className="px-4 sm:px-5 pb-4 sm:pb-5">
-                        <p className="text-xs sm:text-sm text-gray-400 leading-relaxed">{faq.a}</p>
+                      <div className="px-4 sm:px-5 pb-4 sm:pb-5 border-t border-gray-100">
+                        <p className="text-xs sm:text-sm text-gray-600 leading-relaxed pt-2">{faq.a}</p>
                       </div>
                     </motion.div>
                   )}
@@ -974,7 +888,7 @@ function RND() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 sm:py-20 px-4 sm:px-6">
+      <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -982,8 +896,8 @@ function RND() {
             viewport={{ once: true }}
             className="relative rounded-xl sm:rounded-2xl overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-orange-500 opacity-90" />
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2072')] bg-cover bg-center mix-blend-overlay opacity-30" />
+            <div className="absolute inset-0 bg-olive green-600" />
+            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=2072')] bg-cover bg-center mix-blend-overlay opacity-20" />
 
             <div className="relative z-10 p-6 sm:p-8 md:p-10 text-center">
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-white mb-2 sm:mb-3">
@@ -997,7 +911,7 @@ function RND() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => window.location.href = '/Career'}
-                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-black rounded-full text-sm sm:text-base font-semibold hover:shadow-lg hover:shadow-yellow-500/25 transition-all"
+                  className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-olive green-600 rounded-full text-sm sm:text-base font-semibold hover:bg-gray-100 transition-all shadow-md hover:shadow-lg"
                 >
                   Apply for R&D Program
                 </motion.button>
@@ -1006,7 +920,7 @@ function RND() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   onClick={() => window.open('/research-projects', '_blank')}
-                  className="group relative overflow-hidden w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-purple-400 text-purple-400 rounded-full text-sm sm:text-base font-semibold hover:bg-purple-400 hover:text-black transition-all duration-300 flex items-center justify-center gap-2"
+                  className="group relative overflow-hidden w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-2 border-white text-white rounded-full text-sm sm:text-base font-semibold hover:bg-white hover:text-olive green-600 transition-all duration-300 flex items-center justify-center gap-2"
                 >
                   <BookOpen className="w-4 h-4 sm:w-5 sm:h-5" />
                   Explore Research Projects

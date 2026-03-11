@@ -7,7 +7,7 @@ export default function StrategyButton() {
     <>
       <button
         onClick={() => setShowPopup(true)}
-        className="px-8 py-3 border-2 border-black text-black rounded-full font-semibold hover:bg-black hover:text-yellow-400 transition"
+        className="px-8 py-3 border-2 border-black text-black rounded-full font-semibold hover:bg-black hover:text-olive green-400 transition"
       >
         Schedule Strategy Call
       </button>
@@ -22,7 +22,7 @@ export default function StrategyButton() {
             </p>
             <button
               onClick={() => setShowPopup(false)}
-              className="px-4 py-2 bg-black text-yellow-400 rounded-full hover:bg-gray-800 transition"
+              className="px-4 py-2 bg-black text-olive green-400 rounded-full hover:bg-gray-800 transition"
             >
               Close
             </button>

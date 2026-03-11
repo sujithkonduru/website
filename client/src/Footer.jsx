@@ -37,41 +37,41 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-gray-950 to-black border-t border-gray-800/50">
+    <footer className="bg-[#E8F5E9] border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 lg:gap-12 mb-12">
           {/* Company Info - Takes 2 columns on large screens */}
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-4">
-              <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 text-transparent bg-clip-text hover:from-yellow-300 hover:to-orange-300 transition-all">
+              <span className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-[#1E301E] to-[#2E7D32] text-transparent bg-clip-text hover:from-[#2E7D32] hover:to-[#1E301E] transition-all">
                 Stackenzo
               </span>
             </Link>
-            <p className="text-gray-400 mb-6 leading-relaxed text-sm sm:text-base">
+            <p className="text-[#1A1A1A] mb-6 leading-relaxed text-sm sm:text-base">
               Bridging education, innovation, and enterprise solutions to transform ideas into impactful digital realities.
             </p>
             <div className="space-y-3">
               <a 
                 href="mailto:Hello@stackenzo.com" 
-                className="flex items-center gap-3 text-gray-400 hover:text-yellow-400 transition-colors group"
+                className="flex items-center gap-3 text-[#1A1A1A] hover:text-[#1E301E] transition-colors group"
               >
-                <div className="w-8 h-8 rounded-full bg-yellow-400/10 flex items-center justify-center group-hover:bg-yellow-400/20 transition-colors">
-                  <Mail className="w-4 h-4 text-yellow-400" />
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors border border-gray-200">
+                  <Mail className="w-4 h-4 text-[#1E301E]" />
                 </div>
                 <span className="text-sm sm:text-base">Hello@stackenzo.com</span>
               </a>
               <a 
                 href="tel:+919876543210" 
-                className="flex items-center gap-3 text-gray-400 hover:text-yellow-400 transition-colors group"
+                className="flex items-center gap-3 text-[#1A1A1A] hover:text-[#1E301E] transition-colors group"
               >
-                <div className="w-8 h-8 rounded-full bg-yellow-400/10 flex items-center justify-center group-hover:bg-yellow-400/20 transition-colors">
-                  <Phone className="w-4 h-4 text-yellow-400" />
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center group-hover:bg-[#D4AF37]/20 transition-colors border border-gray-200">
+                  <Phone className="w-4 h-4 text-[#1E301E]" />
                 </div>
                 <span className="text-sm sm:text-base">+91 98765 43210</span>
               </a>
-              <div className="flex items-center gap-3 text-gray-400 group">
-                <div className="w-8 h-8 rounded-full bg-yellow-400/10 flex items-center justify-center">
-                  <MapPin className="w-4 h-4 text-yellow-400" />
+              <div className="flex items-center gap-3 text-[#1A1A1A] group">
+                <div className="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-gray-200">
+                  <MapPin className="w-4 h-4 text-[#1E301E]" />
                 </div>
                 <span className="text-sm sm:text-base">Nellore, Andhra Pradesh, India</span>
               </div>
@@ -80,16 +80,16 @@ function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-[#1A1A1A] font-semibold text-lg mb-4 relative inline-block">
               Services
-              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] rounded-full"></span>
             </h3>
             <ul className="space-y-3 mt-6">
               {services.map((service) => (
                 <li key={service.path}>
                   <Link 
                     to={service.path} 
-                    className="text-gray-400 hover:text-yellow-400 transition-colors text-sm sm:text-base inline-block hover:translate-x-1 transform duration-200"
+                    className="text-[#1A1A1A] hover:text-[#1E301E] transition-colors text-sm sm:text-base inline-block hover:translate-x-1 transform duration-200"
                   >
                     {service.name}
                   </Link>
@@ -100,16 +100,16 @@ function Footer() {
 
           {/* Programs */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-[#1A1A1A] font-semibold text-lg mb-4 relative inline-block">
               Programs
-              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] rounded-full"></span>
             </h3>
             <ul className="space-y-3 mt-6">
               {programs.map((program) => (
                 <li key={program.path}>
                   <Link 
                     to={program.path} 
-                    className="text-gray-400 hover:text-yellow-400 transition-colors text-sm sm:text-base inline-block hover:translate-x-1 transform duration-200"
+                    className="text-[#1A1A1A] hover:text-[#1E301E] transition-colors text-sm sm:text-base inline-block hover:translate-x-1 transform duration-200"
                   >
                     {program.name}
                   </Link>
@@ -120,16 +120,16 @@ function Footer() {
 
           {/* Company */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-[#1A1A1A] font-semibold text-lg mb-4 relative inline-block">
               Company
-              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] rounded-full"></span>
             </h3>
             <ul className="space-y-3 mt-6">
               {company.map((item) => (
                 <li key={item.path}>
                   <Link 
                     to={item.path} 
-                    className="text-gray-400 hover:text-yellow-400 transition-colors text-sm sm:text-base inline-block hover:translate-x-1 transform duration-200"
+                    className="text-[#1A1A1A] hover:text-[#1E301E] transition-colors text-sm sm:text-base inline-block hover:translate-x-1 transform duration-200"
                   >
                     {item.name}
                   </Link>
@@ -140,16 +140,16 @@ function Footer() {
 
           {/* Legal & Social */}
           <div>
-            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-[#1A1A1A] font-semibold text-lg mb-4 relative inline-block">
               Legal
-              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] rounded-full"></span>
             </h3>
             <ul className="space-y-3 mt-6 mb-8">
               {legal.map((item) => (
                 <li key={item.path}>
                   <Link 
                     to={item.path} 
-                    className="text-gray-400 hover:text-yellow-400 transition-colors text-sm sm:text-base inline-block hover:translate-x-1 transform duration-200"
+                    className="text-[#1A1A1A] hover:text-[#1E301E] transition-colors text-sm sm:text-base inline-block hover:translate-x-1 transform duration-200"
                   >
                     {item.name}
                   </Link>
@@ -157,9 +157,9 @@ function Footer() {
               ))}
             </ul>
             
-            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-[#1A1A1A] font-semibold text-lg mb-4 relative inline-block">
               Follow Us
-              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full"></span>
+              <span className="absolute -bottom-1 left-0 w-8 h-0.5 bg-gradient-to-r from-[#D4AF37] to-[#D4AF37] rounded-full"></span>
             </h3>
             <div className="flex gap-3 mt-6">
               {socialLinks.map((social, index) => {
@@ -171,7 +171,7 @@ function Footer() {
                     target="_blank" 
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="w-10 h-10 bg-gray-800/50 rounded-xl flex items-center justify-center text-gray-400 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-400 hover:text-black transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 border border-gray-700/50"
+                    className="w-10 h-10 bg-white rounded-xl flex items-center justify-center text-[#1A1A1A] hover:bg-[#1E301E] hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 border border-gray-200"
                   >
                     <Icon className="w-5 h-5" />
                   </a>
@@ -186,8 +186,8 @@ function Footer() {
           <div className="mb-12">
             <div className="relative max-w-4xl mx-auto">
               {/* Decorative elements */}
-              <div className="absolute -inset-1 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-2xl blur-xl"></div>
-              <div className="relative bg-gray-900 rounded-2xl overflow-hidden border border-gray-800 shadow-2xl">
+              <div className="absolute -inset-1 bg-gradient-to-r from-[#D4AF37]/20 to-[#D4AF37]/20 rounded-2xl blur-xl"></div>
+              <div className="relative bg-white rounded-2xl overflow-hidden border border-gray-200 shadow-2xl">
                 <div className="aspect-[21/9] w-full">
                   <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.123!2d79.9865!3d14.4426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4cf3ce3e08ed79%3A0x3301359c6ed40031!2sNellore%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000!5m2!1sen!2sin"
@@ -201,12 +201,12 @@ function Footer() {
                 </div>
                 
                 {/* Map overlay with location info */}
-                <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm rounded-lg px-4 py-2 border border-yellow-400/20">
-                  <p className="text-sm font-medium text-yellow-400 flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
+                <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 border border-[#D4AF37]/20">
+                  <p className="text-sm font-medium text-[#1E301E] flex items-center gap-2">
+                    <MapPin className="w-4 h-4 text-[#D4AF37]" />
                     Our Headquarters
                   </p>
-                  <p className="text-xs text-gray-300">Nellore, Andhra Pradesh</p>
+                  <p className="text-xs text-[#1A1A1A]">Nellore, Andhra Pradesh</p>
                 </div>
               </div>
             </div>
@@ -214,25 +214,25 @@ function Footer() {
         )}
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-800">
+        <div className="pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-gray-500 text-xs sm:text-sm order-2 md:order-1">
+            <p className="text-[#1A1A1A] text-xs sm:text-sm order-2 md:order-1">
               © {new Date().getFullYear()} Stackenzo. All Rights Reserved.
             </p>
             <div className="flex items-center gap-4 order-1 md:order-2">
-              <Link to="/Terms" className="text-gray-500 hover:text-yellow-400 text-xs sm:text-sm transition-colors">
+              <Link to="/Terms" className="text-[#1A1A1A] hover:text-[#1E301E] text-xs sm:text-sm transition-colors">
                 Terms
               </Link>
-              <span className="text-gray-700">•</span>
-              <Link to="/Privacy" className="text-gray-500 hover:text-yellow-400 text-xs sm:text-sm transition-colors">
+              <span className="text-gray-400">•</span>
+              <Link to="/Privacy" className="text-[#1A1A1A] hover:text-[#1E301E] text-xs sm:text-sm transition-colors">
                 Privacy
               </Link>
-              <span className="text-gray-700">•</span>
-              <Link to="/Sitemap" className="text-gray-500 hover:text-yellow-400 text-xs sm:text-sm transition-colors">
+              <span className="text-gray-400">•</span>
+              <Link to="/Sitemap" className="text-[#1A1A1A] hover:text-[#1E301E] text-xs sm:text-sm transition-colors">
                 Sitemap
               </Link>
             </div>
-            <p className="text-gray-500 text-xs sm:text-sm order-3 flex items-center gap-1">
+            <p className="text-[#1A1A1A] text-xs sm:text-sm order-3 flex items-center gap-1">
               Made with <span className="text-red-500 animate-pulse">❤️</span> in India
             </p>
           </div>
